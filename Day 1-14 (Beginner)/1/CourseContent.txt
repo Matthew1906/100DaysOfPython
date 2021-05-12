@@ -1,0 +1,9 @@
+- Printing to Console -> using print function
+- String Manipulation -> "", '', + and \n
+- Receiving Inputs -> Input function
+- Python Variables
+- Variable Naming
+
+// THE NOTES are in the notes.py
+
+- PROJECT = Band Name Generator
