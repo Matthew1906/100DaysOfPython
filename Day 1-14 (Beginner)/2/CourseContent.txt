@@ -1,0 +1,10 @@
+- Data Types -> String, Integer, Float, Boolean
+- Type Errors, Type casting, Type function
+- Mathematical Operator -> +, -, *, /, **, //
+- Mathematical Precedence
+- Rounding Numbers
+- F-Strings -> string formatting using f""
+
+// THE NOTES are in notes.py
+
+- PROJECT = Tip Calculator
