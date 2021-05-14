@@ -1,0 +1,13 @@
+CONDITIONAL OPERATORS: IF, ELIF, ELSE
+MULTIPLE AND NESTED CONDITIONALS USING CONDITIONAL OPERATORS
+LOGICAL OPERATORS ( and, or, not)
+
+// notes are in notes.py 
+// Exercise 1: oddEven -> implements simple conditional 
+// Exercise 2: bmiCalculator2.0 -> implements multiple conditionals 
+// Exercise 3: pizzaOrder -> implements nested and multiple conditionals  
+// Exercise 4: leapYear -> implements nested and multiple conditionals
+// Exercise 5: loveCalculator -> implements logical OPERATORS
+
+- Project = Treasure Island Game
+
