@@ -39,35 +39,36 @@ if direction == 'left':
         >> ''').lower()
     if go_to_island =='wait':
         color = input('''
-            You arrive at the island unharmed. There is a house with 3 doors. 
+            You arrive at the island unharmed. You entered a large castle.
+            Inside the castle there are 3 large doors with different colors. 
             One red, one yellow, and one blue. Which colour do you choose?
             >> ''').lower()
         if color == 'red':
             print('''
-            You entered the Great Dragon's Chamber. 
-            You disturbed its slumber, The Great Dragon burns you.
-            You Died! Game Over!
+                You entered the Great Dragon's Chamber. 
+                You disturbed its slumber, The Great Dragon burns you.
+                You Died! Game Over!
             ''')
         elif color == 'yellow':
             print('''
-            You have chosen the treasure vault. 
-            You are eligible to take as much treasure as you want!
-            Congratulations! You win the game!!
+                You have chosen the treasure vault. 
+                You are eligible to take as much treasure as you want!
+                Congratulations! You win the game!!
             ''')
         elif color == 'blue':
             print('''
-            You entered the domain of the Monarch of Shadows. 
-            The Lord decided to curse you to become his shadow soldier.
-            You lost! Game Over!
+                You entered the domain of the Monarch of Shadows. 
+                The Lord decided to curse you to become his shadow soldier.
+                You lost! Game Over!
             ''')
     else:
         print('''
-        No one can swim across the Lake of Frozen Mist.
-        The Frozen mist freezes your body. You can no longer move.
-        You died! Game Over! 
+            No one can swim across the Lake of Frozen Mist.
+            The frozen mist freezes your body. You can no longer move.
+            You died! Game Over! 
         ''')
 else:
     print('''
-    You took the wrong turn, you met the king of the north and he thinks you're a spy!
-    You're executed by the kingdom of the north. Game Over..
+        You took the wrong turn, you met the King of the East and he thinks you're a spy!
+        You're executed by the kingdom of the East. Game Over..
     ''')
