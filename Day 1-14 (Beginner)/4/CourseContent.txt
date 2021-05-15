@@ -1,0 +1,10 @@
+RANDOM MODULE -> GENERATE RANDOM NUMBERS AND RANDOM FLOATS
+LISTS-> BASIC LIST FUNCTIONS(CREATE, UPDATE, ACCESS), NESTED LISTS
+
+// notes are in notes.py
+// example of importing a module = moduleExample1.py
+// Exercise 1: headsOrTails -> implements randint and if else
+// Exercise 2: bankerRoulette -> implements randint, string functions(split, strip), list, string formatting
+// Exercise 3: treasureMap -> implements nested lists, and getting emojis(it turns out it is possible to print emojis in python)
+
+- Project = Rock Paper Scissors Game 
