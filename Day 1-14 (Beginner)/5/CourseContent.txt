@@ -1,0 +1,11 @@
+FOR LOOPS -> SIMPLE FOR LOOPS, RANGE FUNCTION, INFINITE LOOP USING LISTS
+RANDOM -> SHUFFLE
+LISTS -> CREATE A LIST USING *
+
+// notes are in notes.py
+// EXERCISE 1: averageHeights -> implements for loops, standard I/O, arithmetic operator, rounding, and typecasting
+// EXERCISE 2: highScore -> implements for loops, standard I/O, arithmetic operator, conditionals, and typecasting
+// EXERCISE 3: addingEvens -> implements for loops, range functions
+// EXERCISE 4: fizzBuzz -> implements for loops and conditionals
+
+- Project = Password Generator
