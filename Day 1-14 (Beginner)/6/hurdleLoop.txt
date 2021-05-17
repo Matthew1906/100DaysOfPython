@@ -1,0 +1,53 @@
+# EXERCISES : Hurdle Loop 1-4
+# Done in reeborg -> can't be put in python-> technically uses a built in function
+# the link to reeborg is in the Course Content
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def move_right(num):
+    for i in range(num):
+        turn_right()
+        move()
+
+def move_left(num):
+    for i in range(num):
+        turn_left()
+        move()
+
+def jump():
+    move_left(1)
+    move_right(2)
+    turn_left()
+
+# Hurdles Loop Challenge 1
+for i in range(6):
+    move()
+    jump()
+
+# Hurdles Loop Challenge 4
+while not at_goal():
+    if front_is_clear():
+        move()
+    else:
+        move_left(1)
+        while not right_is_clear():
+            move()
+        move_right(1)
+        turn_right()
+        while front_is_clear():
+            move()
+        turn_left()
+# Maze
+while front_is_clear():
+    move()
+turn_left() 
+while not at_goal():
+    if right_is_clear():
+        move_right()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
