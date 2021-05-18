@@ -11,7 +11,6 @@ from answerkey import answers
 
 # 3. Set the answer and initial values needed
 # create list of answers (in answerkey.py)
-
 # you can use this, or you can use random.choice
 answer = list(answers[random.randint(0,len(answers)-1)].lower())
 
