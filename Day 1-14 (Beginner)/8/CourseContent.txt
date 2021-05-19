@@ -1,0 +1,9 @@
+FUNCTIONS WITH INPUTS
+ARGUMENTS AND PARAMETERS
+POSITIONAL ARGUMENTS AND KEYWORD ARGUMENTS
+
+// notes are in notes.py
+// EXERCISE 1: Area Calculator -> implements function with inputs
+// EXERCISE 2: Prime Number Checker -> implements math, functions with inputs
+
+- Project: Caesar Cypher
