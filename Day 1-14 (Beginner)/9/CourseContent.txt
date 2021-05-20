@@ -1,0 +1,7 @@
+DICTIONARIES -> KEYS, VALUES, ITEMS, NESTED DICTIONARIES
+
+// notes are in notes.py
+// EXERCISE 1: studentGrades -> implements dictionaries and loops
+// EXERCISE 2: Travel Log -> implements nested dictionaries, and printing
+
+- Project = Secret Auction
