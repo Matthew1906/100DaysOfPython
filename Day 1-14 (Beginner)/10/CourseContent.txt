@@ -1,0 +1,9 @@
+FUNCTIONS WITH OUTPUTS
+MULTIPLE RETURN VALUES
+DOCSTRINGS
+PRINT VS RETURN
+WHILE LOOPS, FLAGS, AND RECURSION
+
+// Exercise 1: Days in a Month-> implements function with outputs, docstrings
+
+- Project: Calculator
