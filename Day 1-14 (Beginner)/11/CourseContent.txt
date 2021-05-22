@@ -1,5 +1,5 @@
 Similar to Hangman, this is a Project only day
-The code might not be similar to how the teacher explains it, since i coded it myself
+The code is not be similar at all to how the teacher explains it, since i coded it myself
 (You know what they say, "If it ain't broke...")
 
 - Project: Blackjack
