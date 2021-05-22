@@ -17,8 +17,8 @@ def count_total(cards):
         total+=cards[i]
     return total
 
-# deal cards to the player or the computer
 def deal_cards(cards):
+    '''Deal cards to the player or the computer'''
     new_card = random.randint(2,14)
     # condition for ace
     if new_card==11 and new_card+count_total(cards)>21:
