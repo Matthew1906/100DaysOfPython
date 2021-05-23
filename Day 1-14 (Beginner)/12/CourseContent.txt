@@ -1,0 +1,4 @@
+GLOBAL AND LOCAL SCOPES
+
+- notes are in notes.py
+- Project name: Guess the Number
