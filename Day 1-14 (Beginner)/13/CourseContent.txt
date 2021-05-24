@@ -1,0 +1,15 @@
+How to Debug
+1. Describe the Problem
+2. Reproduce the Bug
+3. Play Computer
+4. Fix the Errors
+5. Print Statement
+6. Use a Debugger 
+7. Take A Break
+8. Stack Overflow duh:v
+
+Exercise 1: Debug Odd Even -> = sign Error
+Exercise 2: Debug Leap Year -> type Error
+Exercise 3: Debug Fizz Buzz -> and or Error, Selection Errors
+
+- Project: Sadly, there is no project in day 13
