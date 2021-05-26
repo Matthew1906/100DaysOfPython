@@ -1,0 +1,9 @@
+More Complex Project -> set up a proper development environment
+
+IDE = Integrated Development environment
+
+Advised = Pycharm (I'll still use VSCode though)
+
+No notes
+
+- Project Name : Coffee Machine
