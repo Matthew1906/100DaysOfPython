@@ -1,0 +1,7 @@
+Object Oriented Programming
+
+notes are in notes.py
+
+- Project Name: Quiz Game
+// for the driver program will always be named in camelCase
+// while the supporting files will be named in snake_case
