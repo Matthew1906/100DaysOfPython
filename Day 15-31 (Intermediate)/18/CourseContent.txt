@@ -1,0 +1,11 @@
+Turtle Module
+Looking at documentation
+Using stack overflow
+
+Exercise 1: Draw Square
+Exercise 2: Draw Dashed Line
+Exercise 3: Draw Shapes
+Exercise 4: Draw Random Walk
+Exercise 5: Draw a Spyrograph
+
+Project Name: Hirst Painting 
