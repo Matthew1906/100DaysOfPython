@@ -1,0 +1,5 @@
+Event Listeners in Turtle
+Using Module Documentation to Program
+
+- Notes are in notes.py
+- Projects : Etch a Sketch and Turtle Race
