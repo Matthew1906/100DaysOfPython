@@ -1,0 +1,5 @@
+- Project Only Days (2 days): Snake Game
+
+- Progress of Day 21:
+    a. Create Snakes Class
+    b. Move and Control Snakes (Up, Down, Right, Left)
