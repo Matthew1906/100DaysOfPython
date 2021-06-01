@@ -1,5 +1,14 @@
 - Project Only Days (2 days): Snake Game
 
-- Progress of Day 21:
+- Progress of Day 20:
     a. Create Snakes Class
     b. Move and Control Snakes (Up, Down, Right, Left)
+- Progress of Day 21:
+    a. Food and Scoreboard
+    b. Main menu
+    c. Extend Snake length
+    d. Collision handling
+
+- Inheritance -> inheriting the parent's attributes and behaviours
+- Slicing -> slice a list/string 
+- Turtle -> uses documentations and searches
