@@ -1,0 +1,6 @@
+Add Highscore to Snake Game
+File Processing
+File Paths
+
+- Project: Mail Merge -> creating emails to different people
+(you can actually mail them)
