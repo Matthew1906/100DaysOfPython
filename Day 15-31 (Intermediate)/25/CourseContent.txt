@@ -1,0 +1,9 @@
+CSV module -> read using csv module
+Pandas Module-> read, write, and conversion, get row or column
+
+notes are in notes.py
+Exercise 1: Weather Data (in notes.py)
+Exercise 2: Student Data (in notes.py)
+Exercise 3: Squirrel Data (in squirrel_census.py)
+
+Project: U.S. States Game
