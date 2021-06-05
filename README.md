@@ -11,9 +11,10 @@ and exercises (if there are any)
 
 For the Projects, the driver program (where you run the code) uses camelCase, while other supporting files use snake_case
 
-## Projects (some are a little different (optimized and shortened code or gets slower due to using turtle graphics) than the file):
+## Projects:
 
-### Simple and Runnable in Console:  
+### Simple and Runnable in Console: 
+##### Some projects are a little different than the file, since it has been optimized and shortened 
 - Band Name Generator: https://replit.com/@matthewadrianus/bandNameGenerator
 - Tip Calculator: https://replit.com/@matthewadrianus/tipCalculator
 - Treasure Island Game: https://replit.com/@matthewadrianus/treasureIsland
@@ -30,7 +31,8 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Quiz Game: https://replit.com/@matthewadrianus/quizGame
 - Mail Merge: https://replit.com/@matthewadrianus/mailMerge
 
-### Uses Turtle GUI (limited screen size and slow performance):
+### Uses Turtle GUI:
+#### Limited Screen Size and Slow Performance Issue (but it actually works just fine)
 - Etch A Sketch: https://replit.com/@matthewadrianus/etchASketch
 - Turtle Race: https://replit.com/@matthewadrianus/turtleRace
 - Snake Game: https://replit.com/@matthewadrianus/snakegame
