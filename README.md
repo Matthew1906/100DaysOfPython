@@ -11,19 +11,30 @@ and exercises (if there are any)
 
 For the Projects, the driver program (where you run the code) uses camelCase, while other supporting files use snake_case
 
-Projects (some are a little different (optimized and shortened code) than the file):
-1. Band Name Generator: https://replit.com/@matthewadrianus/bandNameGenerator
-2. Tip Calculator: https://replit.com/@matthewadrianus/tipCalculator
-3. Treasure Island Game: https://replit.com/@matthewadrianus/treasureIsland
-4. Rock Paper Scissors: https://replit.com/@matthewadrianus/rockPaperScissors
-5. Password Generator: https://replit.com/@matthewadrianus/passwordGenerator
-6. Hangman: https://replit.com/@matthewadrianus/hangman
-7. Caesar Cypher: https://replit.com/@matthewadrianus/caesarCypher
-8. Secret Auction: https://replit.com/@matthewadrianus/secretAuction
-9. Calculator: https://replit.com/@matthewadrianus/calculator
-10. Blackjack: https://replit.com/@matthewadrianus/blackjack
-11. Number Guessing Game: https://replit.com/@matthewadrianus/numberGuessingGame
-12. Higher Lower Game: https://replit.com/@matthewadrianus/higherLower
-13. Coffee Machine: https://replit.com/@matthewadrianus/coffeeMachine
-14. Quiz Game: https://replit.com/@matthewadrianus/quizGame
-15. Mail Merge: https://replit.com/@matthewadrianus/mailMerge
+## Projects (some are a little different (optimized and shortened code or gets slower due to using turtle graphics) than the file):
+
+### Simple and Runnable in Console:  
+- Band Name Generator: https://replit.com/@matthewadrianus/bandNameGenerator
+- Tip Calculator: https://replit.com/@matthewadrianus/tipCalculator
+- Treasure Island Game: https://replit.com/@matthewadrianus/treasureIsland
+- Rock Paper Scissors Game: https://replit.com/@matthewadrianus/rockPaperScissors
+- Password Generator: https://replit.com/@matthewadrianus/passwordGenerator
+- Hangman Game: https://replit.com/@matthewadrianus/hangman
+- Caesar Cypher: https://replit.com/@matthewadrianus/caesarCypher
+- Secret Auction: https://replit.com/@matthewadrianus/secretAuction
+- Calculator: https://replit.com/@matthewadrianus/calculator
+- Blackjack Game: https://replit.com/@matthewadrianus/blackjack
+- Number Guessing Game: https://replit.com/@matthewadrianus/numberGuessingGame
+- Higher Lower Game: https://replit.com/@matthewadrianus/higherLower
+- Coffee Machine: https://replit.com/@matthewadrianus/coffeeMachine
+- Quiz Game: https://replit.com/@matthewadrianus/quizGame
+- Mail Merge: https://replit.com/@matthewadrianus/mailMerge
+
+### Uses Turtle GUI (limited screen size and slow performance):
+- Etch A Sketch: https://replit.com/@matthewadrianus/etchASketch
+- Turtle Race: https://replit.com/@matthewadrianus/turtleRace
+- Snake Game: https://replit.com/@matthewadrianus/snakegame
+- pong Game: https://replit.com/@matthewadrianus/pongGame
+- Turtle Crossing Game: https://replit.com/@matthewadrianus/turtleCrossing
+- U.S. States Game: https://replit.com/@matthewadrianus/statesGame
+
