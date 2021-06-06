@@ -1,0 +1,12 @@
+List and Dictionary Comprehension
+Iterating Pandas Series and Dataframe
+
+notes are in notes.py
+
+Exercise 1: Squaring Numbers
+Exercise 2: Filter Even Numbers
+Exercise 3: Data Overlap
+Exercise 4: Sentence Dictionary
+Exercise 5: Fahrenheit Dictionary
+
+Project Name: NATO Converter
