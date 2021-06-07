@@ -1,0 +1,12 @@
+Tkinter Module
+Advanced Arguments (*args and **kwargs)
+Widgets in Tkinter (Tk/window, Button, Label, Text, Entry, Radio, Check, Scale, Spin, Listbox)
+Layout in Tkinter (Place, Pack, Grid)
+
+notes are in notes.py
+
+Exercises:
+- playground -> Advanced Arguments
+- widget_examples -> Tkinter Widgets
+
+Project: Miles to Kilometer Converter
