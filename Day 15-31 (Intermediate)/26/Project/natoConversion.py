@@ -1,5 +1,5 @@
 # DAY 26 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: U.S. States Game
+# PROJECT NAME: NATO Converter
 # THINGS I IMPLEMENTED: Pandas Module, Dictionary comprehension
 
 # import module
