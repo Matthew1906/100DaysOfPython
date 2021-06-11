@@ -42,7 +42,8 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - U.S. States Game: https://replit.com/@matthewadrianus/statesGame
 
 ### Uses Tkinter GUI:
-#### Limited Screen Size, and probably Slower Performance Issue (it becomes slower when run on replit, but if it is run locally, it will work fine)
+#### Limited Screen Size, and probably Slower Performance Issue (it becomes slower / even unplayable when run on replit, but if it is run locally, it will work fine)
 - Mile to KM Converter: https://replit.com/@matthewadrianus/mileToKmConverter
 - Pomodoro Timer Application: https://replit.com/@matthewadrianus/pomodoroTimer
 - Password Manager: https://replit.com/@matthewadrianus/passwordManager
+- Flash Cards: https://replit.com/@matthewadrianus/flashCards
