@@ -52,7 +52,6 @@ def change_vocab():
         vocab_index = randint(0, vocab_length-1)
     french_vocabulary = vocab_dictionary['French'][vocab_index]
     english_vocabulary = vocab_dictionary['English'][vocab_index]
-    flash_card.itemconfig(vocab_text, text=english_vocabulary, fill = 'white')
     
 # Immediately change cards
 change_vocab()
