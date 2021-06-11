@@ -1,0 +1,5 @@
+Capstone Project: Flash Cards
+
+The implemented concepts are the same (they're both flash card apps) with the course
+However, it has different ways of implementations, since i'm not really adept with pandas
+
