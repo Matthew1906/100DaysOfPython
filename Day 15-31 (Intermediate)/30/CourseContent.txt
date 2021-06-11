@@ -1,1 +1,4 @@
 Error, Warning, JSON Format
+
+Exercise = KeyError and IndexError
+Improving Project Day 29
