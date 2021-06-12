@@ -12,7 +12,8 @@ and exercises (if there are any)
 For the Projects, the driver program (where you run the code) uses camelCase, while other supporting files use snake_case
 
 ## Projects:
-##### Some projects are a little different than the file, since it has been optimized and shortened 
+##### Some projects are a little different than the file, since it has been optimized and shortened
+##### Some projects are not put into a link, since it contains personal information and removing the personal info means the program won't work
 
 ### Simple and Runnable in Console: 
 - Band Name Generator: https://replit.com/@matthewadrianus/bandNameGenerator
@@ -47,3 +48,6 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Pomodoro Timer Application: https://replit.com/@matthewadrianus/pomodoroTimer
 - Password Manager: https://replit.com/@matthewadrianus/passwordManager
 - Flash Cards: https://replit.com/@matthewadrianus/flashCards
+
+## Run on Python Anywhere:
+- Automatic Birthday Wisher: Link NOT INCLUDED | in Day 32 Project Folder (You can insert your own data and your targeted recipient's data)
