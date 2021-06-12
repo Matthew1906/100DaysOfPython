@@ -1,0 +1,4 @@
+Modules
+
+Email SMTP -> send an email through python
+datetime -> date time in python
