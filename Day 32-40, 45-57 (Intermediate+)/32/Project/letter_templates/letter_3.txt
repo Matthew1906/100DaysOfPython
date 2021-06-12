@@ -1,0 +1,8 @@
+Dear [NAME],
+
+It's your birthday! Have a great day!
+
+All the best,
+
+[Sender]
+(This is an automated birthday message)
