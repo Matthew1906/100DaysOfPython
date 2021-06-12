@@ -14,10 +14,6 @@ Add a port number by changing code to
 # Simple Mail Transfer Protocol: rules how emails are sent and passed around in the internet
 # Mail Servers: Post Office, Recipient: Mailbox, SMTP: Postman
 
-
-# Create Fake Email: matthewadrianus1906@gmail.com
-# Password: #(3$hd84iQ3$
-
 import smtplib
 
 email = 'email'
