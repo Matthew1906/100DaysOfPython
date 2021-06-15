@@ -1,0 +1,8 @@
+API Keys
+Authentication
+Environment Variables
+Sending SMS -> use Twilio
+
+// SUpposedly posted on pythonanywhere
+
+Project: Rain Alert Notification (SMS)
