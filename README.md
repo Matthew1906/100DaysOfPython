@@ -50,5 +50,10 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Flash Cards: https://replit.com/@matthewadrianus/flashCards
 - Trivia Quiz: https://replit.com/@matthewadrianus/triviaQuiz
 
-### Run on Python Anywhere:
+### Uses Environment Variables (can't be run since there are personal data/urls):
 - Automatic Birthday Wisher: Link NOT INCLUDED | in Day 32 Project Folder (You can insert your own data and your targeted recipient's data)
+- ISS Location Notification System: Link NOT INCLUDED | in Day 33 Project Folder (You can insert your own data and your targeted recipient's data)
+- Weather Warning System: Link NOT INCLUDED | in Day 35 Project Folder (You can insert your own data and your targeted recipient's data)
+- Stock Trading News Alert System: Link NOT INCLUDED | in Day 36 Project Folder (it can't work well, need to use twilio API (which i didn't implement)
+- Habit Tracker: Link NOT INCLUDED | in Day 37 Project Folder (Requires user authentication and login to the related API (API Authentication)
+- Workout Tracker: https://replit.com/@matthewadrianus/workoutTracker (still won't work tho)
