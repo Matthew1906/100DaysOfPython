@@ -23,7 +23,7 @@ class DataManager:
 
     def getAllCities(self):
         get_result = requests.get(url = self.url, auth = (self.username, self.password)).json()['prices']
-        return [data['city'] for data in get_result['prices']]
+        return [data['city'] for data in get_result]
 
     def addIATACode(self, city:str, code:str):
         change_params = {
