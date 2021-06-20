@@ -1,2 +1,5 @@
-Project only 2 days : did not complete it
--- lots of errors, no time to do it
+Project only(2 days): Multiple reasons on why i can't complete it:
+1. The API Services have monthly request limit, and i've reached mine
+2. I think i took this course in the wrong time, since i tried multiple times
+   and it seems there are 0 to few available flights:|
+   
