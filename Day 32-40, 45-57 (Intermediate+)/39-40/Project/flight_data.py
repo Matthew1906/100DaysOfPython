@@ -1,11 +1,16 @@
-import requests, datetime as dt
-from data_manager import DataManager
-
 class FlightData:
-    #This class is responsible for structuring the flight data.
-    def __init__(self):
-        self.departure_code = 'CGK'
-        self.now = dt.datetime.now().strftime('%d/%m/%Y')
-        self.limit = (dt.datetime.now() + dt.timedelta(days = 30)).strftime('%d/%m/%Y')
-
-
+    '''Flight Data Structure'''
+    def __init__(self, dep_airport, arr_airport, cityTo, countryTo, price, dep_time, arr_time, link):
+        self.dep_airport = dep_airport
+        self.arr_airport = arr_airport
+        self.city_from = 'Jakarta'
+        self.countryFrom = 'Indonesia'
+        self.cityTo = cityTo
+        self.countryTo = countryTo
+        self.price = price
+        self.dep_date = dep_time.split("T")[0]
+        self.dep_time = dep_time.split("T")[1].split(".")[0]
+        self.arr_date = arr_time.split("T")[0]
+        self.arr_time = arr_time.split("T")[1].split(".")[0]
+        self.link = link
+        
