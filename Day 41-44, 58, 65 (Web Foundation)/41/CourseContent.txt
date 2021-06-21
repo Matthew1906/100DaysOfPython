@@ -1,0 +1,22 @@
+How the Internet works:
+- Internet: a long piece of wire that connects different computer to each other
+- Computer that is online 24/7, store lots of data -> a server
+- Computer that people use -> a client
+1. Browser -> send message to ISP -> relay to DNS Server (like a phonebook)
+2. DNS Server -> find an IP Address with that domain name, and sends back the IP Address
+3. Client -> sends a direct request to the IP Address through the internet backbone
+4. Similar to sending mail to friends outside country
+5. Server returns back the files and data to the client
+
+How Website works:
+- Browser: software that allows you to look up ip address and receive data, rendering them
+- Data received: HTML, CSS, JS
+- HTML (Hypertext Markup Language): structure of Website
+- CSS (Cascading Style Sheets): styling of Website
+- JS (Javascript): Behaviour of a Website
+
+HTML Basics:
+- Anatomy of HTML Tags
+- Lists (Unordered and Ordered Lists)
+- Links and Anchor tags
+ 
