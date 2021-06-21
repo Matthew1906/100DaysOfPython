@@ -4,7 +4,7 @@ from flight_data import FlightData
 TEQUILA_URL = "https://tequila-api.kiwi.com/"
 
 TEQUILA_HEADER = {
-    'apikey':"yyyESODifzwvd4Bq3pb7L2sv6INUXk7X",
+    'apikey':"apikey",
     'accept':'application/json'   
 }
 

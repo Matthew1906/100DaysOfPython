@@ -3,10 +3,11 @@ import requests
 class DataManager:
     #This class is responsible for talking to the Google Sheet.
     def __init__(self):
-        self.url = 'https://api.sheety.co/c309161084ec9d9b461c641951201c64/flightDealsProject/prices'
+
+        self.url = 'url'
         self.header = {'Content-Type':'application/json'}
-        self.username = 'Matthew1906'
-        self.password = 'fl16httr4ck3r'
+        self.username = 'username'
+        self.password = 'password'
 
     def getIndex(self, city:str):
         get_result = requests.get(url = self.url, auth = (self.username, self.password)).json()['prices']
@@ -23,7 +24,7 @@ class DataManager:
 
     def getAllCities(self):
         get_result = requests.get(url = self.url, auth = (self.username, self.password)).json()['prices']
-        return [data['city'] for data in get_result['prices']]
+        return [data['city'] for data in get_result]
 
     def addIATACode(self, city:str, code:str):
         change_params = {
