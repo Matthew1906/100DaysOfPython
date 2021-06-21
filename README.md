@@ -38,7 +38,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Etch A Sketch: https://replit.com/@matthewadrianus/etchASketch
 - Turtle Race: https://replit.com/@matthewadrianus/turtleRace
 - Snake Game: https://replit.com/@matthewadrianus/snakegame
-- pong Game: https://replit.com/@matthewadrianus/pongGame
+- Pong Game: https://replit.com/@matthewadrianus/pongGame
 - Turtle Crossing Game: https://replit.com/@matthewadrianus/turtleCrossing
 - U.S. States Game: https://replit.com/@matthewadrianus/statesGame
 
@@ -57,3 +57,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Stock Trading News Alert System: Link NOT INCLUDED | in Day 36 Project Folder (it can't work well, need to use twilio API (which i didn't implement)
 - Habit Tracker: Link NOT INCLUDED | in Day 37 Project Folder (Requires user authentication and login to the related API (API Authentication)
 - Workout Tracker: https://replit.com/@matthewadrianus/workoutTracker (still won't work tho)
+- Flight Club Application: https://replit.com/@matthewadrianus/FlightClub (it can work since im using dummy account)
+
+### Website (some of them are pure HTML, CSS, JS):
+- Personal Site: https://replit.com/@matthewadrianus/Personal-Site
