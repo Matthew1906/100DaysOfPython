@@ -60,4 +60,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Flight Club Application: https://replit.com/@matthewadrianus/FlightClub (it can work since im using dummy account)
 
 ### Website (some of them are pure HTML, CSS, JS):
-- Personal Site: https://matthew1906.github.io/cv/
+- Personal Site: https://matthew1906.github.io/personal_site/
