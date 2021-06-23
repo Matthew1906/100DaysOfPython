@@ -1,0 +1,4 @@
+Project Only Day (technically): Personal Site
+- Introduction to CSS
+- Debugging CSS Code: 
+    -> Use the chrome Developer tools: Inspect
