@@ -1,0 +1,7 @@
+Project Only Day (technically): Personal Site
+- CSS Intermediate:
+    => Box Positioning
+    => Display Block and Inline
+    => Favicon, Flaticon, and Giphy
+    => Float and Clear
+
