@@ -1,0 +1,18 @@
+Web Scraping using Beautiful Soup
+- Use find to look for elements based on HTML tags and attributes
+- Use find_all to look for all elements satisfying the parameters (HTML tags and attributes)
+- Use select_one to look for elements using CSS selectors
+- Use select to look fot all elements using CSS selectors
+- We can parse locally using open() or parse a live website using requests
+
+** HTML tags and attributes = tagname (name), class(class_), id(id), etc.
+** CSS selectors => more or less similar with HTML tags, but can etter specify an element
+
+Legality of Web Scraping:
+- Don't commercialize on copyrighted content
+- Don't commercialize on data that requires authentication
+- Prioritize public APIs
+- Respect the owner (don't accidentally commit a DDoS attack)
+- add '/robots/txt' on the end of the url to check which are allowed
+
+
