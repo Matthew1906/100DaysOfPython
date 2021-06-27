@@ -62,3 +62,8 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 ### Website (some of them are pure HTML, CSS, JS):
 - Personal Site: https://replit.com/@matthewadrianus/Personal-Site
 - Personal Site 2: https://matthew1906.github.io/web_cv_site/
+
+### Web Scraping (some of them can't be run, since they use personal id/application):
+- Top 100 Movies Scraper: https://replit.com/@matthewadrianus/top100Movies
+- Musical Time Machine: LINK NOT INCLUDED | in Day 46 Project Folder (You can use your own CLIENT ID & CLIENT SECRET, it's a bit complicated to connect with spotify tho)
+- Amazon Price Bot: REPLIT LINK NOT INCLUDED, it needs to be run locally i think
