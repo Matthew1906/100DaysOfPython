@@ -8,7 +8,7 @@ from selenium.common.exceptions import ElementClickInterceptedException
 import datetime as dt
 
 # get the driver path
-chrome_driver_path = 'C:/Users/matth/OneDrive/Documents/ProgrammingLanguagesLearning/Python/Development/chromedriver'
+chrome_driver_path = YOUR_OWN_CHROME_DRIVER_PATH
 
 # Create the driver
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
