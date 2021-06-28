@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-chrome_driver_path = 'C:/Users/matth/OneDrive/Documents/ProgrammingLanguagesLearning/Python/Development/chromedriver'
+chrome_driver_path = YOUR_OWN_CHROME_DRIVER_PATH
 # give the selenium the right driver, so that it can interact well with the browser
 
 # Create the driver
