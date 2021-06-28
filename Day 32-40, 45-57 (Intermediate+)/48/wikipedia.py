@@ -3,7 +3,7 @@ from selenium import webdriver #Get webdriver
 from selenium.webdriver.common.keys import Keys # insert keys
 
 # Driver path
-chrome_driver_path = 'C:/Users/matth/OneDrive/Documents/ProgrammingLanguagesLearning/Python/Development/chromedriver'
+chrome_driver_path = YOUR_OWN_CHROME_DRIVER_PATH
 
 # Create the driver
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
