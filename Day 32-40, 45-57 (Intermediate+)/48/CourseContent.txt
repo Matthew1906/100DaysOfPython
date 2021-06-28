@@ -1,0 +1,3 @@
+Advanced Web Scraping: Selenium Webdriver
+-> One of the most well-known pentesting tool
+-> selenium can automate the browser
