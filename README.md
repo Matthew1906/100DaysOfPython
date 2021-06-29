@@ -68,3 +68,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Musical Time Machine: LINK NOT INCLUDED | in Day 46 Project Folder (You can use your own CLIENT ID & CLIENT SECRET, it's a bit complicated to connect with spotify tho)
 - Amazon Price Bot: REPLIT LINK NOT INCLUDED, it needs to be run locally i think
 - Cookie Clicker Game Automation: LINK NOT INCLUDED, it needs to be run locally with chrome driver (and the path to chromedriver)
+- Automated Job Application through Linked In: LINK NOT INCLUDED, instead of applying, i only save the jobs.
