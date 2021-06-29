@@ -7,7 +7,7 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from time import sleep
 
-driver_path = 'C:/Users/matth/OneDrive/Documents/ProgrammingLanguagesLearning/Python/Development/chromedriver'
+driver_path = CHROME_DRIVER_PATH
 job_link = 'https://www.linkedin.com/jobs/search/?geoId=102257491&keywords=python%20developer&location=London%2C%20England%2C%20United%20Kingdom'
 email = 'dummy124635789@gmail.com'
 password = 'dummy@1234'
