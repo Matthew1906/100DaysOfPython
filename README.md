@@ -69,3 +69,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Amazon Price Bot: REPLIT LINK NOT INCLUDED, it needs to be run locally i think
 - Cookie Clicker Game Automation: LINK NOT INCLUDED, it needs to be run locally with chrome driver (and the path to chromedriver)
 - Automated Job Application through Linked In: LINK NOT INCLUDED, instead of applying, i only save the jobs.
+- Internet Complaint Twitter Bot: LINK NOT INCLUDED, uses personal id and file path
