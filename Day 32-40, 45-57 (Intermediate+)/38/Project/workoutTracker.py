@@ -2,6 +2,7 @@
 # Project Name: Workout Tracker
 # Things i implemented: API Requests and Authentication
 
+# Requires input of personal data and private api
 import requests, datetime as dt
 
 APP_ID = 'appid'
