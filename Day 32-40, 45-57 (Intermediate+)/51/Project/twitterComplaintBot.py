@@ -8,11 +8,11 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 # Necessary Constants
-DRIVER_PATH = 'C:/Users/matth/OneDrive/Documents/ProgrammingLanguagesLearning/Python/Development/chromedriver'
+DRIVER_PATH = CHROME_DRIVER_PATH
 PROMISED_DOWNLOAD_SPEED = 25
 PROMISED_UPLOAD_SPEED = 3.75
-TWITTER_EMAIL = 'matthewadrianus@gmail.com'
-TWITTER_PASSWORD = 'GB2rqLAvhemwUgH'
+TWITTER_EMAIL = EMAIL
+TWITTER_PASSWORD = PASSWORD
 
 class InternetSpeedTwitterBot:
     # Constructor
