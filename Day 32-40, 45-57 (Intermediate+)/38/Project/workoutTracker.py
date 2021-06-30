@@ -1,4 +1,8 @@
-import requests, datetime as dt, os
+# Day 38 Project of 100 Days of Python
+# Project Name: Workout Tracker
+# Things i implemented: API Requests and Authentication
+
+import requests, datetime as dt
 
 APP_ID = 'appid'
 API_KEY = 'apikey'
