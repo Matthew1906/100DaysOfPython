@@ -14,7 +14,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 ## Projects:
 ##### Some projects are a little different than the file, since it has been optimized and shortened
 ##### Some can be run, but have performance issues (repl.it have its limitations)
-##### Some can't be run because there are environment variables, but feel free to have a look around the code
+##### Some can't be run because there are environment variables (API Authentication), but feel free to have a look around the code
 ##### Some are not put into a link, because it's too complicated to implement again with a dummy account / it uses applications that i use for myself
 
 ### Simple and Runnable in Console: 
@@ -53,7 +53,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Trivia Quiz: https://replit.com/@matthewadrianus/triviaQuiz
 
 ### Uses Environment Variables (The links here uses dummy account):
-#### You can see them, but you won't be able to run them, because it uses environment variables
+#### In some projects, you can see them, but you won't be able to run them, because it uses environment variables (API Authentication)
 - Automatic Birthday Wisher: https://replit.com/@matthewadrianus/automaticBirthdayWisher
 - ISS Location Notification System: https://replit.com/@matthewadrianus/issLocationNotification
 - Weather Warning System: https://replit.com/@matthewadrianus/weatherWarningSystem
@@ -66,10 +66,12 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Personal Site: https://replit.com/@matthewadrianus/Personal-Site
 - Personal Site 2: https://matthew1906.github.io/web_cv_site/
 
-### Web Scraping and Automation(some of them can't be run, since they use environment variables):
+### Web Scraping and Automation:
+#### Some of them can't run well due to authentication issues:
 - Top 100 Movies Scraper: https://replit.com/@matthewadrianus/top100Movies
 - Musical Time Machine: LINK NOT INCLUDED | in Day 46 Project Folder (You can use your own CLIENT ID & CLIENT SECRET, it's a bit complicated to connect with spotify tho)
 - Amazon Price Bot: https://replit.com/@matthewadrianus/amazonPriceTracker
 - Cookie Clicker Game Automation: https://replit.com/@matthewadrianus/cookieClickerAutomation
 - Automated Job Application through Linked In: https://replit.com/@matthewadrianus/jobAutomation (i only save the jobs | it sometimes doesn't work because linked in requires extra authorization)
-- Internet Complaint Twitter Bot: LINK NOT INCLUDED, uses personal id and file path
+- Internet Complaint Twitter Bot: https://replit.com/@matthewadrianus/twitterBot
+- Instagram Follower Bot: https://replit.com/@matthewadrianus/instagramBot
