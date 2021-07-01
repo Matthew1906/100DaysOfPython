@@ -1,0 +1,2 @@
+Project only day: Instagram Follower Bot
+The program works fine, however sometimes appeared an error when the clicks didnt result in following or requesting to follow
