@@ -27,7 +27,7 @@ amazon_prices = amazon_soup.find_all(name="p", class_="twisterSwatchPrice")
 prices = [float(amazon_price.get_text().strip().split('$')[1]) for amazon_price in amazon_prices]
 
 # If price is lower than $100 (for the pot), send an email
-if min(prices)<100:
+if len(prices)>0 and min(prices)<100:
     message = '\n'.join([
         'Subject: Instant Pot News Alert!\n', 
         f'Price of the instant pot you wanted have dropped to ${min(prices)}!\n',
@@ -39,3 +39,4 @@ if min(prices)<100:
         connection.starttls()
         connection.login(user = user_mail, password = user_password)
         connection.sendmail(from_addr = user_mail, to_addrs = user_mail, msg = message)
+    print(message)
