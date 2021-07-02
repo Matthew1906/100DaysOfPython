@@ -75,3 +75,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Automated Job Application through Linked In: https://replit.com/@matthewadrianus/jobAutomation (i only save the jobs | it sometimes doesn't work because linked in requires extra authorization)
 - Internet Complaint Twitter Bot: https://replit.com/@matthewadrianus/twitterBot
 - Instagram Follower Bot: https://replit.com/@matthewadrianus/instagramBot
+- Automated Data Entry Job: https://replit.com/@matthewadrianus/dataEntryAutomation
