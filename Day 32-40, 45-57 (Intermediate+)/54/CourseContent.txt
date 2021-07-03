@@ -1,0 +1,27 @@
+Command Line
+Decorators
+Web Development with Flask
+
+Backend:
+- Client: User 
+- Server: A Computer tha's on 24/7, ready to receive requests
+- Database: Data Storage
+
+For the Flask to work, need to do lots of things:
+1. In Windows CMD: python -m venv env
+2. Ctrl Shift P: Python: Select Interpreter: By Path 
+3. Find the path to python.exe
+4. It will set up into env:venv as an Interpreter
+5. In vscode, there is a prompt to install pylint, do it if you want
+6. In Python terminal: python -m pip install --upgrade pip
+7. In Python terminal: python -m pip install flask  
+8. In Python terminal: set FLASK_APP=appName.py (By Default, its called app.py)
+9. In Python terminal: python -m flask run
+------ Link to Manual: https://code.visualstudio.com/docs/python/tutorial-flask
+
+Command Line Interface: 
+- Kernel: Core of the OS
+- Shell: User Interface
+   a. Command Line Interface
+   b. Graphical User Interface
+- Command Line Interface: greater control
