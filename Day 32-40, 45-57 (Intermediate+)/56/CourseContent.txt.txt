@@ -1,0 +1,2 @@
+Inserting Static files to flask server
+Project name: Personal Site
