@@ -67,6 +67,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Personal Site 2: https://matthew1906.github.io/web_cv_site/
 - Higher Lower URL Game: https://replit.com/@matthewadrianus/higherLowerURL
 - Portofolio Website (Prototype): https://replit.com/@matthewadrianus/100daysofPython-portofolio1
+- Blog Posts: https://replit.com/@matthewadrianus/blogPosts
 
 ### Web Scraping and Automation:
 #### Some of them can't run well due to authentication issues:
