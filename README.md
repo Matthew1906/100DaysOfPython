@@ -68,6 +68,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Higher Lower URL Game: https://replit.com/@matthewadrianus/higherLowerURL
 - Portofolio Website (Prototype): https://replit.com/@matthewadrianus/100daysofPython-portofolio1
 - Blog Posts: https://replit.com/@matthewadrianus/blogPosts
+- Tindog: https://replit.com/@matthewadrianus/tindog
 
 ### Web Scraping and Automation:
 #### Some of them can't run well due to authentication issues:
