@@ -1,0 +1,16 @@
+Steps of Web Design:
+1. Look other people's websites
+2. Check available UI Designs in the Internet
+3. Wireframing: Low Quality Design
+-> balsamiq.cloud
+-> classic pen & paper
+4. Mock Up: High Quality Design (Optional)
+5. Prototype
+Inspiration: Dribble website
+
+Things i learnt:
+- Fontawesome
+- Bootstrap 5.0 (Grid layout, Buttons, Carousel, Cards)
+- CSS Refactoring, Selectors, Media Queries, z-index
+
+
