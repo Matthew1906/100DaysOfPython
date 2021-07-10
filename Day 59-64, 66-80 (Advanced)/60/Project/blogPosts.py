@@ -35,10 +35,10 @@ def contact():
     if request.method == 'POST':
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
-            connection.login(user='dummy124635789@gmail.com', password='dummy@1234')
+            connection.login(user=USER_MAIL, password=PASSWORD)
             connection.sendmail(
-                from_addr='dummy124635789@gmail.com', 
-                to_addrs='matthewadrianus@gmail.com', 
+                from_addr=USER_MAIL, 
+                to_addrs=TARGET_MAIL, 
                 msg=f"Subject: New Contact\n\n"\
                 f"Name: {request.form['name']}\n"\
                 f"Email: {request.form['email']}\n"\
