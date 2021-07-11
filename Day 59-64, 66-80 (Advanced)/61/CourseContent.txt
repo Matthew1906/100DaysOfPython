@@ -1,0 +1,6 @@
+WTForms (Instant Forms, Form Validation)
+Flask WTForms
+Jinja Templates
+Flask using Bootstrap
+
+Technically, there are no projects
