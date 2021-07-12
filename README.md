@@ -70,6 +70,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Blog Posts 1: https://replit.com/@matthewadrianus/blogPosts1
 - Tindog: https://replit.com/@matthewadrianus/tindog
 - Blog Posts 2: https://replit.com/@matthewadrianus/blogPosts2
+- Cafe Review Website: https://replit.com/@matthewadrianus/cafeReview
 
 ### Web Scraping and Automation:
 #### Some of them can't run well due to authentication issues:
