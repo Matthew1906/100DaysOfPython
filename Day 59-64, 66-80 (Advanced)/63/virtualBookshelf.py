@@ -16,7 +16,7 @@ from flask_sqlalchemy import SQLAlchemy
 # B. The sqlalchemy method
 
 app = Flask(__name__)
-app.config['SQL_ALCHEMY_DATABASE_URI'] = "sqlite:////new-books-collection.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///new-books-collection.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -29,8 +29,6 @@ class Book(db.Model):
     
     def __repr__(self):
         return '<Book %r>' % self.book_title
-
-# If we do it like this, it will create new database everytime
 
 db.create_all()
 
