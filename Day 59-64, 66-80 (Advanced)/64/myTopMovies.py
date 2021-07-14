@@ -15,7 +15,7 @@ import requests
 # Create App
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
-app.config['SQL_ALCHEMY_DATABASE_URI'] = "sqlite:////top-10-movies-collection.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///top-10-movies-collection.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap(app)
 
@@ -33,20 +33,20 @@ class Movie(movie_db.Model):
     img_url = movie_db.Column(movie_db.String(5000), nullable=False)
 
 movie_db.create_all()
-# This is a mock database, since if i commented the adding first movie, it wont exist in the database, which is very weird
 
-first_movie = Movie(
-    title = 'V for Vendetta',
-    year = 2005,
-    description = 'In a future British tyranny, a shadowy freedom fighter, known only by the alias of "V", plots to overthrow it with the help of a young woman.',
-    rating = 8.1,
-    ranking = 10,
-    review = 'Utterly Spectacular!',
-    img_url = 'https://upload.wikimedia.org/wikipedia/id/9/9f/Vforvendettamov.jpg'
-)
+# When running the program for the first time, it is necessary to uncomment the code below, else, comment them
+# first_movie = Movie(
+#     title = 'V for Vendetta',
+#     year = 2005,
+#     description = 'In a future British tyranny, a shadowy freedom fighter, known only by the alias of "V", plots to overthrow it with the help of a young woman.',
+#     rating = 8.1,
+#     ranking = 10,
+#     review = 'Utterly Spectacular!',
+#     img_url = 'https://upload.wikimedia.org/wikipedia/id/9/9f/Vforvendettamov.jpg'
+# )
 
-movie_db.session.add(first_movie)
-movie_db.session.commit()
+# movie_db.session.add(first_movie)
+# movie_db.session.commit()
 
 # Home -> display all movies
 @app.route("/")
