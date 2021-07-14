@@ -1,0 +1,28 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block title %}Edit Movies{% endblock %}
+
+{% block content %}
+<div class="content">
+  <h1 class="heading">{{movie.title}}</h1>
+  <p class="description">Edit Movie Rating</p>
+</div>
+<div class="card">  
+  <form action="{{url_for('edit',movie_id=movie.movie_id)}}" method="POST">
+    {{form.csrf_token}}
+    <h4>Your Rating out of 10 (e.g. 6.5)</h4><br>
+    {{form.rating()}}<br><br>
+    <h4>Your Review</h4><br>
+    {{form.review()}}<br><br>
+    {{form.submit()}}
+  </form>
+</div>
+{% endblock %}
