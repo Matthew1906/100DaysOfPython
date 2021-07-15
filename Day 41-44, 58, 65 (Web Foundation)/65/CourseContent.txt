@@ -1,0 +1,49 @@
+Web Design School: Introduction to Web Design
+-> How to make a website -> Web Design Principles
+
+1. Color Theory
+- Art and Science of creating the right colour pallette
+- Be Aware of the Mood
+  a. Red: Love, Energy, and Intensity
+  b. Yellow: Joy, Intellect, Attention (EXTREME)
+  c. Green: Freshness, Growth, Safety -> Food
+  d. Blue: Stability, Trust, Serenity -> Trustworthiness
+  e. Purple: Royalty, Wealth, Feminity
+- Make sure you're using the correct intention and correct Color
+* Using colors with distance of 2 -> Analogous Colours 
+* Using colors opposing one another -> Complementary Colours -> Attention -> grabbing Attention
+** Colour Discord-> dont use complementary for text and background text
+* Triadic color pallette, Square Color
+* Look for color pallette -> adobe color
+** link to adobe color: https://color.adobe.com/create
+* Color Hunt: Used by Designers
+
+2. Typography
+- Fonts DO MATTER
+- Type of Fonts: 
+  a. Serif: Feet at the end -> marble carvings -> serious and older -> letterhead -> Traditional, Stable, Respectable
+  b. Sans Serif -> Perfect right angle -> approachable and friendly -> Sensible, Simple, Straightforward
+  c. Script -> Personal, Creative, Elegant
+  d. Display -> Friendly, Loud, Amusing
+  e. Modern -> Stylish, Chic, Smart
+- Fonts have Emotions
+- Things to look out for: Open Shapes, Ample intercharacter spacing, unambiguous forms, varying proportions
+- Use 2 Different Fonts: Similar Moods and Era Or Contrast (Serif and Sans-Serif, or changing weights)
+
+3. User Interface Design
+- Hierarchy
+  * We are always drawn to bigger Things
+  * Hierarchy of importance -> most important -> emphasized
+  * Hierarchy -> Uses color, size
+- Layout
+- Alignment
+  * Reduce number of alignment points
+- White Space (empty space around texts)
+- Audience -> Depends on the Audience
+
+4. User Experience Design
+- Simplicity = Keep things Simple
+- Consistency = For example: Nav Bar should be consistent
+- Reading Patterns = F Layout, Z Layout (faster)
+- All Platform Design = Make sure its adaptable to any Platform
+- Don't Use UI/UX for Evil (Whatever that is): Patterns that is beneficial for company and bad for users
