@@ -1,0 +1,18 @@
+Build complete RESTFUL API
+
+REST: Representational State Transfer
+-> Client give request using HTTP Requests to server
+-> Client can also give FTP Requests
+-> Make sure we give the correct request
+
+* API = Menu of things the server can give to the clients
+* REST = Architectural style of designing API's 
+** (Others include SOAP,GraphQL, Falcor, etc.)
+
+* REST = GOLD STANDARD
+-> Rules Web developers can follow when building their APIs
+1. Use HTTP Request Verbs (GET, POST, PUT, PATCH, DELETE) 
+* Database = CRUD 
+2. Use Specific Pattern of Routes/ Endpoint URLs
+* Specify routes to get certain things
+
