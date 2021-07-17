@@ -74,6 +74,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Virtual Bookshelf : https://replit.com/@matthewadrianus/virtualBookshelf
 - Top Movies: https://replit.com/@matthewadrianus/topMoviesWebsite
 - Cafe Website with REST API: https://replit.com/@matthewadrianus/cafeREST
+- Blog Posts 3: https://replit.com/@matthewadrianus/blogPosts3
 
 ### Web Scraping and Automation:
 #### Some of them can't run well due to authentication issues:
