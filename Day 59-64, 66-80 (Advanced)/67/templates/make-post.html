@@ -1,0 +1,44 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block content %}
+{% include "header.html" %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/edit-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>{{title}}</h1>
+            <span class="subheading">You're going to make a great blog post!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <form action="{% if is_edit %}{{url_for('edit_post', post_id=post_id)}}{% else %}{{url_for('new_post')}}{% endif %}" method="post" novalidate>
+          {{form.csrf_token}}
+          <h4>{{form.title.label}}</h4>
+          {{form.title()}}<br><br>
+          <h4>{{form.subtitle.label}}</h4>
+          {{form.subtitle()}}<br><br>
+          <h4>{{form.author.label}}</h4>
+          {{form.author()}}<br><br>
+          <h4>{{form.img_url.label}}</h4>
+          {{form.img_url()}}<br><br>
+          <h4>{{form.body.label}}</h4>
+          {{form.body()}}<br><br>
+          {{form.submit(class='btn-primary')}}
+        </form>
+        {{ ckeditor.load() }}
+        {{ ckeditor.config(name='body') }}
+      </div>
+    </div>
+  </div>
+
+{% include "footer.html" %}
+{% endblock %}
