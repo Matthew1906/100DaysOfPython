@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="box">
+	<h1>Register</h1>
+    {% with message = get_flashed_messages() %}
+    {% if message %}
+    <p>{{message[0]}}</p>
+    {% endif %}
+    {% endwith %}
+    <form action="{{ url_for('register') }}" method="post">
+    	<input type="text" name="name" placeholder="Name" required>
+		<input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Sign me up.</button>
+    </form>
+</div>
+
+{% endblock %}
