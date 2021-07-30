@@ -1,0 +1,13 @@
+Web Application Deployment: 
+- Github, Heroku, and Gunicorn 
+- Git -> version control
+- PostgreSQL -> upgrade database
+
+Version Control: Git and Github
+-> Git: similar to checkpoint
+
+Using Heroku to Deploy the Application
+
+Gunicorn module to assist
+
+PostgreSQL = Add-on from heroku
