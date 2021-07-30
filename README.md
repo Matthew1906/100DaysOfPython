@@ -76,6 +76,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Cafe Website with REST API: https://replit.com/@matthewadrianus/cafeREST
 - Blog Posts 3: https://replit.com/@matthewadrianus/blogPosts3
 - Authentication Website: https://replit.com/@matthewadrianus/auth
+- Blog Posts (Final): https://matthew1906-blog-app.herokuapp.com/
 
 ### Web Scraping and Automation:
 #### Some of them can't run well due to authentication issues:
