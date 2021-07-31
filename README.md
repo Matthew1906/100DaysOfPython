@@ -88,3 +88,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Internet Complaint Twitter Bot: https://replit.com/@matthewadrianus/twitterBot
 - Instagram Follower Bot: https://replit.com/@matthewadrianus/instagramBot
 - Automated Data Entry Job: https://replit.com/@matthewadrianus/dataEntryAutomation
+
+### Data Science
+#### Uses Google Colab:
+- College Majors vs Employee Salary Analysis: https://colab.research.google.com/drive/1G-mn7nKhTO6s23W1nZL8JI2cbVp0PPzu?usp=sharing
