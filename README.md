@@ -94,3 +94,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - College Majors vs Employee Salary Analysis: https://colab.research.google.com/drive/1G-mn7nKhTO6s23W1nZL8JI2cbVp0PPzu?usp=sharing
 - Programming Languages Trend Analysis: https://colab.research.google.com/drive/1BNuSl_YaWmXuZSzizonKV1rojcWZ6zJ7?usp=sharing
 - Lego Analysis: https://colab.research.google.com/drive/1FU4NgErCXpb3_Jj3L41cxVdd_ZAaSUny?usp=sharing
+- Google Trends Analysis: https://colab.research.google.com/drive/1n1yhJ_KmItu11PZUhJk4-cOIDIcvhLPZ?usp=sharing
