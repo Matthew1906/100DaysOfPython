@@ -95,3 +95,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Programming Languages Trend Analysis: https://colab.research.google.com/drive/1BNuSl_YaWmXuZSzizonKV1rojcWZ6zJ7?usp=sharing
 - Lego Analysis: https://colab.research.google.com/drive/1FU4NgErCXpb3_Jj3L41cxVdd_ZAaSUny?usp=sharing
 - Google Trends Analysis: https://colab.research.google.com/drive/1n1yhJ_KmItu11PZUhJk4-cOIDIcvhLPZ?usp=sharing
+- Google Play Store Analysis: https://colab.research.google.com/drive/1zenxA7eLlsDNBPQwDO88U1VNKirYunSr?usp=sharing
