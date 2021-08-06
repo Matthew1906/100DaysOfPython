@@ -97,3 +97,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Google Trends Analysis: https://colab.research.google.com/drive/1n1yhJ_KmItu11PZUhJk4-cOIDIcvhLPZ?usp=sharing
 - Google Play Store Analysis: https://colab.research.google.com/drive/1zenxA7eLlsDNBPQwDO88U1VNKirYunSr?usp=sharing
 - Computation with Numpy and ND Arrays: https://colab.research.google.com/drive/1705y9yxXfli4nas60Y6uvJsMgCP_5JPv?usp=sharing
+- Movies Analysis, Linear Regression using SKLearn: https://colab.research.google.com/drive/1MUgcr6WU1MvciEFIycyN-Y7m7ZJue1k9?usp=sharing
