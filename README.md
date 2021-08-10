@@ -100,3 +100,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Movies Analysis, Linear Regression using SKLearn: https://colab.research.google.com/drive/1MUgcr6WU1MvciEFIycyN-Y7m7ZJue1k9?usp=sharing
 - Nobel Prize Analysis: https://colab.research.google.com/drive/1uPLUPNug3pmbu7a__0SCLbNobZFmBqqV?usp=sharing
 - Handwashing Analysis: https://colab.research.google.com/drive/1Sq_HDVFP8Txi8V-Qmz2o5Ia2iNNxgmBB?usp=sharing
+- Evaluate Residential Price: https://colab.research.google.com/drive/1lAW4ru4ETTbqWv9VRHkVgaGW9Fb8BWTD?usp=sharing
