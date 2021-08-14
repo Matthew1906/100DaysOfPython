@@ -1,0 +1,34 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<header class = 'add'>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class='header'>
+            {% if edit == True %}
+            <h1>Edit Project</h1>
+            <span>Edit details of your python projects</span>
+            {% else %}
+            <h1>Add New Projects</h1>
+            <span>Insert new python projects</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+<main class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto content">
+        <h3 class = 'form-prompt'>Fill out this form!</h3>
+        {% with messages = get_flashed_messages() %}
+          {% if messages: %}
+            <p class='flash'>{{messages[0]}}</p>
+          {% endif %}
+       {% endwith %}
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+      </div>
+    </div>
+</main>
+{% include"footer.html" %}

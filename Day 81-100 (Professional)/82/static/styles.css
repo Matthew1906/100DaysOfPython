@@ -1,0 +1,120 @@
+/* Base.html */
+
+.navbar{
+    font-weight:2rem;
+}
+
+.nav-align{
+    justify-content:flex-end;
+    padding-right: 50px;
+}
+
+/* Header */
+.index{
+    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtOjcBCgoKDQ0NDg0NDysZFRktKysrKy0rKy0rKysrLSsrKystKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAABAAIDB//EAB4QAQEBAQEAAgMBAAAAAAAAAAABEQISA1FxoeET/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/APEEkqJIgkkBSKoiiAOI4qJHDgDFhw4DOLGsWAzixrBgMpoYDKawAyGhiKA15WAzixoAyiEVJIEkgCSBFIEUVRFEEUYqIo4AOE4qDFjWIBixrFgjODG8GCs4Maw+Ac1jp5VCuflY1RUVllusgyGqEUAgAkkVJIAkQSRBFFURihBRoRqKikOKNRURxSGRUGHDhwBixucVqcT8rErl5Pj7dcWEK54LHTGbAYsZsdLGaisWM1us1FZZrdZqKyCKgyjQKAQipJACCCIKoTA0CagMVDGoI1FRRqKRucKgjU5tb55jcWJWJ8f23OTGsVlnFjWLAZwY3gsBixmxuwVFc7Ga6VmiudFbrFRWazWqzUVmitVmorNDVCKyGgASSKCCCjQMVCYJG5ADUhkbioJy3OYo1FZajUZjUaZajUEaioYcUaioMWNYgZwVoUGKzW6zUVis1usVFYrNbrneojQrNV6ZtRVWbUzUVWi1BFWjUkVIICYGoqJqMtQC1GWoqGNxiNxUajUZjUVGo3GI3FZajUZjUVGo1GY1FRqJJUFZp6sjn18n1+0VqufVg66rFRYeu3O9U1mstM1mtVmorNZrVZqKKy0zRQCEUJJFCSBpQGKhMBgNQwGKjUajMaio1G4xGoqNxqMRqKjcajMXuKy6w64/6UaEdr8jN7t/jnqCNMoCqs01moCs00VGmaKazUUVmmioorNarKKAQASSKEkBIIEwFULUZhgjUajMMVG41GNXpR11e3LWoqRv1pjEplEblOsadUb1azq0Q6qzqBUVaLUUUVUUUVmms1FVZpoRRQqEVUKgECEVJICQgJBVC0xq0G9WswqjUMZINwswxUaalYIjerWdWqN6tZ1aDWjWdWgRo0aBoFFRVQcoxFZorWIGBjdZqKziwgAGgihFAkEB1AgmmSqEhA0WSqNFkg1KdZOqjWnWNOg1q1nVoNaNUhwAsOq0BiWs6BtZqFRVRUAQVCKgkASSKkkAQIJJAUkBLJVCQgaLJAnWTFRrUpDoGQxnVqo1q1nVoHVo0agdGjQKQggqEBUkAQSRUkgSSBkpAkkCKQJFKiMSBFIC0kqFJAkUASQKipAEkgAkKFUgCSAJJFSSBJIH/9k=');
+}
+
+.about{
+    background-image: url('https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+}
+
+.add{
+    background-image: url('https://sharegate.com/app/uploads/2020/05/jasper-recommendedupdates-v20-04-23-featured-920x517.png');
+}
+
+.login{
+    background-image: url('https://wallpaperaccess.com/full/4893666.jpg');
+}
+
+header{
+    height:auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
+.header{
+     display:flex;
+     flex-direction:column;
+     justify-content:center;
+     align-items: center;
+     color:white;
+ }
+
+.float-right{
+    margin-top:10px;
+    float:right;
+}
+
+.carousel{
+    background-color: black;
+}
+
+.project-slides{
+    margin: 0 auto 0 auto;
+    height:auto;
+    width: 100%;
+}
+
+/* main */
+main{
+    margin-top:75px;
+    margin-bottom: 75px;
+}
+
+/* Projects */
+.project-name{
+    text-decoration: none;
+    font-weight: bolder;
+    color:black;
+}
+
+/* Form */
+.form-prompt{
+   margin-bottom: 20px;
+}
+
+.flash{
+    color:red;
+}
+
+.control-label{
+    padding-bottom:10px;
+}
+
+.form-group{
+    padding-bottom: 30px;
+}
+
+.link{
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    bottom:0;
+    height:auto;
+    width:100%;
+    padding: 50px 0 65px;
+    background-color: black;
+}
+footer .list-inline {
+    margin: 0;
+    padding: 0; 
+}
+footer .copyright {
+    margin-top:25px;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+    color:white
+}
+.big{
+    font-size: 30px;
+}
+
+
