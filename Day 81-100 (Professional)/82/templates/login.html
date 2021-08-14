@@ -1,0 +1,29 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<header class = 'login'>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class='header'>
+            <h1>Login</h1>
+            <span>Login to insert new projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+<main class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto content">
+        <h3 class = 'form-prompt'>Fill out this form!</h3>
+        {% with messages = get_flashed_messages() %}
+          {% if messages: %}
+            <p class='flash'>{{messages[0]}}</p>
+          {% endif %}
+       {% endwith %}
+        {{ wtf.quick_form(form, novalidate=True, button_map={"login": "primary"}) }}
+      </div>
+    </div>
+</main>
+{% include"footer.html" %}

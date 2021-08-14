@@ -1,0 +1,34 @@
+{% include 'header.html' %}
+<header class = 'index'>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class='header'>
+            <h1>My Portofolio</h1>
+            <span>Projects I've made throughout this course</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+<main class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% for project in projects %}
+        <a href="{{url_for('project', id = project.id)}}" class = 'project-name'><h2>{{project.name}}</h2></a>
+        <p>{{project.type}}
+          {% if current_user.is_authenticated %}
+            <a href="{{url_for('delete', id=project.id)}}" class = 'link flash'>✘</a>
+          {% endif %}
+        </p>
+        <hr>
+        {% endfor %}
+      </div>
+    </div>
+    {% if current_user.is_authenticated %}
+    <div>
+        <a class="btn btn-primary float-right" href="{{ url_for('add') }}">Add New Project</a>
+    </div>
+    {% endif %}
+</main>
+{% include "footer.html" %}

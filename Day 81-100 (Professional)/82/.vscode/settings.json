@@ -1,0 +1,4 @@
+{
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.envFile": "${workspaceFolder}/.env"
+}
