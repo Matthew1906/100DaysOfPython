@@ -105,3 +105,5 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 ### Portofolio Project
 #### Although I think other projects also counts as portofolio since i made them by myself (although some of them with the course's guidance), these projects are purely made by myself without the course's guidance:
 - Text to Morse Code Converter: https://replit.com/@matthewadrianus/textToMorseCode
+- Portofolio Website: https://matthew1906-python-portofolio.herokuapp.com/
+- Tic Tac Toe: https://replit.com/@matthewadrianus/ticTacToe
