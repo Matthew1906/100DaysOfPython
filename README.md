@@ -108,3 +108,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Portofolio Website: https://matthew1906-python-portofolio.herokuapp.com/
 - Tic Tac Toe: https://replit.com/@matthewadrianus/ticTacToe
 - Watermark Desktop App: https://replit.com/@matthewadrianus/watermarkApp
+- Typing Speed Test Desktop App: https://replit.com/@matthewadrianus/typingSpeedTest
