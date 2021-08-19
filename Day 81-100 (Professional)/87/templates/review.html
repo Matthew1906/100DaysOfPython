@@ -1,0 +1,50 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}
+  {{cafe.name}} Review
+{% endblock %}
+
+{% block styles %}
+  {{super()}}
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+      <div class='column'>
+        <h1>{{cafe.name}}</h1>
+        <img src="{{cafe.image_url}}" alt="{{cafe.name}}">
+        <h5>Location: <a href="{{cafe.location}}" target='_blank'>Map link</a></h5>   
+        <h5>Open hours: {{cafe.open_time}} - {{cafe.close_time}}</h5>
+        <h5>Coffee Rating: {{cafe.coffee_rating}}</h5>
+        <h5>Wifi Rating: {{cafe.wifi_rating}}</h5>
+        <h5>Power Outlet Rating: {{cafe.power_rating}}</h5>
+      </div>
+      <div class='column'>
+        <br><br>
+        {% if cafe.reviews %}
+        <ul class="reviewList">
+          {% for review in cafe.reviews %} 
+            <li> 
+              <p class = 'reviews'>{{review.body}}</p>
+              <p class = 'reviewer'> - {{review.name}}</p>
+            </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <h4>No customer reviews yet!</h4>
+        {% endif %}
+        <hr>
+        <h3>Review form</h3>
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "warning"}) }}
+      </div>
+  </div>
+  <br><br>
+  <div class="flex space-around">
+    <p><a href="{{url_for('home')}}">Return to home page</a></p>
+    <p><a href="{{url_for('cafes')}}">Back to all cafes</a></p>
+  </div>
+</div>
+{% endblock %}

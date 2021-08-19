@@ -1,0 +1,77 @@
+/* Adding Custom CSS to a Bootstrapped templates */
+
+body {
+  background-color: #333;
+  color: white;
+}
+
+a {
+    color: #ffc107;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  color: white;
+  background-color: #333;
+}
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+input, select{
+  color:black;
+  border-radius: 2%;
+}
+
+input[type=text]{
+  width:80%;
+  height:400%;  
+}
+
+h1{
+  font-size: 250%;
+  font-weight: bolder;
+}
+
+.flex{
+  display:flex;
+}
+
+.space-around{
+  justify-content: space-around;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.flash{
+  color:#ffc107;
+}
+
+.row{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+.reviewList {
+  list-style:none;
+  max-height:150px;
+  max-width:450px;
+  overflow:auto;
+}
+
+.reviews{
+  font-weight:bold;
+}
+
+.reviewer{
+  display: flex;
+  justify-content: flex-end;
+}

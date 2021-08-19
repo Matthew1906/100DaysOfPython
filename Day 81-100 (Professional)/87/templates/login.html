@@ -1,0 +1,27 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}Admin Access{% endblock %}
+{% block styles %}
+        {{super()}}
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+        <h1>
+          <a href="{{ url_for('cafes')}}"><img src="../static/images/back.png" alt="back" width="35px" height="35px" style="color: #f0ad4e;"></a>
+          Login as Admin
+        </h1>
+        {% with messages = get_flashed_messages() %}
+          {% if messages: %}
+            <p class='flash'>{{messages[0]}}</p>
+          {% endif %}
+        {% endwith %}
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "warning"}) }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

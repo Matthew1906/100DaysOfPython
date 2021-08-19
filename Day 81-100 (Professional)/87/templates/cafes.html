@@ -1,0 +1,53 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+  All Cafes
+{% endblock %}
+
+{% block styles %}
+  {{super()}}
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>All Cafes</h1>
+	    <table class="table">
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Open</th>
+          <th>Close</th>
+          <th>Coffee Rating</th>
+          <th>Wifi Rating</th>
+          <th>Power Outlet Rating</th>
+          <th>Reviews: </th>
+        </tr>
+        {% for cafe in cafes %}
+            <tr>
+              <td>{{cafe.name}}</td>
+              <td><a href="{{cafe.location}}" target="_blank">Maps Link</a></td>
+              <td>{{cafe.open_time}}</td>
+              <td>{{cafe.close_time}}</td>
+              <td>{{cafe.coffee_rating}}</td>
+              <td>{{cafe.wifi_rating}}</td>
+              <td>{{cafe.power_rating}}</td>
+              <td><a href="{{url_for('review', id=cafe.id)}}">Reviews</a></td>
+            </tr>
+        {% endfor %}
+  	  </table>
+    </div>
+  </div>
+  <div class="flex space-between">
+    <p><a href="{{url_for('home')}}">Return to index page</a></p>
+    {% if current_user.is_authenticated %}
+    <p><a href="{{url_for('logout')}}">Logout</a></p>
+    <p><a href="{{url_for('add_cafe')}}">Add new cafe</a></p>
+    {% else %}
+    <p><a href="{{url_for('login')}}">Login</a></p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
