@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {% if purpose == 'login' %}
+        Login
+    {% else %}
+        Register
+    {% endif %} 
+{% endblock %}
+{% block content %}
+<main class ='container'>
+    <div class="row">
+        <div class="col">
+            <h3 class='black'>
+                {% if purpose == 'login' %}
+                    Log in to your account 
+                    {% else %}
+                    Register an account
+                    {% endif %} 
+                to save and access your lists!
+            </h3>
+            <h5 class='black'>
+                {% if purpose == 'login' %}
+                Don't
+                {% else %}
+                Already
+                {% endif %}
+                have an Account? 
+                <a href="{% if purpose == 'login' %} {{url_for('register')}} {% else %} {{url_for('login')}} {% endif %}" class='auth-link link-primary'>
+                    {% if purpose == 'login' %}
+                    Register
+                    {% else %}
+                    Login
+                    {% endif %} 
+                </a>
+            </h5>
+            {% with messages = get_flashed_messages() %}
+            {% if messages: %}
+              <p class='red'>{{messages[0]}}</p>
+            {% endif %}
+          {% endwith %}     
+        </div>
+    </div>
+    <div class='row'>
+        <form action="{% if purpose == 'login' %} {{url_for('login')}} {% else %} {{url_for('register')}} {% endif %}" method="post" novalidate>
+            {{form.csrf_token}}
+            <div class="form-group">
+                <label class="control-label">{{form.username.label}}</label>
+                {{form.username(class="form-control")}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">{{form.password.label}}</label>
+                {{form.password(class="form-control")}}
+            </div>
+            <br>
+            {{form.submit(class='btn yellow-bg black')}}
+        </form>
+    </div>
+</main>
+{% endblock %}
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="To  do List App with Flask">
+    <meta name="author" content="Matthew Adrianus Mulyono">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class='turqouise-bg'>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top black-bg white">
+        <div class="container">
+          <a class="navbar-brand" href="{{url_for('home')}}">Todo List</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav-align" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              {% if not current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('register')}}">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('login')}}">Login</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a href="" class="nav-link">👤{{current_user.username}}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('logout')}}">Log Out</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    {% block content %}{% endblock %}
+    <footer class='black-bg'>
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <ul class="list-inline text-center">
+                <li class="list-inline-item">
+                  <a href="https://www.hackerrank.com/matthewadrianus" target="_blank">
+                    <span class="fa-stack fa-lg">
+                      <i class="big fab fa-hackerrank fa-stack-1x fa-inverse black-bg"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/matthewadrianusm/" target="_blank">
+                    <span class="fa-stack fa-lg">
+                      <i class="big fab fa-linkedin fa-stack-1x fa-inverse black-bg"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/Matthew1906/100DaysOfPython" target="_blank">
+                    <span class="fa-stack fa-lg">
+                      <i class="big fab fa-github fa-stack-1x fa-inverse black-bg"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <p class="copyright white">Copyright &copy; Matthew's Portofolio Project Website 2021</p>
+            </div>
+          </div>
+        </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

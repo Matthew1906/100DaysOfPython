@@ -1,0 +1,179 @@
+/* Background Colours */
+.yellow-bg{
+    background-color: #FFE194;
+}
+
+.white-bg{
+    background-color: #E8F6EF;
+}
+
+.turqouise-bg{
+    background-color: #B8DFD8;
+}
+
+.black-bg{
+    background-color: #4C4C6D;
+}
+
+.purple-bg{
+    background-color: #B980F0;
+}
+
+/* Colors */
+.yellow{
+    color: #FFE194;
+}
+
+.white{
+    color: #E8F6EF;
+}
+
+.turqouise{
+    color: #B8DFD8;
+}
+
+.black{
+    color: #4C4C6D;
+}
+
+.red{
+    color:red;
+}
+
+body{
+    position:relative;
+    height:auto;
+    min-height: 100% !important;
+}
+
+/* Navbar */
+.navbar{
+    font-weight:2rem;
+}
+
+.nav-align{
+    justify-content:flex-end;
+    padding-right: 50px;
+}
+
+.auth-link{
+    font-style: italic;
+    text-decoration: none;
+}
+
+.auth-link:hover{
+    color:#F6A9A9;
+}
+
+.control-label{
+    margin:0 0 10px;
+}
+
+/* Todo List */
+
+main{
+    padding:100px;
+    height:auto;
+}
+
+.main{
+    position:relative;
+    margin-top:55px;
+    display:flex;
+    width:100vw;
+    min-height:80vh;
+    height:auto;
+}
+
+h6{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.lists{
+    display:flex;
+    flex-direction: column;
+    width:25vw;
+    min-height:70vh;
+    height:auto;
+    padding:10px;
+}
+
+.list{
+    background-color: white;
+    width:75vw;
+    min-height:70vh;
+    height:auto;
+}
+
+.not-authenticated{
+    min-height:80vh;
+    height:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:100px;
+    font-weight: bolder;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.pointer{
+    font-size: larger;
+}
+
+.listname>input{
+    width:100%;
+    border:none;
+    padding:15px;
+    color:white;
+    font-size: x-large;
+    font-weight:bolder;
+}
+
+.listname>input::placeholder{
+    color:white;
+}
+
+.add-activity>input{
+    width:100%;
+    border:none;
+    margin-bottom:10px;
+    padding:10px;
+}
+
+.update-activity{
+    border:0.5px solid #E8F6EF;
+    padding:10px;
+}
+
+.update-activity>input{
+    border:none;
+}
+
+/* Footer */
+footer {
+    margin:0;
+    bottom:0;
+    height:auto;
+    width:100%;
+    padding: 30px 0;
+}
+
+footer .list-inline {
+    margin: 0;
+    padding: 0; 
+}
+
+footer .copyright {
+    margin-top:25px;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.big{
+    font-size: 30px;
+}
