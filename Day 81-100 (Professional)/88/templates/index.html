@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %} Todo List {% endblock %}
+{% block content %}
+
+{% if current_user.is_authenticated %}
+<div class="main">
+    <div class = 'lists yellow-bg'>
+        <h6 class='black'>
+            {{current_user.username}}'s Todo Lists
+            <a href="{{url_for('add_list')}}" class='link black'> + </a>
+            <hr>
+        </h6>
+        <ul>
+            {% for list in current_user.todolists %}
+                <li>
+                    <a href="{{url_for('show_list', id=list.id)}}" class='link black'>{{list.name}}</a>
+                    {% if list == todo %}
+                        <a href="{{url_for('delete_list', id=list.id)}}" class='link'>❌</a>
+                        <em class='pointer'>>></em>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class = 'list'>
+        <form action="{{url_for('edit_list', id = todo.id)}}" method="POST" class = 'listname'>
+            <input type="text" name="listname" placeholder="{{todo.name}}"class='purple-bg'>
+        </form>
+        <form action="{{url_for('add_activity', id= todo.id)}}" method="POST" class='add-activity'>
+            <input type="text" name="activity" placeholder="Add something to your todo list">
+        </form>
+        {% for activity in todo.activities[::-1] %}
+            <form action="{{url_for('update_activity', list_id = todo.id, activity_id=activity.id)}}" method="POST" class='update-activity'>
+                <a href="{{url_for('delete_activity', list_id = todo.id, activity_id=activity.id)}}" class='link'>✅</a>
+                <input type="text" name="activity" placeholder="{{activity.name}}">
+            </form>
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<div class="not-authenticated">
+    <h2 class='black'>You need to login to start making todolists!</h2>
+</div>
+{% endif %}
+{% endblock %}
+

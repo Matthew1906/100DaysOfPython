@@ -1,0 +1,11 @@
+# db.create_all()
+# admin = User(
+#     username=getenv('ADMIN_USERNAME'), 
+#     password=generate_password_hash(
+#         getenv('ADMIN_PASSWORD'),
+#         method='pbkdf2:sha256',
+#         salt_length=13,
+#     )
+# )
+# db.session.add(admin)
+# db.session.commit()
