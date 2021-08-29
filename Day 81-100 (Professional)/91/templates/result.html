@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Generated Image
+{% endblock %}
+
+{% block content %}
+<div class="main">
+    <img src="{{image}}">
+    <table class='table'>
+        <tr>
+            <th>Color</th>
+            <th>Hex Code</th>
+            <th>Count</th>
+        </tr>
+        {% for color, count in colors.items() %}
+        <tr>
+            <td>
+                <a href="{{url_for('copy_hexcode', hex_code=color)}}" onclick="hex_copied()" class='link'>
+                    <div class = 'box' style="background-color:{{color}};"></div>
+                </a>
+            </td>
+            <td>{{color}}</td>
+            <td>{{count}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{url_for('home')}}" class='btn btn-primary'>Go Back</a>
+</div>
+{% endblock %}
+            
+        
