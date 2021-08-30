@@ -1,27 +1,25 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Generated Image
+    Generated Color Palette
 {% endblock %}
 
 {% block content %}
 <div class="main">
-    <img src="{{image}}">
+    <img src="{{image}}" class='result-image'>
     <table class='table'>
         <tr>
             <th>Color</th>
             <th>Hex Code</th>
-            <th>Count</th>
+            <th>Percentage of Color</th>
         </tr>
         {% for color, count in colors.items() %}
         <tr>
             <td>
-                <a href="{{url_for('copy_hexcode', hex_code=color)}}" onclick="hex_copied()" class='link'>
-                    <div class = 'box' style="background-color:{{color}};"></div>
-                </a>
+                <button class='box' style="background-color:{{color}};" onclick="hex_copied('{{color}}')"></button>
             </td>
             <td>{{color}}</td>
-            <td>{{count}}</td>
+            <td>{{count}}%</td>
         </tr>
         {% endfor %}
     </table>

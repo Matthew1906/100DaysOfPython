@@ -26,6 +26,12 @@ input{
     margin-top:15px;
 }
 
+.result-image{
+    max-width:800px;
+    max-height:600px;
+    margin-bottom:20px;
+}
+
 .box{
     width:25px;
     height:25px;
