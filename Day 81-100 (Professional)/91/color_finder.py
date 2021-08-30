@@ -9,6 +9,10 @@ def get_image(file_path:str):
     '''Return numpy array of the image'''
     return array(Image.open(file_path))
 
+def get_length(image:array):
+    '''Get Length of numpy array'''
+    return image.shape[0]*image.shape[1]
+
 def find_top_colors(image:array):
     '''Extract top 10 colors from the image'''
     if len(image.shape)<=2:
@@ -21,6 +25,6 @@ def rgb_to_hex(rgb:tuple):
     rgb = list(map(lambda x:x/255, rgb))
     return to_hex(rgb, keep_alpha=True).upper()
 
-def reshape_colors(colors:list):
+def reshape_colors(colors:list, length:int):
     '''Reshape the (rgb_tuple, count) into {hex_color:count}'''
-    return {rgb_to_hex(color):count for color, count in colors}
+    return {rgb_to_hex(color):round(count*100/length, 2) for color, count in colors}
