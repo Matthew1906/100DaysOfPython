@@ -14,7 +14,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 ## Projects:
 
 ### Simple and Runnable in Console: 
-- Band Name Generator: [Link to Folder](Day 1-14 (Beginner)/1/Project/bandNameGenerator.md)
+- Band Name Generator: [Link to Folder](bandNameGenerator.md)
 - Tip Calculator: https://replit.com/@matthewadrianus/tipCalculator
 - Treasure Island Game: https://replit.com/@matthewadrianus/treasureIsland
 - Rock Paper Scissors Game: https://replit.com/@matthewadrianus/rockPaperScissors
