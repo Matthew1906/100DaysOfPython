@@ -114,4 +114,4 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Todo List Website: https://matthew1906-todolist-website.herokuapp.com/
 - Disappearing Text Writing Desktop App: https://replit.com/@matthewadrianus/disappearingTextWriting
 - Image Colour Palette Generator Website: https://matthew1906-palette-generator.herokuapp.com/
-- Udemy Course Scraper: [Link to Folder](./Day 81-100 (Professional)/92/)
+- Udemy Course Scraper: Link will be available soon
