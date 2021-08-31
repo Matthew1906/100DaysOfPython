@@ -1,7 +1,4 @@
-# DAY 14 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: HIGHER LOWER 
-# THINGS I IMPLEMENTED: Random Module, Functions and Recursions, System Module, F-Strings
-
+# Import modules
 from game_data import data
 from art import logo,vs 
 from random import randint

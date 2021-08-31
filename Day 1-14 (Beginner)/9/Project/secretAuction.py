@@ -1,7 +1,3 @@
-# DAY 9 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: SECRET AUCTION
-# THINGS I LEARNT: DICTIONARIES
-
 from art import logo
 
 bidders = {}

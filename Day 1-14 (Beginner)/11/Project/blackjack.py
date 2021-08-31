@@ -1,7 +1,3 @@
-# DAY 11 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: BLACKJACK
-# THINGS I IMPLEMENTED: Random Module, Functions, Recursion, Selection, Blackjack concept
-
 # import necessary libraries
 import random, art
 

@@ -1,7 +1,3 @@
-# DAY 12 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: GUESS THE NUMBER 
-# THINGS I IMPLEMENTED: Random Module, Functions
-
 # import necessary libraries
 import random, art
 
