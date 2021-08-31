@@ -1,7 +1,3 @@
-# DAY 7 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: HANGMAN
-# THINGS I LEARNT:RANDOM, SELECTION, REPETITION, LISTS, STRING FUNCTIONS, GAME LOGIC, IMPORTING MODULES
-
 # 1. Import necessary libraries (in this case: random)
 import random
 from art import logo, symbol

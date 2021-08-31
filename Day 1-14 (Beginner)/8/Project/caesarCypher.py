@@ -1,9 +1,13 @@
-# DAY 8 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: CAESAR CYPHER
-# THINGS I LEARNT: caesar cypher, ascii manipulation, modulus operator, functions
 from art import logo
+from os import system, name
 
-# There is a slight difference since i manipulate the ascii value, while in the course it uses simple addition
+def clear():
+  '''Library Way to Clear Screen'''
+  if name == 'nt':
+    _ = system("cls")
+  else:
+    _ = system("clear")
+
 def caesar(string, shift, direction):
     for i in range(len(string)):
         # check if its an alphabet
@@ -23,13 +27,20 @@ def caesar(string, shift, direction):
     else: 
         print(f"Here's the decoded result {string}")
 
-print(logo)
 while True:
+    print(logo)
     direction = input("Type 'encode' to encypt, type 'decode' to decrypt:\n")
     # convert to list so that it can be manipulated
     text = list(input("Type your message:\n").lower())
-    shift = int(input("Type the shift number:\n"))
-    caesar(string = text, direction=direction, shift = shift)
-    again = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
-    if again =='no':
-        break
+    try:
+      shift = int(input("Type the shift number:\n"))
+    except ValueError as error_message:
+      print(error_message)
+      input("Press enter to restart...")
+      clear()
+      continue
+    else:
+      caesar(string = text, direction=direction, shift = shift)
+      again = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
+      if again =='no':
+          break
