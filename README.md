@@ -14,18 +14,18 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 ## Projects:
 
 ### Simple and Runnable in Console: 
-- Band Name Generator: [Link to Folder](bandNameGenerator.md)
-- Tip Calculator: https://replit.com/@matthewadrianus/tipCalculator
-- Treasure Island Game: https://replit.com/@matthewadrianus/treasureIsland
-- Rock Paper Scissors Game: https://replit.com/@matthewadrianus/rockPaperScissors
-- Password Generator: https://replit.com/@matthewadrianus/passwordGenerator
-- Hangman Game: https://replit.com/@matthewadrianus/hangman
-- Caesar Cypher: https://replit.com/@matthewadrianus/caesarCypher
-- Secret Auction: https://replit.com/@matthewadrianus/secretAuction
-- Calculator: https://replit.com/@matthewadrianus/calculator
-- Blackjack Game: https://replit.com/@matthewadrianus/blackjack
-- Number Guessing Game: https://replit.com/@matthewadrianus/numberGuessingGame
-- Higher Lower Game: https://replit.com/@matthewadrianus/higherLower
+- Band Name Generator: [Link to Folder](Beginner/1/Project)
+- Tip Calculator: [Link to Folder](Beginner/2/Project)
+- Treasure Island Game: [Link to Folder](Beginner/3/Project)
+- Rock Paper Scissors Game: [Link to Folder](Beginner/4/Project)
+- Password Generator: [Link to Folder](Beginner/5/Project)
+- Hangman Game: [Link to Folder](Beginner/7/Project)
+- Caesar Cypher: [Link to Folder](Beginner/8/Project)
+- Secret Auction: [Link to Folder](Beginner/9/Project)
+- Calculator: [Link to Folder](Beginner/10/Project)
+- Blackjack Game: [Link to Folder](Beginner/11/Project)
+- Number Guessing Game: [Link to Folder](Beginner/12/Project)
+- Higher Lower Game: [Link to Folder](Beginner/14/Project)
 - Coffee Machine: https://replit.com/@matthewadrianus/coffeeMachine
 - Quiz Game: https://replit.com/@matthewadrianus/quizGame
 - Mail Merge: https://replit.com/@matthewadrianus/mailMerge
