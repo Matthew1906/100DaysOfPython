@@ -12,13 +12,9 @@ and exercises (if there are any)
 For the Projects, the driver program (where you run the code) uses camelCase, while other supporting files use snake_case
 
 ## Projects:
-##### Some projects are a little different than the file, since it has been optimized and shortened
-##### Some can be run, but have performance issues (repl.it have its limitations)
-##### Some can't be run because there are environment variables (API Authentication), but feel free to have a look around the code
-##### Some are not put into a link, because it's too complicated to implement again with a dummy account / it uses applications that i use for myself
 
 ### Simple and Runnable in Console: 
-- Band Name Generator: https://replit.com/@matthewadrianus/bandNameGenerator
+- Band Name Generator: [Link to Folder](Day 1-14 (Beginner)/1/Project/bandNameGenerator.md)
 - Tip Calculator: https://replit.com/@matthewadrianus/tipCalculator
 - Treasure Island Game: https://replit.com/@matthewadrianus/treasureIsland
 - Rock Paper Scissors Game: https://replit.com/@matthewadrianus/rockPaperScissors
