@@ -1,5 +1,5 @@
-__pycache__/
-env/
+__pycache__
+env
 .vscode
 .env
 Procfile
