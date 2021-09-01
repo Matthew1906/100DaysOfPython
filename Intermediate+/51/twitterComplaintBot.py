@@ -1,18 +1,21 @@
-# Day 51 of 100 Days of Python
-# Project Name: Automated Internet Complaint Twitter Bot
-# Things i implemented: Selenium, Time Module
-
 # Import Modules
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from dotenv import load_dotenv
+from os import getenv
+
+# Load Environment variables
+load_dotenv()
 
 # Necessary Constants
-DRIVER_PATH = CHROME_DRIVER_PATH
-PROMISED_DOWNLOAD_SPEED = 25
-PROMISED_UPLOAD_SPEED = 3.75
-TWITTER_EMAIL = EMAIL
-TWITTER_PASSWORD = PASSWORD
+# 25, 3.75 @FirstMediaCares
+DRIVER_PATH = getenv('CHROME_PATH')
+PROMISED_DOWNLOAD_SPEED = int(input("Insert promised download speed: "))
+PROMISED_UPLOAD_SPEED = float(input("Insert promised upload speed: "))
+INTERNET_PROVIDER = input('Insert Internet Service Provider twitter account (starts with @): ')
+TWITTER_EMAIL = getenv('EMAIL')
+TWITTER_PASSWORD = getenv('PASSWORD')
 
 class InternetSpeedTwitterBot:
     # Constructor
@@ -43,9 +46,9 @@ class InternetSpeedTwitterBot:
         password.send_keys(TWITTER_PASSWORD, Keys.ENTER)
         # Input Tweet Message
         sleep(3)
-        message_box = self.driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div[2]/div/div/div/div')
+        message_box = self.driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div[2]/div/div/div/div')
         message_box.click()
-        message_box.send_keys(f"Salam sejahtera bagi @FirstMediaCares,\n\n Mengapa Internet Speed saya {self.download_speed}down/{self.upload_speed}up, ketika dijanjikan {PROMISED_DOWNLOAD_SPEED}down/{PROMISED_UPLOAD_SPEED}?")
+        message_box.send_keys(f"Salam sejahtera bagi {INTERNET_PROVIDER},\n\n Mengapa Internet Speed saya {self.download_speed}down/{self.upload_speed}up, ketika dijanjikan {PROMISED_DOWNLOAD_SPEED}down/{PROMISED_UPLOAD_SPEED}?")
         sleep(2)
         tweet_button = self.driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[2]/div[3]')
         tweet_button.click()

@@ -1,18 +1,19 @@
-# Day 52 Project of 100 Days of Python
-# Project Name: Instagram Follower Bot
-# Things i implemented: Selenium, Time
-
 # import modules
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import ElementClickInterceptedException
 from time import sleep
+from dotenv import load_dotenv
+from os import getenv
+
+# Load Environment variables
+load_dotenv()
 
 # Create Constants
-CHROME_DRIVER_PATH = YOUR_CHROME_PATH
+CHROME_DRIVER_PATH = getenv('CHROME_PATH')
 TARGET_ACCOUNT = input("Insert target account: ")
-INSTAGRAM_EMAIL = input("Insert email: ")
-INSTAGRAM_PASSWORD = input("Insert password: ")
+INSTAGRAM_EMAIL = getenv('EMAIL')
+INSTAGRAM_PASSWORD = getenv('PASSWORD')
 
 # Create class
 class InstagramBot:
@@ -31,15 +32,21 @@ class InstagramBot:
         # Input Password
         password_input = self.driver.find_element_by_name('password')
         password_input.send_keys(INSTAGRAM_PASSWORD,Keys.ENTER)
-        sleep(1)
+        sleep(3)
+        not_now = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/div/div/button')
+        not_now.click()
+        sleep(3)
+        not_now1 = self.driver.find_element_by_css_selector('.aOOlW.HoLwm')
+        not_now1.click()
+        sleep(3)
     # Find followers
     def find_followers(self):
         sleep(1)
         search_input = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input')
         search_input.send_keys(TARGET_ACCOUNT)
         sleep(1)
-        search_input.send_keys(Keys.ENTER, Keys.ENTER)
-        sleep(3)
+        search_input.send_keys(Keys.ENTER, Keys.ENTER, Keys.ENTER)
+        sleep(5)
         follower_page = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a')
         follower_page.click()
         sleep(2)
@@ -48,7 +55,7 @@ class InstagramBot:
             sleep(1)
     # Scroll
     def scroll(self):
-        follower_container = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]')
+        follower_container = self.driver.find_element_by_css_selector('.isgrP')
         self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", follower_container)
     # Follow
     def follow(self):

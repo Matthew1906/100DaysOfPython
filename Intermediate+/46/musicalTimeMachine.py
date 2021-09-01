@@ -1,9 +1,9 @@
-# Day 46 Project of 100 Days of Code
-# Project Name: Musical Time Machine
-# Things i implemented: Beautiful Soup, Requests, API Authentication and Requests, Regular Expressions, Datetime
-
 from bs4 import BeautifulSoup
+from os import getenv
+from dotenv import load_dotenv
 import requests, re, datetime as dt
+
+load_dotenv()
 
 def check_date(date):
     '''Check if Inserted Data is Valid'''
@@ -42,8 +42,8 @@ for billboard_title in billboard_titles:
     titles.append(billboard_title.get_text())
 
 # Use Spotify API 
-CLIENT_ID = 'id'
-CLIENT_SECRET = 'secret'
+CLIENT_ID = getenv('CLIENT_ID')
+CLIENT_SECRET = getenv('CLIENT_SECRET')
 
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
@@ -55,8 +55,8 @@ sp = spotipy.Spotify(
         client_id= CLIENT_ID,
         client_secret=CLIENT_SECRET,
         show_dialog=True,
-        cache_path="Project/token.json"
-    )
+        cache_path="token.json",
+    ),
 )
 
 user_id = sp.current_user()["id"]

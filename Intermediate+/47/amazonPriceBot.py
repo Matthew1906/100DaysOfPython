@@ -1,7 +1,3 @@
-# Day 47 Project of 100 Days of Python
-# Project Name: Amazon Price Bot
-# Things i implemented: Requests, Web Scraping using Beautiful SOup, SMTPLIB to send emails
-
 import requests, smtplib
 from bs4 import BeautifulSoup
 

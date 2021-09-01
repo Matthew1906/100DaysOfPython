@@ -1,16 +1,14 @@
-# Day 49 Project of 100 Days of Python
-# Project Name: Automated Job Application through LinkedIn
-# Things i implemented: Selenium and Time
-
-# I only save clickable jobs and not applying for the job, therefore its shorter
+# Import modules
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from time import sleep
+from dotenv import load_dotenv
+from os import getenv
 
-driver_path = CHROME_DRIVER_PATH
+driver_path = getenv('CHROME_PATH')
 job_link = 'https://www.linkedin.com/jobs/search/?geoId=102257491&keywords=python%20developer&location=London%2C%20England%2C%20United%20Kingdom'
-email = 'dummy124635789@gmail.com'
-password = 'dummy@1234'
+email = getenv('EMAIL')
+password = getenv('PASSWORD')
 
 # Set up Driver
 driver = webdriver.Chrome(executable_path = driver_path)

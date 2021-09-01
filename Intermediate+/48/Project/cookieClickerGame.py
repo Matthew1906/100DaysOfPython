@@ -1,14 +1,15 @@
-# Day 48 Project of 100 Days of Python
-# Project Name: Cookie Clicker Game Automation
-# Things i implemented: Selenium webdriver, datetime
-
 # Import modules
 from selenium import webdriver
 from selenium.common.exceptions import ElementClickInterceptedException
 import datetime as dt
+from time import sleep
+from dotenv import load_dotenv
+from os import getenv
+
+load_dotenv()
 
 # get the driver path
-chrome_driver_path = YOUR_OWN_CHROME_DRIVER_PATH
+chrome_driver_path = getenv('CHROME_PATH')
 
 # Create the driver
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
@@ -28,6 +29,7 @@ while True:
         products = driver.find_elements_by_css_selector('.unlocked.enabled')
         if len(products)>0:
             try:
+                sleep(0.1)
                 products[-1].click()
             except ElementClickInterceptedException:
                 pass
