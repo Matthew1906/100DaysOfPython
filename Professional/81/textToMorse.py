@@ -1,7 +1,3 @@
-# Day 81 of 100 Days of Python
-# Project Name: Text to Morse Code Converter
-# Things i implemented: dictionary, json, audio, function, and recursion
-
 # Import modules
 from morseConverter import morse_converter, DOT, DASH
 from art import logo

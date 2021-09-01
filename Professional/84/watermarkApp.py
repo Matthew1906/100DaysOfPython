@@ -1,7 +1,3 @@
-# Day 84 of 100 Days of Python
-# Project name: Watermark Desktop App
-# Things I implemented: tkinter, file processing, PIL
-
 # Import modules
 from tkinter import Tk, Button, Label, Canvas, Entry
 from tkinter.filedialog import askopenfilename
