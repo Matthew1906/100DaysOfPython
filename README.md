@@ -26,27 +26,28 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - [Blackjack Game](Beginner/11/Project)
 - [Number Guessing Game](Beginner/12/Project)
 - [Higher Lower Game](Beginner/14/Project)
-- Coffee Machine: https://replit.com/@matthewadrianus/coffeeMachine
-- Quiz Game: https://replit.com/@matthewadrianus/quizGame
-- Mail Merge: https://replit.com/@matthewadrianus/mailMerge
-- NATO Converter : https://replit.com/@matthewadrianus/natoConversion
+- [Coffee Machine](Intermediate/15/Project)
+- [Quiz Game](Intermediate/17/Project)
+- [Mail Merge](Intermediate/24/Project)
+- [NATO Converter](Intermediate/26/Project)
 
 ### Uses Turtle GUI:
 #### Limited Screen Size and Slow Performance Issue (but it actually works just fine)
-- Etch A Sketch: https://replit.com/@matthewadrianus/etchASketch
-- Turtle Race: https://replit.com/@matthewadrianus/turtleRace
-- Snake Game: https://replit.com/@matthewadrianus/snakegame
-- Pong Game: https://replit.com/@matthewadrianus/pongGame
-- Turtle Crossing Game: https://replit.com/@matthewadrianus/turtleCrossing
-- U.S. States Game: https://replit.com/@matthewadrianus/statesGame
+-  [Hirst Painting](Intermediate/18/Project)
+- [Etch A Sketch](Intermediate/19/Project)
+- [Turtle Race](Intermediate/19/Project)
+- [Snake Game](Intermediate/20-21/Project)
+- [Pong Game](Intermediate/22/Project)
+- [Turtle Crossing Game](Intermediate/23/Project)
+- [U.S. States Game](Intermediate/25/Project)
 
 ### Uses Tkinter GUI:
 #### Limited Screen Size, and probably Slower Performance Issue (it becomes slower / even unplayable when run on replit, but if it is run locally, it will work fine)
-- Mile to KM Converter: https://replit.com/@matthewadrianus/mileToKmConverter
-- Pomodoro Timer Application: https://replit.com/@matthewadrianus/pomodoroTimer
-- Password Manager: https://replit.com/@matthewadrianus/passwordManager
-- Flash Cards: https://replit.com/@matthewadrianus/flashCards
-- Trivia Quiz: https://replit.com/@matthewadrianus/triviaQuiz
+- [Mile to KM Converter](Intermediate/27/Project)
+- [Pomodoro Timer Application](Intermediate/28)
+- [Password Manager](Intermediate/29)
+- [Flash Cards](Intermediate/31)
+- [Trivia Quiz]: https://replit.com/@matthewadrianus/triviaQuiz
 
 ### Uses Environment Variables (The links here uses dummy account):
 #### In some projects, you can see them, but you won't be able to run them, because it uses environment variables (API Authentication)
