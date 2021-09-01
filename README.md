@@ -58,7 +58,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 
 ### Web Development (some of them are pure HTML, CSS, JS):
 - [Personal Site](WebFoundation/43/Project)
-- [Stylised Personal Site](https://matthew1906.github.io/web_cv_site/)
+- [Stylised Personal Site](https://matthew1906.github.io/mock_cv_website/)
 - [Higher Lower URL Game](Intermediate+/55)
 - [Template Portofolio Website](Intermediate+/56)
 - [Blog Posts part 1](Intermediate+/57/Project)
