@@ -1,13 +1,5 @@
-# DAY 35 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: Weather Warning 
-# THINGS I IMPLEMENTED: SMTPLIB, API Authentication, REQUESTS, JSONS
-
+# Import modules
 import requests, smtplib
-
-# Other types of data that are valuable
-# People charge for API, because it is quite hard to get the data
-# API = selling data 
-
 
 weather_url = 'https://api.openweathermap.org/data/2.5/onecall'
 weather_params= {
@@ -27,20 +19,17 @@ for idx in range(12):
         will_rain = True
         break
 
-# We can use TWILIO API to send sms, but i am not using it duh
-
-user = 'user@mail.com'
-recipient = 'recipient@mail.com'
-password = 'a1b2c3d4e5f6g7h8i9j0k'
+print("Input your credentials! (make sure it's gmail and you have allowed third party application to send emails")
+user = input("Insert your email: ")
+password = input("Insert your password: ")
+print("This program will send an email from your own email to your email, notifying you about the weather. I made it like that so anyone can use them without environment restrictions")
 
 if will_rain:
     message = 'Subject:Hello there, Weather Alert\n\nIt will rain today, bring an umbrella!'
 else:
     message = "Subject:Hello there, Weather Alert\n\nIt might not rain today, but bring an umbrella just in case!"
 
-with smtplib.SMTP("smtp.gmail.com") as connection:
+with smtplib.SMTP("smtp.gmail.com:587") as connection:
     connection.starttls()
     connection.login(user = user, password=password)
-    connection.sendmail(from_addr=user, to_addrs=recipient, msg=message)
-
-
+    connection.sendmail(from_addr=user, to_addrs=user, msg=message)

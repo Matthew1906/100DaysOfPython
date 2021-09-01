@@ -1,10 +1,15 @@
 import smtplib
+from os import getenv
+from dotenv import load_dotenv
+
+load_dotenv()
+
 class NotificationManager:
     '''Sending Notifications through email about cheap flight deals'''
     def __init__(self):
         '''Notification Manager Constructor'''
-        self.email = 'dummy124635789@gmail.com'
-        self.password = 'dummy@1234'
+        self.email = getenv('EMAIL')
+        self.password = getenv('PASSWORD')
 
     def sendmail(self,details, name, email):
         '''Send Mail Function'''

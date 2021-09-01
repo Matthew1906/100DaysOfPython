@@ -1,20 +1,17 @@
 import requests 
+from os import getenv
+from dotenv import load_dotenv
+
+load_dotenv()
+
 class DataManager:
     #This class is responsible for talking to the Google Sheet.
     def __init__(self):
-<<<<<<< HEAD
-        self.price_url = 'https://api.sheety.co/67718a1735911fa925ff2fe0c3d43574/flightDealsProject/prices'
-        self.user_url = 'https://api.sheety.co/67718a1735911fa925ff2fe0c3d43574/flightDealsProject/users'
+        self.price_url = getenv('PRICE_URL')
+        self.user_url = getenv('USER_URL')
         self.header = {'Content-Type':'application/json'}
-        self.username = 'dummy'
-        self.password = 'dummy1234'
-=======
-
-        self.url = 'url'
-        self.header = {'Content-Type':'application/json'}
-        self.username = 'username'
-        self.password = 'password'
->>>>>>> 6fdeb2ae4dacd23aa2c5ffabdc846d50bc73163d
+        self.username = getenv('DATA_USERNAME')
+        self.password = getenv('DATA_PASS')
 
     def getIndex(self, city:str):
         get_result = requests.get(url = self.price_url, auth = (self.username, self.password)).json()['prices']
@@ -30,11 +27,7 @@ class DataManager:
         return get_result
 
     def getAllCities(self):
-<<<<<<< HEAD
         get_result = requests.get(url = self.price_url, auth = (self.username, self.password)).json()['prices']
-=======
-        get_result = requests.get(url = self.url, auth = (self.username, self.password)).json()['prices']
->>>>>>> 6fdeb2ae4dacd23aa2c5ffabdc846d50bc73163d
         return [data['city'] for data in get_result]
 
     def addIATACode(self, city:str, code:str):

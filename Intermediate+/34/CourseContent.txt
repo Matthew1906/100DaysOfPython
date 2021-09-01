@@ -1,7 +1,0 @@
-Project Only Day: Trivia Quiz 
-
-Learn :
-- Type Hints in methods
-- Tkinter in a class
-- Working with multiple classes
-- API requests
