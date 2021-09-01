@@ -1,8 +1,0 @@
-Advanced Authentication
-
-POST / PUT / DELETE Requests
--> Post: give data to external system
--> Put: update data in external system
--> Delete: delete data in external system
-
-Project: Habit Tracker

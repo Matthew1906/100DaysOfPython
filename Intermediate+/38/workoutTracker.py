@@ -1,7 +1,3 @@
-# Day 38 Project of 100 Days of Python
-# Project Name: Workout Tracker
-# Things i implemented: API Requests and Authentication
-
 # Requires input of personal data and private api
 import requests, datetime as dt
 

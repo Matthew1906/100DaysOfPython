@@ -1,3 +1,0 @@
-Project Only Day: Stock Trading News Alert
-
-Errors in smtplib, since im not using twillio

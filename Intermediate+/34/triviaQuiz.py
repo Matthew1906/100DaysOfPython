@@ -1,7 +1,4 @@
-# DAY 34 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: Trivia Quiz App
-# THINGS I IMPLEMENTED: Object Oriented Programming, Tkinter, API, REQUESTS, JSONS, HTML Module
-
+# Import modules
 from question_model import Question
 from data import question_data
 from quiz_brain import QuizBrain

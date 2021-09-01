@@ -1,23 +1,15 @@
 import requests,datetime as dt
 from flight_data import FlightData
-<<<<<<< HEAD
-=======
+from os import getenv
+from dotenv import load_dotenv
 
-TEQUILA_URL = "https://tequila-api.kiwi.com/"
-
-TEQUILA_HEADER = {
-    'apikey':"apikey",
-    'accept':'application/json'   
-}
-
->>>>>>> 6fdeb2ae4dacd23aa2c5ffabdc846d50bc73163d
 class FlightSearch:
     #This class is responsible for talking to the Flight Search API.
     def __init__(self): 
         '''Flight Search Contructor'''
         self.url = "https://tequila-api.kiwi.com/"
         self.header = {
-            'apikey':"yyyESODifzwvd4Bq3pb7L2sv6INUXk7X",
+            'apikey':getenv('FLIGHT_KEY'),
             'accept':'application/json'   
         }
 

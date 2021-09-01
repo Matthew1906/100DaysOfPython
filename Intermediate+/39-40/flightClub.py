@@ -1,7 +1,3 @@
-# DAY 39-40 CAPSTONE PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: FLIGHT CLUB APPLICATION
-# THINGS I IMPLEMENTED: API, REQUESTS, API AUTHENTICATION, DATETIME, REGEX, OS
-
 # Import Modules
 from data_manager import DataManager
 from flight_search import FlightSearch
