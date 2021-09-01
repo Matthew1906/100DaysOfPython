@@ -1,7 +1,3 @@
-# Day 63 Project of 100 Days of Python
-# Project Name: Virtual Bookshelf
-# Things i implemented: Flask, SQLAlchemy
-
 # Import modules
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy

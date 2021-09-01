@@ -1,4 +1,0 @@
-Project only day: Blog Posts
-- Finally back after Final Exam, i suppose its not 100 days of code then:v
-- In a nutshell: leant backend development (authentication, forms, user access, database, etc.)
-

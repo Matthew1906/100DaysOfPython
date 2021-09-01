@@ -1,7 +1,3 @@
-# Day 69 Capstone Project of 100 Days of Code
-# Project Name: Blog Posts (Final Version)
-# Things i implemented: Flask, Bootstrap, CKEditor, Password_Hash, SQLAlchemy, WTForms, Gravatar
-
 # Import Modules
 from flask import Flask, render_template, redirect, url_for, flash, request, abort
 from flask_bootstrap import Bootstrap
@@ -11,13 +7,22 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
-from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
+from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm, ContactForm
 from flask_gravatar import Gravatar
 from functools import wraps
+import smtplib, os
+
+# Constants
+USER_MAIL = os.getenv("USER_MAIL")
+USER_PASSWORD = os.getenv("USER_PASSWORD")
+TARGET_MAIL = os.getenv("TARGET_MAIL")
 
 # Configure Application
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+if os.getenv('SECRET_KEY') == None:
+    app.config['SECRET_KEY'] = '6k&A7$(16ENJ&%(E6xU8'
+else:
+    app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 gravatar = Gravatar(app,size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False, base_url=None)
@@ -27,7 +32,11 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 # Connect to database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+if os.getenv('DATABASE_URL') == None:
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+else: 
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace("postgres", "postgresql")
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -61,9 +70,6 @@ class Comments(db.Model):
     post_id = db.Column(db.Integer, db.ForeignKey('blog_posts.id'))
     parent_post = relationship("BlogPost", back_populates="comments")
     body = db.Column(db.Text, nullable = False)
-
-# Create database
-db.create_all()
 
 # Default loading user function
 @login_manager.user_loader
@@ -152,9 +158,24 @@ def about():
     return render_template("about.html")
 
 ## Contact Me Page
-@app.route("/contact")
+@app.route("/contact", methods=['GET', 'POST'])
 def contact():
-    return render_template("contact.html")
+    contact_form = ContactForm()
+    if request.method == 'POST':
+        with smtplib.SMTP("smtp.gmail.com") as connection:
+            connection.starttls()
+            connection.login(user=USER_MAIL, password=USER_PASSWORD)
+            connection.sendmail(
+                from_addr=USER_MAIL, 
+                to_addrs=TARGET_MAIL, 
+                msg=f"Subject: New Contact\n\n"\
+                f"Name: {request.form['name']}\n"\
+                f"Email: {request.form['email']}\n"\
+                f"Phone: {request.form['phone']}\n"\
+                f"Message: {request.form['message']}\n"
+            )
+        return redirect(url_for('get_all_posts'))
+    return render_template("contact.html", form = contact_form)
 
 ## Make new post - Admin Privilege
 @app.route("/new-post", methods=['GET', 'POST'])

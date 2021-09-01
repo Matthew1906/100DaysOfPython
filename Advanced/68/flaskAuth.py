@@ -1,7 +1,4 @@
-# Day 68 Project of 100 Days of Python
-# Project Name: Flask Auth Page
-# Things i implemented: Flask, Flask_SQLAlchemy, Hashing, FLask_login
-
+# Import Modules
 from flask import Flask, render_template, request, url_for, redirect, flash, send_from_directory
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy

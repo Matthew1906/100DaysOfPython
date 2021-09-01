@@ -1,8 +1,3 @@
-# Day 64 of 100 Days of Python
-# Project Name: Top Movies Website
-# Things i implemented, flask, flask-bootstrap, wtforms, sqlalchemy, api requests
-# Kinda different from the course, but it works more or less
-
 # Import Modules
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_bootstrap import Bootstrap

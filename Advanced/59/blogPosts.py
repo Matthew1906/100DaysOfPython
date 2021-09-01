@@ -1,8 +1,3 @@
-# Day 59 of 100 Days of Python
-# Project Name: Personal Blog (Part 2)
-# Things i implemented: Flask, render templates, requests, kwargs
-# This project will keep improving (so there might be copies of the same folders)
-
 # Import Modules
 from flask import Flask, render_template
 import requests

@@ -1,7 +1,3 @@
-# Day 62 of 100 Days of Python
-# Project Name: Cafe Review Website
-# Things i implemented: List Comprehension, Backend using Flask, Bootstrap, datetime, csv
-
 # Import Modules
 from flask import Flask, render_template, request 
 from flask_bootstrap import Bootstrap
