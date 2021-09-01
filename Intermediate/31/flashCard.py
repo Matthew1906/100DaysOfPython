@@ -17,7 +17,7 @@ def str_to_int(string):
     return res
 
 try:
-    with open("Project/data/learned.txt") as learned_data:
+    with open("./data/learned.txt") as learned_data:
         temp = learned_data.read().split("\n")
         for row in temp:
             row = str_to_int(row)
@@ -25,7 +25,7 @@ try:
 except FileNotFoundError:
     pass
 
-vocab_dictionary = pd.read_csv("Project/data/french_words.csv").to_dict()
+vocab_dictionary = pd.read_csv("./data/french_words.csv").to_dict()
 vocab_length = len(vocab_dictionary['French'])
 
 # Keep Track of Data
@@ -39,7 +39,7 @@ def change_vocab():
     if len(understood) == vocab_length:
         # Clear the learned.txt and the understood list
         understood.clear()
-        with open('Project/data/learned.txt','w') as save_file:
+        with open('./data/learned.txt','w') as save_file:
             save_file.write("")
     vocab_index = randint(0, vocab_length-1)
     while vocab_index in understood:
@@ -54,7 +54,7 @@ def save_progress():
     '''Save Learned Vocabulary Index'''
     global understood
     understood.append(vocab_index)
-    with open('Project/data/learned.txt','a') as save_file:
+    with open('./data/learned.txt','a') as save_file:
         save_file.write(f"{vocab_index}\n")
     change_vocab()
 
@@ -77,10 +77,10 @@ screen.title("Flash Card")
 screen.config(padx=20, pady = 10, bg=BACKGROUND_COLOR)
 
 # - Photo Images
-right_image = PhotoImage(file='Project/images/right.png')
-wrong_image = PhotoImage(file='Project/images/wrong.png')
-front_image = PhotoImage(file='Project/images/card_front.png')
-back_image = PhotoImage(file='Project/images/card_back.png')
+right_image = PhotoImage(file='./images/right.png')
+wrong_image = PhotoImage(file='./images/wrong.png')
+front_image = PhotoImage(file='./images/card_front.png')
+back_image = PhotoImage(file='./images/card_back.png')
 
 # - Canvas
 flash_card = Canvas(width = 800, height = 526)
