@@ -1,6 +1,3 @@
-# Day 56 Project of 100 Days of Python
-# Project Name: Static Personal Site using Template and Flask
-# Things i implemented: Flask, Website Templates
 
 from flask import Flask, render_template
 
