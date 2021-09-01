@@ -1,7 +1,3 @@
-# Day 67 Project of 100 Days of Python
-# Project Name: Improved Blog Post (I call them Blog Post 3)
-# Things i implemented: Flask, Wtforms, Bootstrap, SQLAlchemy, CKEditor, Datetime
-
 # Import Modules
 from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap

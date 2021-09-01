@@ -1,8 +1,3 @@
-# Day 60 of 100 Days of Python
-# Project Name: Personal Blog (Part 3)
-# Things i implemented: Flask, render templates, requests and flask.request, kwargs, smtplib
-# This project will keep improving (so there might be copies of the same folders)
-
 # Import Modules
 from flask import Flask, render_template, request
 import requests, smtplib
@@ -33,18 +28,19 @@ def index():
 @app.route('/contact', methods=['POST', 'GET'])
 def contact():
     if request.method == 'POST':
-        with smtplib.SMTP("smtp.gmail.com") as connection:
-            connection.starttls()
-            connection.login(user=USER_MAIL, password=PASSWORD)
-            connection.sendmail(
-                from_addr=USER_MAIL, 
-                to_addrs=TARGET_MAIL, 
-                msg=f"Subject: New Contact\n\n"\
-                f"Name: {request.form['name']}\n"\
-                f"Email: {request.form['email']}\n"\
-                f"Phone: {request.form['phone']}\n"\
-                f"Message: {request.form['message']}\n"
-            )
+        # with smtplib.SMTP("smtp.gmail.com") as connection:
+        #     connection.starttls()
+        #     connection.login(user=USER_MAIL, password=PASSWORD)
+        #     connection.sendmail(
+        #         from_addr=USER_MAIL, 
+        #         to_addrs=TARGET_MAIL, 
+        #         msg=f"Subject: New Contact\n\n"\
+        #         f"Name: {request.form['name']}\n"\
+        #         f"Email: {request.form['email']}\n"\
+        #         f"Phone: {request.form['phone']}\n"\
+        #         f"Message: {request.form['message']}\n"
+        #     )
+        pass
     return render_template('contact.html')
 
 @app.route('/about')

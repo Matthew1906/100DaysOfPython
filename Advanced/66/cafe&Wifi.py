@@ -1,7 +1,4 @@
-# Day 66 Project of 100 Days of Python
-# Project Name: Cafe & Wifi Website with RESTFUL API
-# Things i implemented: Flask, Random, REST API, Postman
-
+# Import modules
 from flask import Flask, jsonify, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from random import choice
