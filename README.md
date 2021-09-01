@@ -1,15 +1,18 @@
 # 100DaysOfPython
 
-These are my notes and projects while trying to complete 100 days of Code in Python Course.
+Hello there, I'm Matthew Adrianus Mulyono
+
+Recently I decided to take 100 Days of Python Course by Angela Yu on Udemy. 
 
 course link: https://www.udemy.com/course/100-days-of-code/
 
-The notes and projects are put in a folder, sorted by day number and difficulty level
+I took this course to improve my skills in python, while also building my portofolio.
 
-On each day folder, there are course notes (in notes.py if there is any), course content explanation (in CourseContent.txt), project folder (folder = Project),
-and exercises (if there are any)
+This repository contain all my notes and projects while trying to complete this course.
 
-For the Projects, the driver program (where you run the code) uses camelCase, while other supporting files use snake_case
+Feel free to see my projects and exercises, The finished projects are listed below...
+
+Thanks for visiting this repository!
 
 ## Projects:
 
