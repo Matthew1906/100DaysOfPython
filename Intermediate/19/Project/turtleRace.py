@@ -1,7 +1,4 @@
-# DAY 19 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: TURTLE RACE
-# THINGS I IMPLEMENTED: TURTLE, INPUTS, RANDOM, COORDINATES IN TURTLE
-
+# Import modules
 from turtle import Turtle, Screen
 from random import randint
 

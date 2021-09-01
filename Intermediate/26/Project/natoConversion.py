@@ -1,11 +1,7 @@
-# DAY 26 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: NATO Converter
-# THINGS I IMPLEMENTED: Pandas Module, Dictionary comprehension
-
-# import module
+# Import module
 import pandas as pd
 
-# create dataframe and dictionary
+# Create dataframe and dictionary
 nato_df = pd.read_csv("Project/nato_phonetic_alphabet.csv")
 nato_dict = {nato_df.at[index,'letter']:nato_df.at[index,'code'] for index,row in nato_df.iterrows()}
 

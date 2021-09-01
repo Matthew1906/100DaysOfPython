@@ -1,8 +1,3 @@
-# DAY 23 CAPSTONE PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: TURTLE CROSSING GAME
-# THINGS I IMPLEMENTED: TURTLE, INHERITANCE, TURTLE CROSSING GAME LOGIC, RANDOM
-# The Game is different from the course, since i added a main menu and probably different logic in the game
-
 # Import Modules and Classes
 import time
 from turtle import Screen, Turtle

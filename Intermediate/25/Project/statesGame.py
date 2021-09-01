@@ -1,7 +1,3 @@
-# DAY 25 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: U.S. States Game
-# THINGS I IMPLEMENTED: Turtle and Pandas Module, Read and Create CSV using pandas, U.S. States i guess
-
 # Import Modules
 from turtle import Screen, Turtle
 import pandas as pd

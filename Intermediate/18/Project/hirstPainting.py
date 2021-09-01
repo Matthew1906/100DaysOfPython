@@ -1,14 +1,9 @@
-# DAY 18 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: HIRST SPOT PAINTING SPOT GENERATOR
-# THINGS I IMPLEMENTED: TURTLE, COLORGRAM, AND RANDOM MODULE
-# DIFFERENT FROM THE COURSE EXPLANATION
-
 from turtle import Turtle, Screen
 from random import choice
-import colorgram
+from colorgram import extract
 
 # EXTRACT COLORS
-colors = colorgram.extract('Project/spots.jpg', 100)
+colors = extract('Project/spots.jpg', 100)
 
 # INITIALIZE TURTLE
 timmy = Turtle()

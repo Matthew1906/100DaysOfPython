@@ -1,7 +1,3 @@
-# DAY 30 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: Password Manager
-# THINGS I IMPLEMENTED: Tkinter Module, Message Box, Random, Pyperclip, File Processing, Error Handling, JSON handling
-
 # 1. Import Modules
 # - Widgets
 from tkinter import Tk, Button, Canvas, PhotoImage, Label, Entry

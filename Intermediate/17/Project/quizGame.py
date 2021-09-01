@@ -1,7 +1,4 @@
-# DAY 17 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: QUIZ GAME
-# THINGS I IMPLEMENTED: Classes and Objects, Functions and Recursions, System Module
-
+# Import modules
 from quiz_brain import QuizBrain
 from quiz_data import question_data
 from quiz_model import Question
