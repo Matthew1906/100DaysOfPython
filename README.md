@@ -63,14 +63,15 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - [Template Portofolio Website](Intermediate+/56)
 - [Blog Posts part 1](Intermediate+/57/Project)
 - [Tindog](WebFoundation/58)
-- Blog Posts 2: https://replit.com/@matthewadrianus/blogPosts2
-- Cafe Review : https://replit.com/@matthewadrianus/cafeReview
-- Virtual Bookshelf : https://replit.com/@matthewadrianus/virtualBookshelf
-- Top Movies: https://replit.com/@matthewadrianus/topMoviesWebsite
-- Cafe Website with REST API: https://replit.com/@matthewadrianus/cafeREST
-- Blog Posts 3: https://replit.com/@matthewadrianus/blogPosts3
-- Authentication Website: https://replit.com/@matthewadrianus/auth
-- Blog Posts (Final): https://matthew1906-blog-app.herokuapp.com/
+- [Blog Posts part 2](Advanced/59)
+- [Blog Posts part 3](Advanced/60/Project)
+- [Cafe Review](Advanced/62)
+- [Virtual Bookshelf](Advanced/63)
+- [Top Movies](Advanced/64)
+- [Cafe Website with REST API](Advanced/66)
+- [Blog Posts part 4](Advanced/67)
+- [Authentication Website](Advanced/68)
+- [Blog Posts (Final)](Advanced/69)
 
 ### Web Scraping and Automation:
 - [Top 100 Movies Scraper](Intermediate+/45/Project)
