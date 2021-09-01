@@ -47,17 +47,17 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - [Pomodoro Timer Application](Intermediate/28)
 - [Password Manager](Intermediate/29)
 - [Flash Cards](Intermediate/31)
-- [Trivia Quiz]: https://replit.com/@matthewadrianus/triviaQuiz
+- [Trivia Quiz](Intermediate+/34)
 
 ### Uses Environment Variables (The links here uses dummy account):
 #### In some projects, you can see them, but you won't be able to run them, because it uses environment variables (API Authentication)
-- Automatic Birthday Wisher: https://replit.com/@matthewadrianus/automaticBirthdayWisher
-- ISS Location Notification System: https://replit.com/@matthewadrianus/issLocationNotification
-- Weather Warning System: https://replit.com/@matthewadrianus/weatherWarningSystem
-- Stock Trading News Alert System: https://replit.com/@matthewadrianus/stockNews
-- Habit Tracker: https://replit.com/@matthewadrianus/habitTracker
-- Workout Tracker: https://replit.com/@matthewadrianus/workoutTracker
-- Flight Club Application: https://replit.com/@matthewadrianus/FlightClub
+- [Automatic Birthday Wisher](Intermediate+/32/Project)
+- [ISS Location Notification System](Intermediate+/33/Project)
+- [Weather Warning System](Intermediate+/35)
+- [Stock Trading News Alert System](Intermediate+/36)
+- [Habit Tracker](Intermediate+/37)
+- [Workout Tracker](Intermediate+/38)
+- [Flight Club Application](Intermediate+/39-40)
 
 ### Website (some of them are pure HTML, CSS, JS):
 - Personal Site: https://replit.com/@matthewadrianus/Personal-Site
@@ -88,16 +88,16 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 
 ### Data Science
 #### Uses Google Colab:
-- College Majors vs Employee Salary Analysis: https://colab.research.google.com/drive/1G-mn7nKhTO6s23W1nZL8JI2cbVp0PPzu?usp=sharing
-- Programming Languages Trend Analysis: https://colab.research.google.com/drive/1BNuSl_YaWmXuZSzizonKV1rojcWZ6zJ7?usp=sharing
-- Lego Analysis: https://colab.research.google.com/drive/1FU4NgErCXpb3_Jj3L41cxVdd_ZAaSUny?usp=sharing
-- Google Trends Analysis: https://colab.research.google.com/drive/1n1yhJ_KmItu11PZUhJk4-cOIDIcvhLPZ?usp=sharing
-- Google Play Store Analysis: https://colab.research.google.com/drive/1zenxA7eLlsDNBPQwDO88U1VNKirYunSr?usp=sharing
-- Computation with Numpy and ND Arrays: https://colab.research.google.com/drive/1705y9yxXfli4nas60Y6uvJsMgCP_5JPv?usp=sharing
-- Movies Analysis, Linear Regression using SKLearn: https://colab.research.google.com/drive/1MUgcr6WU1MvciEFIycyN-Y7m7ZJue1k9?usp=sharing
-- Nobel Prize Analysis: https://colab.research.google.com/drive/1uPLUPNug3pmbu7a__0SCLbNobZFmBqqV?usp=sharing
-- Handwashing Analysis: https://colab.research.google.com/drive/1Sq_HDVFP8Txi8V-Qmz2o5Ia2iNNxgmBB?usp=sharing
-- Evaluate Residential Price: https://colab.research.google.com/drive/1lAW4ru4ETTbqWv9VRHkVgaGW9Fb8BWTD?usp=sharing
+- [College Majors vs Employee Salary Analysis](https://colab.research.google.com/drive/1G-mn7nKhTO6s23W1nZL8JI2cbVp0PPzu?usp=sharing)
+- [Programming Languages Trend Analysis](https://colab.research.google.com/drive/1BNuSl_YaWmXuZSzizonKV1rojcWZ6zJ7?usp=sharing)
+- [Lego Analysis](https://colab.research.google.com/drive/1FU4NgErCXpb3_Jj3L41cxVdd_ZAaSUny?usp=sharing)
+- [Google Trends Analysis](https://colab.research.google.com/drive/1n1yhJ_KmItu11PZUhJk4-cOIDIcvhLPZ?usp=sharing)
+- [Google Play Store Analysis](https://colab.research.google.com/drive/1zenxA7eLlsDNBPQwDO88U1VNKirYunSr?usp=sharing)
+- [Computation with Numpy and ND Arrays](https://colab.research.google.com/drive/1705y9yxXfli4nas60Y6uvJsMgCP_5JPv?usp=sharing)
+- [Movies Analysis, Linear Regression using SKLearn](https://colab.research.google.com/drive/1MUgcr6WU1MvciEFIycyN-Y7m7ZJue1k9?usp=sharing)
+- [Nobel Prize Analysis](https://colab.research.google.com/drive/1uPLUPNug3pmbu7a__0SCLbNobZFmBqqV?usp=sharing)
+- [Handwashing Analysis](https://colab.research.google.com/drive/1Sq_HDVFP8Txi8V-Qmz2o5Ia2iNNxgmBB?usp=sharing)
+- [Evaluate Residential Price](https://colab.research.google.com/drive/1lAW4ru4ETTbqWv9VRHkVgaGW9Fb8BWTD?usp=sharing)
 
 ### Portofolio Project
 #### Although I think other projects also counts as portofolio since i made them by myself (although some of them with the course's guidance), these projects are purely made by myself without the course's guidance:
