@@ -1,7 +1,3 @@
-# DAY 27 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: Miles To Kilometer Converter
-# THINGS I IMPLEMENTED: Tkinter Module
-
 # import modules
 from tkinter import Tk, Label, Button, Entry
 

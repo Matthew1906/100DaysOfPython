@@ -1,21 +1,8 @@
-# DAY 28 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: Pomodoro App
-# THINGS I IMPLEMENTED: Tkinter Module
-
-'''
-Pomodoro App:
-1. Decide on a task
-2. Repeat this for 4 times
-    a. Work (25 min)
-    b. Short Break (5 min) -> 3 times
-3. Long break(15-30 min)
-'''
-
-# 1. IMPORT MODULES
+# IMPORT MODULES
 from tkinter import Tk, Canvas, PhotoImage, Button, Label
 import time
 
-# 2. CONSTANTS
+# CONSTANTS
 PINK = "#FF449F"
 RED = "#BF1363"
 GREEN = "#1eae98"
@@ -28,7 +15,7 @@ CHECKMARK = '✓'
 reps  = 0
 timer = None 
 
-# 3. TIMER RESET
+# TIMER RESET
 def reset_timer():
     global reps
     reps = 0
@@ -39,7 +26,7 @@ def reset_timer():
     check_label['text'] = ''
     
 
-# 4. TIMER MECHANISM
+# TIMER MECHANISM
 def work(): 
     todo_label['text'] = 'Work'
     todo_label.config(fg=GREEN)
@@ -72,7 +59,7 @@ def start_timer():
         return
 
 
-# 5. COUNTDOWN MECHANISM
+# COUNTDOWN MECHANISM
 def countdown(length):
     minutes = length//60
     if minutes<10:
@@ -95,7 +82,7 @@ window.title("Pomodoro")
 window.config(padx = 70, pady = 15, bg=YELLOW)
 
 # PhotoImage
-tomato = PhotoImage(file ="Project/tomato.png")
+tomato = PhotoImage(file ="tomato.png")
 
 # Canvas
 canvas = Canvas(width = 200, height = 224)

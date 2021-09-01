@@ -1,7 +1,3 @@
-# DAY 15 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: COFFEE MACHINE 
-# THINGS I IMPLEMENTED: Dictionaries, Scoping, Functions and Recursions, System Module, F-Strings
-
 # import necessary libraries
 from recipes import resources, MENU
 from os import system,name

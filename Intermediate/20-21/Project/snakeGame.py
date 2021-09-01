@@ -1,8 +1,3 @@
-# DAY 20 & 21 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: SNAKE GAME
-# THINGS I IMPLEMENTED: TURTLE, INHERITANCE, SLICING, SNAKE GAME LOGIC
-# The Game is different from the course, since i added a main menu and speed in the snake game
-
 # Import Modules and Classes
 from turtle import Screen, Turtle
 from snake import Snake

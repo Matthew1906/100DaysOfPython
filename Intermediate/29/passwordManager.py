@@ -1,16 +1,15 @@
-# DAY 29 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: Password Manager
-# THINGS I IMPLEMENTED: Tkinter Module, Message Box, Random, Pyperclip, File Processing
-
-# 1. Import Modules
+# Import Modules
 # - Widgets
 from tkinter import Tk, Button, Canvas, PhotoImage, Label, Entry
 # - Message Boxes
-from tkinter.messagebox import askyesno, showerror
+from tkinter.messagebox import askyesno, showerror, showinfo
 # - Random
 from random import randint
 # - Clipboard
 from pyperclip import copy
+# -JSON
+import json
+from json.decoder import JSONDecodeError
 
 # 2. Password Generator
 # List all numbers, alphabets, symbols
@@ -66,8 +65,31 @@ def save_data():
         name = name_input.get().strip()
         password = password_input.get().strip()
         # Append to File
-        with open('Project/data.txt', 'a') as save_file:
-            save_file.write(f'{website} | {name} | {password}\n')
+        new_data={
+            website:{
+                'email':name,
+                'password':password
+            }
+        }
+        try:
+            with open('data.json', 'r') as data_file:
+                data = json.load(data_file)
+                update = True
+                for website_name in data.keys():
+                    if website == website_name:
+                        confirm = askyesno(title='Confirm Save', message='Data already exist! Do you want to rewrite it?')
+                        if confirm:
+                           data[website]['email'] = name
+                           data[website]['password'] = password 
+                        update = False
+                if update:
+                    data.update(new_data)
+        except JSONDecodeError:
+            data = new_data
+        except FileNotFoundError:
+            data = new_data
+        with open('data.json', 'w') as save_file:
+            json.dump(data, save_file, indent=4)
         # Clear Input
         website_input.delete(0,'end')
         name_input.delete(0,'end')
@@ -76,7 +98,22 @@ def save_data():
         # Error Message
         showerror(title='Incomplete input', message = 'Your Input is incomplete!')
 
-# 4. UI Setup
+# 4. Search Data
+def search():
+    try:
+        with open('data.json', 'r') as data_file:
+            data = json.load(data_file)
+        website = website_input.get().strip()
+        result = data[website]
+    except FileNotFoundError:
+        showerror(title='File not found!', message = 'File not found!')
+    except KeyError:
+        showerror(title='Data not found!', message = "Data not found!")
+    else:
+        result = f"Email/Username: {result['email']}\nPassword:{result['password']}"
+        showinfo(title = website, message = result)
+
+# 5. UI Setup
 
 # Screen
 screen = Tk()
@@ -84,7 +121,7 @@ screen.title("Password Manager")
 screen.config(padx=40, pady=40)
 
 # Image
-logo_image = PhotoImage(file = 'Project/logo.png')
+logo_image = PhotoImage(file = 'logo.png')
 
 # Canvas
 canvas = Canvas(width = 200, height = 200)
@@ -102,6 +139,7 @@ name_input = Entry(width=35)
 password_input = Entry(width=21)
 
 # Button
+search_button = Button(text='Search', command = search)
 pass_generator = Button(text='Generate Password',command=generate_password)
 save_password = Button(text='Add',width=36, command=save_data)
 
@@ -110,9 +148,10 @@ canvas.grid(row = 0, column = 1)
 website_label.grid(row=1, column=0, sticky='EW')
 name_label.grid(row=2, column=0, sticky='EW')
 password_label.grid(row=3,column=0, sticky='EW')
-website_input.grid(row=1, column=1, columnspan=2, sticky='EW')
+website_input.grid(row=1, column=1, sticky='EW')
 name_input.grid(row=2, column=1, columnspan=2, sticky='EW')
 password_input.grid(row=3, column=1, sticky='EW')
+search_button.grid(row=1, column=2,sticky='EW')
 pass_generator.grid(row=3,column=2, sticky='EW')
 save_password.grid(row=4, column=1, columnspan=2, sticky='EW')
 

@@ -1,7 +1,3 @@
-# DAY 24 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: MAIL MERGE
-# THINGS I IMPLEMENTED: STRING FUNCTIONS, FILE PROCESSING, PATHS
-
 # Retrieve the template
 with open(".\\Project\\Input\\Letters\\letter_template.txt") as letter_template_file:
     letter_template = letter_template_file.read()

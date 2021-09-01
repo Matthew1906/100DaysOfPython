@@ -1,8 +1,3 @@
-# DAY 22 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: PONG GAME
-# THINGS I IMPLEMENTED: TURTLE, INHERITANCE, PONG GAME LOGIC
-# The Game is different from the course, since i added a main menu and the ball movement have different logic
-
 # Import Modules and Classes
 from turtle import Screen, Turtle
 from paddle import Paddle

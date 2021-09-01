@@ -1,10 +1,4 @@
-# DAY 31 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: Flash Card
-# THINGS I IMPLEMENTED: Tkinter Module, Pandas, Random, File Processing, Error Handling
-
-# Different from the course since i made it by myself
-# Less usage of Pandas, but similar mechanism
-
+# CONSTANTS
 BACKGROUND_COLOR = "#B1DDC6"
 FONT_NAME = 'Arial'
 

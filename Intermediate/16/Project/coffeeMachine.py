@@ -1,7 +1,3 @@
-# DAY 16 PROJECT OF 100 DAYS OF CODE
-# PROJECT NAME: COFFEE MACHINE (OOP) 
-# THINGS I IMPLEMENTED: Classes and Objects, Functions and Recursions, System Module
-
 # import all necessary modules
 from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
