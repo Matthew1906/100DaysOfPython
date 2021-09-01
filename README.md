@@ -13,7 +13,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 
 ## Projects:
 
-### Simple and Runnable in Console: 
+### Basic Scripting: 
 - [Band Name Generator](Beginner/1/Project)
 - [Tip Calculator](Beginner/2/Project)
 - [Treasure Island Game](Beginner/3/Project)
@@ -56,13 +56,13 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - [Workout Tracker](Intermediate+/38)
 - [Flight Club Application](Intermediate+/39-40)
 
-### Website (some of them are pure HTML, CSS, JS):
-- Personal Site: https://replit.com/@matthewadrianus/Personal-Site
-- Personal Site 2: https://matthew1906.github.io/web_cv_site/
-- Higher Lower URL Game: https://replit.com/@matthewadrianus/higherLowerURL
-- Portofolio (Prototype): https://replit.com/@matthewadrianus/100daysofPython-portofolio1
-- Blog Posts 1: https://replit.com/@matthewadrianus/blogPosts1
-- Tindog: https://replit.com/@matthewadrianus/tindog
+### Web Development (some of them are pure HTML, CSS, JS):
+- [Personal Site](WebFoundation/43/Project)
+- [Stylised Personal Site](https://matthew1906.github.io/web_cv_site/)
+- [Higher Lower URL Game](Intermediate+/55)
+- [Template Portofolio Website](Intermediate+/56)
+- [Blog Posts part 1](Intermediate+/57/Project)
+- [Tindog](WebFoundation/58)
 - Blog Posts 2: https://replit.com/@matthewadrianus/blogPosts2
 - Cafe Review : https://replit.com/@matthewadrianus/cafeReview
 - Virtual Bookshelf : https://replit.com/@matthewadrianus/virtualBookshelf
@@ -82,8 +82,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - [Instagram Follower Bot](Intermediate+/52)
 - [Automated Data Entry Job](Intermediate+/53)
 
-### Data Science
-#### Uses Google Colab:
+### Data Science:
 - [College Majors vs Employee Salary Analysis](https://colab.research.google.com/drive/1G-mn7nKhTO6s23W1nZL8JI2cbVp0PPzu?usp=sharing)
 - [Programming Languages Trend Analysis](https://colab.research.google.com/drive/1BNuSl_YaWmXuZSzizonKV1rojcWZ6zJ7?usp=sharing)
 - [Lego Analysis](https://colab.research.google.com/drive/1FU4NgErCXpb3_Jj3L41cxVdd_ZAaSUny?usp=sharing)
@@ -95,7 +94,7 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - [Handwashing Analysis](https://colab.research.google.com/drive/1Sq_HDVFP8Txi8V-Qmz2o5Ia2iNNxgmBB?usp=sharing)
 - [Evaluate Residential Price](https://colab.research.google.com/drive/1lAW4ru4ETTbqWv9VRHkVgaGW9Fb8BWTD?usp=sharing)
 
-### Portofolio Project
+### Portofolio Projects
 #### Although I think other projects also counts as portofolio since i made them by myself (although some of them with the course's guidance), these projects are purely made by myself without the course's guidance:
 - Text to Morse Code Converter: https://replit.com/@matthewadrianus/textToMorseCode
 - Portofolio Website: https://matthew1906-python-portofolio.herokuapp.com/
