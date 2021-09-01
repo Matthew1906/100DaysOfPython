@@ -1,14 +1,3 @@
-# Day 86 of 100 Days of Python
-# Project name: Breakout Game
-# Things I implemented: Breakout game logic, OOP, Turtle
-
-# TODO:
-# - Main screen
-# - Paddle = move left and right
-# - Ball = change direction
-# - Blocks = positioning, and hide itself when hit (cause the ball to change direction)
-# - Scoreboard = Keep track of score
-
 # Import modules
 from turtle import Screen, Turtle
 from paddle import Paddle

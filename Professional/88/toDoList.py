@@ -1,7 +1,3 @@
-# Day 88 of 100 Days of Python
-# Project name: To Do List Website
-# Things I implemented: Frontend Web Development, Backend Web Development, 
-
 # Import modules
 ## Flask App
 from flask import Flask, render_template, request, redirect, url_for, flash

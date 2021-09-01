@@ -1,13 +1,4 @@
-# Day 82 of 100 Days of Python
-# Project Name: Portofolio Website
-# Things I implemented: Backend Web Development with Flask, Bootstrap, File processing
-
-'''
-TODO:
-- project.html page -> show image
-- deployment
-'''
-
+# Import modules
 from flask import Flask, render_template, redirect, request , flash, url_for
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy

@@ -1,7 +1,3 @@
-# Day 87 of 100 Days of Python
-# Project Name: Cafe Review Website
-# Things i implemented: Backend using Flask
-
 # Import Modules
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_bootstrap import Bootstrap

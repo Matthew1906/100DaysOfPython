@@ -1,7 +1,3 @@
-# Day 83 of 100 Days of Python
-# Project name: Tic Tac Toe
-# Things I implemented: Object Oriented Programming, Functions, List Comprehension
-
 # Modules
 from board import Board
 from utilities import logo, print_board, prompt, clear

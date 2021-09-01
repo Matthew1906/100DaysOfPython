@@ -1,7 +1,3 @@
-# Day 92 of 100 Days of Python
-# Project name: Udemy Course Scraper
-# Things I implemented: selenium, pandas
-
 # Import modules
 from selenium.webdriver import Chrome
 from selenium.common.exceptions import NoSuchElementException
@@ -9,9 +5,13 @@ from utils import *
 from time import sleep
 from math import ceil
 from pandas import DataFrame
+from dotenv import load_dotenv
+from os import getenv
+
+load_dotenv()
 
 # Constants
-CHROME_DRIVER_PATH = 'C:/Users/matth/OneDrive/Documents/ProgrammingLanguagesLearning/Python/Development/chromedriver'
+CHROME_DRIVER_PATH = getenv('CHROME_PATH')
 UDEMY_URL = 'https://www.udemy.com/courses/development/'
 UDEMY_PARAMS = {
     'lang':'en',
