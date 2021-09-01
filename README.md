@@ -32,7 +32,6 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - [NATO Converter](Intermediate/26/Project)
 
 ### Uses Turtle GUI:
-#### Limited Screen Size and Slow Performance Issue (but it actually works just fine)
 -  [Hirst Painting](Intermediate/18/Project)
 - [Etch A Sketch](Intermediate/19/Project)
 - [Turtle Race](Intermediate/19/Project)
@@ -42,15 +41,13 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - [U.S. States Game](Intermediate/25/Project)
 
 ### Uses Tkinter GUI:
-#### Limited Screen Size, and probably Slower Performance Issue (it becomes slower / even unplayable when run on replit, but if it is run locally, it will work fine)
 - [Mile to KM Converter](Intermediate/27/Project)
 - [Pomodoro Timer Application](Intermediate/28)
 - [Password Manager](Intermediate/29)
 - [Flash Cards](Intermediate/31)
 - [Trivia Quiz](Intermediate+/34)
 
-### Uses Environment Variables (The links here uses dummy account):
-#### In some projects, you can see them, but you won't be able to run them, because it uses environment variables (API Authentication)
+### Emails, HTTP Requests, and APIs:
 - [Automatic Birthday Wisher](Intermediate+/32/Project)
 - [ISS Location Notification System](Intermediate+/33/Project)
 - [Weather Warning System](Intermediate+/35)
@@ -76,15 +73,14 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 - Blog Posts (Final): https://matthew1906-blog-app.herokuapp.com/
 
 ### Web Scraping and Automation:
-#### Some of them can't run well due to authentication issues:
-- Top 100 Movies Scraper: https://replit.com/@matthewadrianus/top100Movies
-- Musical Time Machine: LINK NOT INCLUDED | in Day 46 Project Folder (You can use your own CLIENT ID & CLIENT SECRET, it's a bit complicated to connect with spotify tho)
-- Amazon Price Bot: https://replit.com/@matthewadrianus/amazonPriceTracker
-- Cookie Clicker Game Automation: https://replit.com/@matthewadrianus/cookieClickerAutomation
-- Automated Job Application through Linked In: https://replit.com/@matthewadrianus/jobAutomation (i only save the jobs | it sometimes doesn't work because linked in requires extra authorization)
-- Internet Complaint Twitter Bot: https://replit.com/@matthewadrianus/twitterBot
-- Instagram Follower Bot: https://replit.com/@matthewadrianus/instagramBot
-- Automated Data Entry Job: https://replit.com/@matthewadrianus/dataEntryAutomation
+- [Top 100 Movies Scraper](Intermediate+/45/Project)
+- [Musical Time Machine](Intermediate+/46)
+- [Amazon Price Bot](Intermediate+/47)
+- [Cookie Clicker Game Automation](Intermediate+/48/Project)
+- [Automated Job Application through Linked In](Intermediate+/49)
+- [Internet Complaint Twitter Bot](Intermediate+/51)
+- [Instagram Follower Bot](Intermediate+/52)
+- [Automated Data Entry Job](Intermediate+/53)
 
 ### Data Science
 #### Uses Google Colab:
