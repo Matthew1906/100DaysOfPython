@@ -1,4 +1,0 @@
-Project only day: Musical Time Machine
--> Scrape top 100 songs from the billboard based on the inputted date
--> create a spotify playlist using spotify API
--> console based application

@@ -4,3 +4,4 @@ env
 .env
 Procfile
 requirements.txt
+token.json

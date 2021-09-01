@@ -1,16 +1,14 @@
-# Day 53 Capstone Project of 100 Days of Python
-# Project Name: Data Entry Job Automation
-# Things i implemented: Requests, Beautiful Soup, Selenium, Time
-
 # 1. Import Modules
 import requests
 from bs4 import BeautifulSoup 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
+from dotenv import load_dotenv
+from os import getenv
 
 # 2. Setup Constants
-CHROME_DRIVER_PATH = CHROME_DRIVER_PATH
+CHROME_DRIVER_PATH = getenv('CHROME_PATH')
 FORMS_URL = 'https://forms.gle/8Tgv5EhWzv4HGpWTA'
 ZILLOW_URL = 'https://www.zillow.com/homes/for_rent/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-118.27334129615998%2C%22east%22%3A-71.69131004615998%2C%22south%22%3A20.11041089232061%2C%22north%22%3A52.69600585535755%7D%2C%22isMapVisible%22%3Atrue%2C%22filterState%22%3A%7B%22fsba%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22fr%22%3A%7B%22value%22%3Atrue%7D%2C%22ah%22%3A%7B%22value%22%3Atrue%7D%7D%2C%22isListVisible%22%3Atrue%2C%22mapZoom%22%3A4%7D'
 ZILLOW_HEADER = {
