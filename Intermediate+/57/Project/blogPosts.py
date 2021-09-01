@@ -1,7 +1,3 @@
-# Day 57 of 100 Days of Python
-# Project Name: Blog Posts
-# Things i implemented: Flask and Requests
-
 from flask import Flask, render_template
 from post import Post
 import requests 

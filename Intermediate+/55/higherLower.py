@@ -1,8 +1,3 @@
-# Day 55 Project of 100 Days of Python
-# Project Name: Higher Lower URL Game
-# Things i implemented: Decorator, Flask, Paths
-
-
 from flask import Flask
 from random import randint
 
