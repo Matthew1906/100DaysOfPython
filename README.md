@@ -97,14 +97,15 @@ For the Projects, the driver program (where you run the code) uses camelCase, wh
 
 ### Portofolio Projects
 #### Although I think other projects also counts as portofolio since i made them by myself (although some of them with the course's guidance), these projects are purely made by myself without the course's guidance:
-- Text to Morse Code Converter: https://replit.com/@matthewadrianus/textToMorseCode
-- Portofolio Website: https://matthew1906-python-portofolio.herokuapp.com/
-- Tic Tac Toe: https://replit.com/@matthewadrianus/ticTacToe
-- Watermark Desktop App: https://replit.com/@matthewadrianus/watermarkApp
-- Typing Speed Test Desktop App: https://replit.com/@matthewadrianus/typingSpeedTest
-- Breakout Game: https://replit.com/@matthewadrianus/breakoutGame
-- Cafe & Wifi Website: https://matthew1906-cafe-review.herokuapp.com/
-- Todo List Website: https://matthew1906-todolist-website.herokuapp.com/
-- Disappearing Text Writing Desktop App: https://replit.com/@matthewadrianus/disappearingTextWriting
-- Image Colour Palette Generator Website: https://matthew1906-palette-generator.herokuapp.com/
-- Udemy Course Scraper: Link will be available soon
+- [Text to Morse Code Converter](Professional/81)
+- [Portofolio Website](https://github.com/Matthew1906/PortofolioWebsite)
+- [Tic Tac Toe](Professional/83)
+- [Watermark Desktop App](Professional/84)
+- [Typing Speed Test Desktop App](Professional/85)
+- [Breakout Game](Professional/86)
+- [Cafe & Wifi Website](https://github.com/Matthew1906/Cafe-WifiReview)
+- [Todo List Website](https://github.com/Matthew1906/ToDoList-Flask)
+- [Disappearing Text Writing Desktop App](Professional/89)
+- [PDFtoAudio Converter](Professional/90)
+- [Image Colour Palette Generator Website](https://github.com/Matthew1906/image-color-palette-generator)
+- [Udemy Course Scraper](Professional/92)
