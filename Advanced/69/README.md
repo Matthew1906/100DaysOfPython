@@ -2,6 +2,7 @@
 #### Project name: Blog Posts (Final version)
 #### Things I Implemented: Backend Web Development with flask
 
+#### Link to Github containing deployed website: https://github.com/Matthew1906/BlogApp
 #### Link to deployed website: https://matthew1906-blog-app.herokuapp.com/
 
 #### Steps of deployment:
