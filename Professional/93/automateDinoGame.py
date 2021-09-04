@@ -3,28 +3,20 @@ from pyautogui import press, moveTo
 from time import sleep
 from numpy import array
   
-dinosaur_coordinates = (210, 600)
+dinosaur_coordinates = (215, 600)
  
 def imageGrab():
-    box = (dinosaur_coordinates[0]+40, dinosaur_coordinates[1]-50, dinosaur_coordinates[0]+130, dinosaur_coordinates[1]+150)
-    # moveTo(dinosaur_coordinates[0]+10, dinosaur_coordinates[1]-50)
-    # sleep(2.5)  
-    # moveTo(dinosaur_coordinates[0]+10, dinosaur_coordinates[1]+100)
-    # sleep(2.5)
-    # moveTo(dinosaur_coordinates[0]+100, dinosaur_coordinates[1]-50)
-    # sleep(2.5)
-    # moveTo(dinosaur_coordinates[0]+100, dinosaur_coordinates[1]+100)
-    # sleep(2.5)
-    image = ImageGrab.grab(box)
-    grayImage = ImageOps.grayscale(image)
-    a = array(grayImage.getcolors())
-    print(a)
-    print(a.sum())
-    return a.sum()
+    image = array(ImageOps.grayscale(ImageGrab.grab()))
+    for i in range(dinosaur_coordinates[1]-50, dinosaur_coordinates[1]+110):
+        for j in range(dinosaur_coordinates[0]+35, dinosaur_coordinates[0]+120):
+            if image[i,j] != 255:
+                return True
     
+# Start Game
 sleep(5)
-# moveTo(dinosaur_coordinates)
+press('up')
+
+# Jump
 while True:
-    if imageGrab() not in [18038, 18338]:
-        print('jump')
+    if imageGrab():
         press('up')      
