@@ -112,3 +112,4 @@ Thanks for visiting this repository!
 - [PDF to Audio Book Converter](Professional/90)
 - [Image Colour Palette Generator Website](https://github.com/Matthew1906/image-color-palette-generator)
 - [Udemy Course Scraper](Professional/92)
+- [Google Dinosaur Run Automation](Professional/93)
