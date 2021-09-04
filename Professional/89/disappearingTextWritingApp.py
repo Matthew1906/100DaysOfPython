@@ -22,6 +22,7 @@ def start():
     pre = None
     text = choice(db)
     writer_input.insert("1.0", text)
+    writer_input.focus()
     start_button.config(state='disabled')
     screen.after(5000, disappear)
 
