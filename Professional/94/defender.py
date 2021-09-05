@@ -9,7 +9,7 @@ class Defender(Turtle):
         self.penup()
         self.setpos((0,-180))
         self.setheading(90)
-        self.lives = 3
+        self._lives = 3
         self.bullets = []
 
     def left(self):
@@ -42,9 +42,23 @@ class Defender(Turtle):
         for bullet in self.bullets:
             bullet.move()
 
-    def reset(self):
+    def lose_life(self):
+        '''Decrement defender's life'''
+        self._lives -=1
+
+    def reset_defender(self):
         '''Reset everything'''
         for bullet in self.bullets:
             bullet.reset()
         self.bullets.clear()
         self.reset()
+
+    def successful_shot(self, invaders:list):
+        '''Check if defender's fired bullets successfully hit an invader'''
+        for bullet in self.bullets:
+            for invader in invaders:
+                if bullet.distance(invader)<=10 and invader.isvisible():
+                    bullet.hideturtle()
+                    invader.hideturtle()
+                    return True
+        return False
