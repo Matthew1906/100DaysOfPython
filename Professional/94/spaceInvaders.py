@@ -8,11 +8,6 @@ from scoreboard import ScoreBoard
 from time import sleep
 from PIL import Image, ImageTk
 
-# TODO:
-# - Bullet system (shoot defender or shoot invaders)
-# - Background music if possible
-
-
 # Initialize Screen
 main_screen = Screen()
 main_screen.title("Space Invaders")
@@ -73,10 +68,12 @@ def space_invaders():
 
     # Helper functions
     def clear_all():
-        defender.reset()
-        scoreboard.reset()
+        defender.reset_defender()
+        invaders.reset_invaders()
+        scoreboard.clear()
 
     def back_to_menu():
+        scoreboard.reset()
         draw_menu()
 
     # Config listener
@@ -94,8 +91,17 @@ def space_invaders():
         defender.move_bullets()
         invaders.move_invaders()
         invaders.move_bullets()
-
+        # Check for collision
+        if invaders.check_collision(defender):
+            scoreboard.update_lives()
+            defender.lose_life()
+        elif defender.successful_shot(invaders.invaders):
+            scoreboard.update_score()
+        # Win condition
+        if scoreboard.score == 560 or scoreboard.lives == 0:
+            break
     clear_all()
+    scoreboard.final_result()
     main_screen.ontimer(fun=back_to_menu, t=3000)
     is_game=False
 
