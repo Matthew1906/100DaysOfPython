@@ -2,6 +2,4 @@
 #### Project name: Space Invaders
 #### Things I implemented: Turtle, Image Processing, Inheritance, Game Logic
 
-#### Slight bug where after 1 game, an invader will appear in the middle (like a stamp)
-
-#### There are no repl.it links
+#### There are no repl.it links and I'm not adding audio since it'll take too much time, and most audio playing modules failed :( 
