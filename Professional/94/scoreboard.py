@@ -32,14 +32,15 @@ class ScoreBoard(Turtle):
         self.update_scoreboard()
 
     def final_result(self):
+        '''Show Final Result'''
         if self.lives>0:
             self.goto((0,45))
-            self.write(f"You won!", align = "center", font = ("Arial",24,"bold"))    
+            self.write(f"You win!", align = "center", font = ("Arial",24,"bold"))    
         else:
             self.goto((0,45))
             self.write(f"Game over!", align = "center", font = ("Arial",24,"bold"))    
         self.goto((0,0))
-        self.write(f"Final score {self.score}", align = "center", font = ("Arial",12,"bold"))
+        self.write(f"Final score: {self.score}", align = "center", font = ("Arial",12,"bold"))
         self.goto((0,-35))
         self.write(f"Please wait for a while...", align = "center", font = ("Arial",12,"bold")) 
 

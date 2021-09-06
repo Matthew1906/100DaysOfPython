@@ -46,12 +46,12 @@ class Defender(Turtle):
         '''Decrement defender's life'''
         self._lives -=1
 
-    def reset_defender(self):
+    def reset_bullets(self):
         '''Reset everything'''
         for bullet in self.bullets:
             bullet.reset()
+            bullet.hideturtle()
         self.bullets.clear()
-        self.reset()
 
     def successful_shot(self, invaders:list):
         '''Check if defender's fired bullets successfully hit an invader'''

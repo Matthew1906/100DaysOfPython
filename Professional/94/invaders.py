@@ -17,6 +17,10 @@ class Invaders():
                 invader.setpos((i,j))
                 self.invaders.append(invader)
 
+    def get_possibility(self):
+        living_invaders = len(list(filter(lambda x: x.isvisible(), self.invaders)))
+        return living_invaders*5
+
     def move_invaders(self):
         '''Move the invaders left and right, and shoot something'''
         if self.direction =='right' and self.invaders[0].xcor()<=320:
@@ -35,7 +39,8 @@ class Invaders():
             self.direction = 'right'
         for invader in self.invaders:
             shoot_indicator = randint(1,1000)
-            if shoot_indicator%200==0 and invader.isvisible():
+            possibility_count = self.get_possibility()
+            if shoot_indicator%possibility_count==0 and invader.isvisible():
                 enemy_bullet = Bullet(
                     color = 'red',
                     position = (invader.xcor(), invader.ycor()-12), 
@@ -60,10 +65,13 @@ class Invaders():
                 return True
         return False
 
-    def reset_invaders(self):
+    def reset(self):
+        '''Remove all invaders and bullets'''
         for bullet in self.bullets:
             bullet.reset()
+            bullet.hideturtle()
         self.bullets.clear()
         for invader in self.invaders:
             invader.reset()
+            invader.hideturtle()
         self.invaders.clear()

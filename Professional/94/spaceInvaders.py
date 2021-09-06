@@ -47,7 +47,7 @@ def draw_menu():
     menu.goto((0,0))
     menu.write(f"Press 's' to start game", align = "center", font = ("Arial",12,"bold"))
     menu.goto((0,-35))
-    menu.write(f"Press 'e' to quit game", align = "center", font = ("Arial",12,"bold")) 
+    menu.write(f"Press 'q' to quit game", align = "center", font = ("Arial",12,"bold")) 
 
 def space_invaders():
     # Make sure that the game doesn't run multiple times
@@ -61,18 +61,22 @@ def space_invaders():
     running = True
     delay = 0.05
 
-    # Objects
-    defender = Defender()
+    # Objects   
     scoreboard = ScoreBoard()
     invaders = Invaders()
+    defender = Defender()
 
     # Helper functions
     def clear_all():
-        defender.reset_defender()
-        invaders.reset_invaders()
+        '''Reset all objects (except scoreboard)'''
+        defender.reset_bullets()
+        defender.reset()
+        defender.hideturtle()
+        invaders.reset()
         scoreboard.clear()
 
     def back_to_menu():
+        '''Reset scoreboard and go back to menu'''
         scoreboard.reset()
         draw_menu()
 
@@ -107,5 +111,5 @@ def space_invaders():
 
 draw_menu()
 main_screen.onkey(key='s', fun=space_invaders)
-main_screen.onkey(key='e', fun=main_screen.bye)
+main_screen.onkey(key='q', fun=main_screen.bye)
 main_screen.mainloop()
