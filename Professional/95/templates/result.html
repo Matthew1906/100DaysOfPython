@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Definition(s) of {{result['word']}}
+{% endblock %}
+
+{% block content %}
+<main class='result'>
+    <div class="main">
+        <h2>{{result['word'].capitalize()}}</h2>
+        {% for definition in result['definitions'] %}
+            <!-- type, definition, example, emoji, image -->
+            <hr>
+            <div class = 'definition'>
+                {% if definition.get('image_url') != None %}
+                    <img src="{{definition.get('image_url')}}" alt="{{result['word'].capitalize()}}" class='image'>
+                {% else %}
+                    <img src="https://cdn.dribbble.com/users/760295/screenshots/4433975/no-search-result.png?compress=1&resize=400x300" alt="No result" class='image'>
+                {% endif %}
+                <div class='meaning'>
+                    <p>Type: {{definition['type']}}</p>
+                    <p>Definition: {{definition['definition']}}</p>
+                    <p>Example: {{definition['example']}}</p>
+                    <p>Emoji: {{definition.get('emoji')}} </p> 
+                </div>
+            </div>
+        {% endfor %}
+        <a href="{{url_for('home')}}" class='btn btn-primary'>Go Back</a>
+    </div>
+</main>
+{% endblock %}

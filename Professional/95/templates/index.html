@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dictionary
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="main">
+        <h2>English Dictionary</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages: %}
+                <p class='flash'>{{messages[0]}}</p>
+            {% endif %}
+        {% endwith %}
+        <form action="{{url_for('home')}}" method="post" novalidate>
+            {{form.csrf_token}}
+            {{form.keyword(class='form-control')}}
+            {{form.submit(class='btn btn-primary')}}
+        </form>
+    </div>
+</main>
+{% endblock %}
