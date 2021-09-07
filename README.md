@@ -34,16 +34,14 @@ Thanks for visiting this repository!
 - [Mail Merge](Intermediate/24/Project)
 - [NATO Converter](Intermediate/26/Project)
 
-### Uses Turtle GUI:
--  [Hirst Painting](Intermediate/18/Project)
+### Graphical User Interface (Tkinter & Turtle):
+- [Hirst Painting](Intermediate/18/Project)
 - [Etch A Sketch](Intermediate/19/Project)
 - [Turtle Race](Intermediate/19/Project)
 - [Snake Game](Intermediate/20-21/Project)
 - [Pong Game](Intermediate/22/Project)
 - [Turtle Crossing Game](Intermediate/23/Project)
 - [U.S. States Game](Intermediate/25/Project)
-
-### Uses Tkinter GUI:
 - [Mile to KM Converter](Intermediate/27/Project)
 - [Pomodoro Timer Application](Intermediate/28)
 - [Password Manager](Intermediate/29)
@@ -100,18 +98,18 @@ Thanks for visiting this repository!
 
 ### Portofolio Projects
 #### Although I think other projects also counts as portofolio since i made them by myself (although some of them with the course's guidance), these projects are purely made by myself without the course's guidance:
-- [Text to Morse Code Converter](Professional/81)
-- [Portofolio Website](https://github.com/Matthew1906/PortofolioWebsite)
-- [Tic Tac Toe](Professional/83)
-- [Watermark Desktop App](Professional/84)
-- [Typing Speed Test Desktop App](Professional/85)
-- [Breakout Game](Professional/86)
-- [Cafe & Wifi Website](https://github.com/Matthew1906/Cafe-WifiReview)
-- [Todo List Website](https://github.com/Matthew1906/ToDoList-Flask)
-- [Disappearing Text Writing Desktop App](Professional/89)
-- [PDF to Audio Book Converter](Professional/90)
-- [Image Colour Palette Generator Website](https://github.com/Matthew1906/image-color-palette-generator)
-- [Udemy Course Scraper](Professional/92)
-- [Google Dinosaur Run Automation](Professional/93)
-- [Space Invaders](Professional/94)
-- [API based Website - English Dictionary using Owlbot API](Professional/95)
+- [Text to Morse Code Converter](Professional/81) (Scripting, Playing Audio, JSON Parsing)
+- [Tic Tac Toe](Professional/83) (Scripting, Game)
+- [Portofolio Website](https://github.com/Matthew1906/PortofolioWebsite) (Web Development, File Handling)
+- [Watermark Desktop App](Professional/84) (GUI, Image Processing, File Handling)
+- [Typing Speed Test Desktop App](Professional/85) (Graphical User Interface, HTTP Request & APIs)
+- [Breakout Game](Professional/86) (GUI, Game)
+- [Cafe & Wifi Website](https://github.com/Matthew1906/Cafe-WifiReview) (Web Development)
+- [Todo List Website](https://github.com/Matthew1906/ToDoList-Flask) (Web Development)
+- [Disappearing Text Writing Desktop App](Professional/89) (GUI)
+- [PDF to Audio Book Converter](Professional/90) (GUI, Text-To-Speech API, File Handling)
+- [Image Colour Palette Generator Website](https://github.com/Matthew1906/image-color-palette-generator) (Image Processing, Web Development)
+- [Udemy Course Scraper](Professional/92) (Web Scraping & Automation)
+- [Google Dinosaur Run Automation](Professional/93) (GUI Automation)
+- [Space Invaders](Professional/94) (GUI, Game)
+- [API based Website - English Dictionary using Owlbot API](Professional/95) (HTTP Requests & APIs, Web Development) 
