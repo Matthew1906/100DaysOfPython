@@ -2,4 +2,4 @@
 #### Project Name: Cafe Review Website
 #### Things i implemented: Backend using Flask
 
-#### This is merely a placeholder, I'm linking it to my deployed repository
+#### This is merely a placeholder, I'm linking it to my formerly deployed repository
