@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online Shop with Flask">
+    <meta name="author" content="Matthew Adrianus Mulyono">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="{{url_for('home')}}">Shoplex</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav-align" id="navbarResponsive">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Automotive</a></li>
+                        <li><a class="dropdown-item" href="#">Arts and Crafts</a></li>
+                        <li><a class="dropdown-item" href="#">Books</a></li>
+                        <li><a class="dropdown-item" href="#">Clothing</a></li>
+                        <li><a class="dropdown-item" href="#">Electronics</a></li>
+                        <li><a class="dropdown-item" href="#">Food & Beverages</a></li>
+                        <li><a class="dropdown-item" href="#">Health & Beauty</a></li>
+                        <li><a class="dropdown-item" href="#">Home & Garden</a></li>
+                        <li><a class="dropdown-item" href="#">Office</a></li>
+                        <li><a class="dropdown-item" href="#">Sports & Outdoor Activities</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex mx-auto">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Browse</button>
+                <a href='' class='link-light cart'><i class="fas fa-shopping-cart"></i></a>
+            </form>
+            <ul class="navbar-nav ml-auto">
+                {% if not current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('register')}}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+                </li>
+                {% endif %}
+            </ul>
+          </div>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+    <footer>
+        <hr>
+        <div class='footer white'>
+            <ul class='footer-info'>
+                <strong>Customer Service</strong>
+                <li>Open 24 hours a day</li>
+                <li><a href="" class='link white'><i class="fab fa-whatsapp"></i> +628787197594</a></li>
+                <li><a href="" class='link white'><i class="far fa-envelope"></i> shoplex@mail.com</a></li>
+            </ul>
+            <ul class='footer-info'>
+                <strong>About Shoplex</strong>
+                <li><a href="" class='link white'>Usage Rules</a></li>
+                <li><a href="" class='link white'>Privacy & Refund Policy</a></li>
+                <li><a href="" class='link white'>Buyer Testimonials</a></li>
+            </ul>
+            <ul class='footer-info'>
+                <strong>Buyer</strong>
+                <li><a href="" class='link white'>How to Shop</a></li>
+                <li><a href="" class='link white'>Delivery Methods</a></li>
+                <li><a href="" class='link white'>Payment Methods</a></li>
+            </ul>
+            <div>
+                <div>Follow Us On</div>
+                <a href="" class='link white'><i class="fab fa-instagram"></i></a>
+                <a href="" class='link white'><i class="fab fa-facebook-square"></i></a>
+                <a href="" class='link white'><i class="fab fa-youtube-square"></i></a>
+            </div>
+        </div>
+        <p class='copyright white'>Copyright &copy; Matthew1906's Online Shop Project 2021 </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
