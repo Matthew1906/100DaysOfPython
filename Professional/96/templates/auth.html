@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {% if purpose == 'login' %}
+        Login
+    {% else %}
+        Register
+    {% endif %} 
+{% endblock %}
+{% block content %}
+<main class ='container'>
+    <div class="row">
+        <div class="col">
+            <h3>
+                {% if purpose == 'login' %}
+                    Log in to your account 
+                    {% else %}
+                    Register an account
+                    {% endif %} 
+                to purchase items
+            </h3>
+            <h5>
+                {% if purpose == 'login' %}
+                Don't
+                {% else %}
+                Already
+                {% endif %}
+                have an Account? 
+                <a href="{% if purpose == 'login' %} {{url_for('register')}} {% else %} {{url_for('login')}} {% endif %}" class='link-primary link'>
+                    {% if purpose == 'login' %}
+                    Register
+                    {% else %}
+                    Login
+                    {% endif %} 
+                </a>
+            </h5>
+            {% with messages = get_flashed_messages() %}
+            {% if messages: %}
+              <p class='red'>{{messages[0]}}</p>
+            {% endif %}
+          {% endwith %}     
+        </div>
+    </div>
+    <div class='row'>
+        <form action="{% if purpose == 'login' %} {{url_for('login')}} {% else %} {{url_for('register')}} {% endif %}" method="post" novalidate>
+            {{form.csrf_token}}
+            <div class="form-group">
+                <label class="control-label">{{form.email.label}}</label>
+                {{form.email(class="form-control")}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">{{form.password.label}}</label>
+                {{form.password(class="form-control")}}
+            </div>
+            {% if purpose == 'register' %} 
+                <div class="form-group">
+                    <label class="control-label">{{form.name.label}}</label>
+                    {{form.name(class="form-control")}}
+                </div>
+                <div class="form-group">
+                    <label class="control-label">{{form.dob.label}}</label>
+                    {{form.dob(class="form-control")}}
+                </div>
+            {% endif %}
+            <br>
+            {{form.submit(class='btn btn-primary')}}
+        </form>
+    </div>
+</main>
+{% endblock %}
