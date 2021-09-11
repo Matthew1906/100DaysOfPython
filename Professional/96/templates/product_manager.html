@@ -1,0 +1,87 @@
+{% extends "layout.html" %} 
+
+{% block title %}
+    {% if purpose == 'add' %}   
+        Add Product
+    {% elif purpose == 'update' %} 
+        Update Product
+    {% else %}
+        {{product.name}}
+    {% endif %}
+{% endblock %}
+
+{% block content %} 
+<main>
+    <div class="row">
+        {% if purpose == 'update' %} 
+        <h2 class='text-center'>Update Product</h1>
+        {% endif %}
+        <div class="col {% if purpose != 'update' %}product-info{% endif %}">
+        {% if purpose != 'add' %}
+            {% if purpose == 'get' %}
+                <img src="{{product.image_url}}" alt="{{product.name}}" class='product-img'>
+            {% endif %}
+            <div class='product-detail'>
+                {% if purpose == 'update' %} 
+                    <h4>{{product.name}}</h4> 
+                    <img src="{{product.image_url}}" alt="{{product.name}}" class='update-img'>
+                {% else %} 
+                    <h1>{{product.name}}</h1>
+                {% endif %}
+                <p>{{product.description.strip().capitalize()}}</p>
+                <p>Category: {{product.categories | refactor_categories}}</p>
+                <p>Price: {{product.price | format_currency }}</p>
+                {% if product.stock>0 %} 
+                    <p>In Stock: {{product.stock}}</p>
+                    {% if current_user.id != 1 %}
+                    <a href="" class='btn btn-primary'>Add to Cart</a>
+                    {% endif %}
+                {% else %}
+                    <button class='btn btn-danger'>SOLD OUT!!</button>
+                {% endif %}
+                {% if purpose == 'get' and current_user.id == 1 %}
+                    <a href="{{url_for('update_product', id=product.id)}}" class='btn btn-info'>Update Product</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        {% if purpose != 'get' %} 
+        <form action="{% if purpose == 'add' %}{{url_for('add_product')}}{% else %}{{url_for('update_product', id=product.id)}}{% endif %}" method="post" novalidate class='col'>
+            {{form.csrf_token}}
+            <h2>
+                {% if purpose == 'add' %}
+                    Add Product
+                {% endif %}
+            </h2>
+            <div class="form-group">
+                <label class="control-label">{{form.name.label}}</label>
+                {{form.name(class="form-control")}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">{{form.description.label}}</label>
+                {{form.description(class="form-control")}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">{{form.image_url.label}}</label>
+                {{form.image_url(class="form-control")}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">{{form.price.label}}</label>
+                {{form.price(class="form-control")}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">{{form.stock.label}}</label>
+                {{form.stock(class="form-control")}}
+            </div>
+            <div class="form-group">
+                <label class="control-label">{{form.categories.label}}</label>
+                {{form.categories(class="form-control")}}
+            </div>
+            <br>
+            {{form.submit(class='btn btn-primary')}}
+        </form>
+        {% endif %}
+    </div>
+</main>
+{% endblock %}
+

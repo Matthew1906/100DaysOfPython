@@ -34,3 +34,4 @@ class ProductForm(FlaskForm):
         ],
         validators=[InputRequired()]
     )
+    submit = SubmitField('Save Product')

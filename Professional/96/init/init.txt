@@ -21,3 +21,5 @@ with app.app_context():
     new_category = Category(name='SportsAndOutdoor')
     db.session.add(new_category)
     db.session.commit()
+    df = pd.read_csv('./init/products.csv', delimiter=';')
+    df.to_sql(name='products', con=db.engine, if_exists='append', index=False)
