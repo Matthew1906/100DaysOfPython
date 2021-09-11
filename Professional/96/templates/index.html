@@ -1,12 +1,52 @@
 {% extends "layout.html" %} 
 
 {% block title %}
-    Online Shop
+   Shoplex
 {% endblock %}
 
 {% block content %} 
 <main>
-    Welcome to Shoplex!
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" class="d-block w-100" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" class="d-block w-100" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1612151855475-877969f4a6cc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGQlMjBpbWFnZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" class="d-block w-100" alt="">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center text-center">
+           {% for product in products %} 
+           <div class="card col-4" style="width: 18rem;">
+                <img src="{{product.image_url}}" class="card-img-top" alt="{{product.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">
+                        {{ product.categories | refactor_categories}}
+                    </p>
+                    <p class="card-text">{{product.price | format_currency}}</p>
+                    <a href="{{url_for('get_product', id=product.id)}}" class="btn btn-primary">Check it out</a>
+                </div>
+            </div>
+           {% endfor %}
+           {% if current_user.id == 1 %}
+           <a href="{{url_for('add_product')}}" class='btn btn-info'>Add Product</a>
+            {% endif %}
+        </div>
+    </div>
 </main>
 {% endblock %}
 
