@@ -31,6 +31,10 @@ body{
     text-decoration: none;
 }
 
+.btn-info{
+    margin-top:25px;
+}
+
 .white{
     color:white;
 }
@@ -44,6 +48,14 @@ main{
     height:auto;
     margin-top:55px;
     padding-bottom:220px;
+}
+
+.no-products{
+    margin:25px auto;
+}
+
+.pagination{
+    justify-content: center;
 }
 
 .top-75{

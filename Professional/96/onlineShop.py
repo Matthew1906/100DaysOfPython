@@ -4,15 +4,15 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 # Forms
-from forms import LoginForm, RegisterForm, ProductForm
+from forms import LoginForm, RegisterForm, ProductForm, CartForm
 # Database
 from models import db, User, Product, ProductReview, Order, Transaction, TransactionDetail, Category, ProductCategory
 # Utilities
-from functools import wraps
+from functools import wraps # Decorators
 from datetime import datetime
-from dotenv import load_dotenv
-from os import getenv
-import locale
+from dotenv import load_dotenv # Environment variables
+from os import getenv # Environment variables
+from locale import setlocale, currency, LC_ALL # Currency formatter
 # For initializing dataframe
 import pandas as pd
 
@@ -22,19 +22,21 @@ import pandas as pd
 # - Frontend: Header. Footer, show all products, individual products, product form, unfinished slider (need to add image)
 # - Forms: Product, Login, Register
 # - Authorizations: All done
-# - Product Management: Add Product, Update Product
+# - Product Management: Add Product, Update Product, reduce stock (after adding to cart)
 # - Admin Access: Decorator is done, condition on product management
-# - Cart Function
-# - Product Review
-# - Search Function
-# - Pagination
+# - Cart Function: Add product to cart
+# - Search Function: All done
+# - Pagination: All done
 # - Checkout and Payment Processing
+# - Transaction History
+# - Product Review
+# - Member Editing
 
 # Load Environment Variables
 load_dotenv()
 
 # Configure Locale
-locale.setlocale(locale.LC_ALL, 'IND')
+setlocale(LC_ALL, 'IND')
 
 # Create App
 app = Flask(__name__)
@@ -69,10 +71,18 @@ def admin_only(func):
         return abort(403)
     return decorated_function
 
+def member_only(func):
+    @wraps(func)
+    def decorated_function(*args, **kwargs):
+        if current_user.is_authenticated and current_user.id != 1 :
+            return func(*args, **kwargs)
+        return abort(403)
+    return decorated_function
+
 # Setup Template filter
 @app.template_filter('format_currency')
 def format_currency(price:int):
-    return locale.currency(float(price))
+    return currency(float(price))
 
 @app.template_filter('refactor_categories')
 def refactor_categories(categories:list):
@@ -82,9 +92,23 @@ def refactor_categories(categories:list):
 
 # Main route
 @app.route('/')
-def home():
-    products = Product.query.all()
+@app.route('/<int:page>')
+def home(page=1):
+    products = Product.query.paginate(page,9)
     return render_template('index.html', products = products)
+
+@app.route('/category/<int:id>')
+@app.route('/category/<int:id>/<int:page>')
+def get_by_category(id:int, page=1):
+    products = Product.query.join(ProductCategory).filter_by(category_id=id).paginate(page,9)
+    return render_template('index.html', products= products)
+
+@app.route('/search')
+@app.route('/search/<int:page>')
+def search_product(page=1):
+    query = request.args.get('search')
+    products = Product.query.filter(Product.name.like(f'%{query}%')).paginate(page,9)
+    return render_template('index.html', products= products)
 
 # User Authentication
 @app.route('/register', methods=['GET','POST'])
@@ -194,11 +218,26 @@ def update_product(id:int):
         return redirect(url_for('get_product', id=id))
     return render_template('product_manager.html', product=product, purpose = 'update', form = form)
 
-# Add to Cart
-@app.route('/products/<int:id>', methods=['GET','POST'])
+@app.route('/products/<int:id>')
 def get_product(id:int):
     product = Product.query.filter_by(id=id).first()
-    return render_template('product_manager.html', product=product, purpose = 'get')
+    form = CartForm(product.stock)
+    return render_template('product_manager.html', form=form, product=product, purpose = 'get')
+
+# Add to Cart
+@app.route('/cart/<int:user_id>/add/<int:product_id>', methods=['POST'])
+def add_to_cart(product_id, user_id):
+    product = Product.query.filter_by(id=product_id).first()
+    new_order = Order(
+        user= current_user,
+        product = product,
+        quantity = int(request.form.get('count'))
+    )
+    with app.app_context():
+        product.stock = product.stock-new_order.quantity
+        db.session.add(new_order)
+        db.session.commit()
+    return redirect(url_for('home'))
 
 # Checkout
 

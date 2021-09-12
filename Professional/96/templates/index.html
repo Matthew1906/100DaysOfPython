@@ -1,7 +1,7 @@
 {% extends "layout.html" %} 
 
 {% block title %}
-   Shoplex
+   Shoplexify
 {% endblock %}
 
 {% block content %} 
@@ -29,21 +29,48 @@
     </div>
     <div class="container">
         <div class="row justify-content-center text-center">
-           {% for product in products %} 
-           <div class="card col-4" style="width: 18rem;">
-                <img src="{{product.image_url}}" class="card-img-top" alt="{{product.name}}">
-                <div class="card-body">
-                    <h5 class="card-title">{{product.name}}</h5>
-                    <p class="card-text">
-                        {{ product.categories | refactor_categories}}
-                    </p>
-                    <p class="card-text">{{product.price | format_currency}}</p>
-                    <a href="{{url_for('get_product', id=product.id)}}" class="btn btn-primary">Check it out</a>
+            {% if products.items == [] %} 
+              <h2 class='no-products'>There are no products!</h2>
+            {% else %}
+              {% for product in products.items %} 
+              <div class="card col-4" style="width: 18rem;">
+                    <img src="{{product.image_url}}" class="card-img-top" alt="{{product.name}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text">
+                            {{ product.categories | refactor_categories}}
+                        </p>
+                        <p class="card-text">{{product.price | format_currency}}</p>
+                        <a href="{{url_for('get_product', id=product.id)}}" class="btn btn-primary">Check it out</a>
+                    </div>
                 </div>
-            </div>
-           {% endfor %}
-           {% if current_user.id == 1 %}
-           <a href="{{url_for('add_product')}}" class='btn btn-info'>Add Product</a>
+              {% endfor %}
+              <ul class="pagination">
+                  <li class="page-item {% if not products.has_prev %} disabled {% endif %}">
+                    <a class="page-link" href="{% if products.has_prev %}{{url_for('home', page=products.prev_num)}}{% endif %}">Previous</a>
+                  </li>
+                  {% if products.page != 1 %}
+                    <li class="page-item"><a class="page-link" href="{{url_for('home', page=1)}}">1</a></li>
+                    {% if products.page != 2 %}
+                      <li class="page-item disabled"><a class="page-link" href="#">🞄🞄🞄</a></li>
+                    {% endif %}
+                  {% endif %}
+                  <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">{{products.page}}</a>
+                  </li>
+                  {% if products.page != products.pages %}
+                    {% if products.page+1 != products.pages%}
+                      <li class="page-item disabled"><a class="page-link" href="#">🞄🞄🞄</a></li>
+                    {% endif %}
+                    <li class="page-item"><a class="page-link" href="{{url_for('home', page=products.pages)}}">{{products.pages}}</a></li>
+                  {% endif %}
+                  <li class="page-item {% if not products.has_next %} disabled {% endif %}">
+                    <a class="page-link" href="{% if products.has_next %}{{url_for('home', page=products.next_num)}}{% endif %}">Next</a>
+                  </li>
+                </ul>
+                {% if current_user.id == 1 %}
+                <a href="{{url_for('add_product')}}" class='btn btn-info'>Add Product</a>
+                {% endif %}
             {% endif %}
         </div>
     </div>
