@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="{{url_for('home')}}">Shoplex</a>
+          <a class="navbar-brand" href="{{url_for('home')}}">Shoplexify</a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -25,21 +25,21 @@
                         Categories
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Automotive</a></li>
-                        <li><a class="dropdown-item" href="#">Arts and Crafts</a></li>
-                        <li><a class="dropdown-item" href="#">Books</a></li>
-                        <li><a class="dropdown-item" href="#">Clothing</a></li>
-                        <li><a class="dropdown-item" href="#">Electronics</a></li>
-                        <li><a class="dropdown-item" href="#">Food & Beverages</a></li>
-                        <li><a class="dropdown-item" href="#">Health & Beauty</a></li>
-                        <li><a class="dropdown-item" href="#">Home & Garden</a></li>
-                        <li><a class="dropdown-item" href="#">Office</a></li>
-                        <li><a class="dropdown-item" href="#">Sports & Outdoor Activities</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=1)}}">Automotive</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=2)}}">Arts and Crafts</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=3)}}">Books</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=4)}}">Clothing</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=5)}}">Electronics</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=6)}}">Food & Beverages</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=7)}}">Health & Beauty</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=8)}}">Home & Garden</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=9)}}">Office</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('get_by_category', id=10)}}">Sports & Outdoor Activities</a></li>
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex mx-auto">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex mx-auto" action='{{url_for("search_product")}}' method='GET'>
+                <input class="form-control me-2" name='search' type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-light" type="submit">Browse</button>
                 <a href='' class='link-light cart'><i class="fas fa-shopping-cart"></i></a>
             </form>

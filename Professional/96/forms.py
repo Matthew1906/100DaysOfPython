@@ -1,7 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms.fields import StringField, TextAreaField , PasswordField, SubmitField, IntegerField, SelectMultipleField
-from wtforms.fields.html5 import DateField
-from wtforms.validators import InputRequired, URL, email
+from wtforms.fields import StringField, TextAreaField , PasswordField, SubmitField, SelectMultipleField
+from wtforms.fields.html5 import DateField, IntegerField
+from wtforms.widgets.html5 import NumberInput
+from wtforms.validators import InputRequired, URL, email, NumberRange
 
 # Authentication
 class RegisterForm(FlaskForm):
@@ -21,8 +22,8 @@ class ProductForm(FlaskForm):
     name = StringField('Product Name', validators=[InputRequired()])
     description = TextAreaField('Product Description', validators=[InputRequired()])
     image_url = StringField('Product Image URL', validators=[InputRequired(), URL()])
-    price = IntegerField('Product Price', validators=[InputRequired()])
-    stock = IntegerField('Stock', validators=[InputRequired()])
+    price = IntegerField('Product Price', validators=[InputRequired(), NumberRange(min=1)])
+    stock = IntegerField('Stock', validators=[InputRequired(), NumberRange(min=1)])
     categories = SelectMultipleField(
         label='Categories', 
         choices=[
@@ -31,7 +32,16 @@ class ProductForm(FlaskForm):
             ('Electronics', 'Electronics'), ('Food', 'Food and Beverages'),
             ('HealthAndBeauty','Health and Beauty'),('HomeAndGarden', 'Home and Garden'), 
             ('Office', 'Office'), ('SportsAndOutdoor','Sports & Outdoor Activities')
-        ],
-        validators=[InputRequired()]
+        ]
     )
     submit = SubmitField('Save Product')
+
+# Add to Cart Form
+class CartForm(FlaskForm):
+    count = IntegerField('Number of Products', validators=[InputRequired()])
+    def __init__(self, limit=None, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if limit:
+            print(limit)
+            self.count.widget = NumberInput(min=1, max=limit)
+    

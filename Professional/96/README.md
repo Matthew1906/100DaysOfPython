@@ -11,3 +11,4 @@
 2. build database, form basic layout of website(navbar and footer), add categories to the database (save the block of code into ./init/init.txt)
 3. User Authentication (login, register, logout) and Mock data for products (taken from amazon, with a little tinkering) -> saved to .csv
 4. Insert Mock Data into Database, Add product management functionality (Add new products and Update products), add Admin only decorator, and implemented template filter 
+5. Add to Cart function, Pagination, and Search
