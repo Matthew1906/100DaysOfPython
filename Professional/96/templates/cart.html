@@ -1,0 +1,40 @@
+{% extends "layout.html" %} 
+
+{% block title %}
+   My Cart
+{% endblock %}
+
+{% block content %} 
+<main>
+    <div class='row'>
+        <h2 class='text-center margin-50'>{{current_user.name}}'s Cart</h2>
+        <hr>
+        <div class="col cart-contents">
+            <div>
+            {% for order in orders %} 
+                <div class="cart-item">
+                    <img src="{{order.product.image_url}}" alt="{{order.product.name}}" class='cart-img'>
+                    <div class='cart-details'>
+                        <h4>{{order.product.name}}</h4>
+                        <p>Price: {{order.product.price}}</p>
+                        <p class='btn-group'>
+                            <a href="{{url_for('decrement_product_quantity', user_id=current_user.id, product_id = order.product_id)}}" class='btn btn-light'>-</a>
+                            <span class='btn btn-light'>{{order.quantity}}</span>
+                            <a href="{{url_for('increment_product_quantity', user_id=current_user.id, product_id = order.product_id)}}" class='btn btn-light {% if order.product.stock <= 0%} disabled {% endif %}'>+</a>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+            <div class="card cart-summary">
+                <div class="card-body">
+                    <h5 class="card-title">Cart Summary</h5>
+                    <p class="card-text">Total Price ({{orders | get_order_count}}): {{orders | get_current_sum}}</p>
+                    <hr>
+                    <a href="{{url_for('checkout', user_id=current_user.id)}}" class = 'btn btn-primary'>Checkout</a>
+                </div>
+            </div>  
+        </div>
+    </div> 
+</main>
+{% endblock %}

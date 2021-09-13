@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transactions
+{% endblock %}
+{% block content %}
+<main>
+    <div class='row'>
+        {% if purpose == 'show_all' %} 
+        <h2 class='text-center margin-50'>All {{current_user.name}}'s Transaction</h2> 
+        <div class="col">
+        {% for transaction in transactions %} 
+            <div class="transaction-history">
+                <hr>
+                <h5>Date of Transaction: {{transaction.date | format_date }}</h5>
+                <h6>Total Payment: {{transaction | get_total_payment}}</h6>
+                {% if transaction.payment_status == 'Unpaid' %}
+                <h6>Status: {{transaction.payment_status}}</h6>
+                {% else %}
+                <h6>Status: {{transaction.delivery_status}}</h6>
+                {% endif %}
+                <a href="{{url_for('get_transaction_history', transaction_id=transaction.id, user_id = current_user.id)}}" class = 'btn btn-info'>Check it out</a>
+            </div>
+        {% endfor %}
+        </div>
+        {% else %}
+        <h2 class='text-center margin-50'>{{current_user.name}}'s {{transaction.date | format_date }}'s Transaction</h2>
+        <hr>
+        <div class="col cart-contents">
+            <div>
+            {% for detail in transaction.details %} 
+                <div class="cart-item">
+                    <img src="{{detail.product.image_url}}" alt="{{detail.product.name}}" class='cart-img'>
+                    <div class='cart-details'>
+                        <h4>{{detail.product.name}}</h4>
+                        <p>Price: {{detail.price | format_currency}}</p> 
+                        <p>Quantity: {{detail.quantity}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+            <div class="card transaction-summary">
+                <div class="card-body">
+                    <h5 class="card-title">Transaction Summary</h5>
+                    <p class="card-text">Total Price ({{transaction.details | get_products_count}}): {{transaction.details | get_price_sum}}</p>
+                    <p class="card-text">Delivery Cost: {{transaction.delivery_cost | format_currency}}</p>
+                    <em class="card-text">Total Payment: {{transaction | get_total_payment}}</em>
+                    <hr>
+                    <p class='card-text'>Payment Method: {{transaction.payment_method}}</p>
+                    <p class='card-text'>Payment Status: {{transaction.payment_status}}</p>
+                    <p class='card-text'>Delivery Status: {{transaction.delivery_status}}</p>
+                    <hr>
+                    {% if transaction.delivery_status == 'Unsent' %}
+                        <a href="{{url_for('product_delivered', user_id=current_user.id, transaction_id=transaction.id)}}" class='btn btn-primary'>Reached the destination</a>
+                    {% endif %}
+                </div>
+            </div>  
+        </div>
+        {% endif %}
+    </div> 
+</main>
+{% endblock %}
