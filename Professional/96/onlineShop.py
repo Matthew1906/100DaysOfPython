@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 # Forms
-from forms import LoginForm, RegisterForm, ProductForm, CartForm
+from forms import LoginForm, RegisterForm, ProductForm, CartForm, TransactionForm, ReviewForm
 # Database
 from models import db, User, Product, ProductReview, Order, Transaction, TransactionDetail, Category, ProductCategory
 # Utilities
@@ -27,10 +27,9 @@ import pandas as pd
 # - Cart Function: Add product to cart
 # - Search Function: All done
 # - Pagination: All done
-# - Checkout and Payment Processing
-# - Transaction History
+# - Checkout: All done
+# - Transaction History: All done
 # - Product Review
-# - Member Editing
 
 # Load Environment Variables
 load_dotenv()
@@ -84,11 +83,35 @@ def member_only(func):
 def format_currency(price:int):
     return currency(float(price))
 
+@app.template_filter('format_date')
+def format_date(date):
+    return date.strftime('%d/%m/%Y')
+
 @app.template_filter('refactor_categories')
 def refactor_categories(categories:list):
     if len(categories) == 0:
         return 'Miscellaneous'
     return ', '.join([pc.category.name.replace('And', ' & ') for pc in categories])
+
+@app.template_filter('get_order_count')
+def get_order_count(orders):
+    return sum([order.quantity for order in orders])
+
+@app.template_filter('get_products_count')
+def get_products_count(details):
+    return sum([detail.quantity for detail in details])
+
+@app.template_filter('get_current_sum')
+def get_current_sum(orders):
+    return currency(float(sum([order.product.price * order.quantity for order in orders])))
+
+@app.template_filter('get_price_sum')
+def get_price_sum(transactions):
+    return currency(float(sum([transaction.price * transaction.quantity for transaction in transactions])))
+
+@app.template_filter('get_total_payment')
+def get_total_payment(info):
+    return currency(float(info.delivery_cost+sum([transaction.price * transaction.quantity for transaction in info.details])))
 
 # Main route
 @app.route('/')
@@ -221,8 +244,15 @@ def update_product(id:int):
 @app.route('/products/<int:id>')
 def get_product(id:int):
     product = Product.query.filter_by(id=id).first()
-    form = CartForm(product.stock)
-    return render_template('product_manager.html', form=form, product=product, purpose = 'get')
+    cart_form = CartForm(product.stock)
+    review_form = ReviewForm()
+    return render_template(
+        'product_manager.html',
+        cart_form=cart_form, 
+        review_form=review_form, 
+        product=product, 
+        purpose = 'get'
+    )
 
 # Add to Cart
 @app.route('/cart/<int:user_id>/add/<int:product_id>', methods=['POST'])
@@ -234,15 +264,123 @@ def add_to_cart(product_id, user_id):
         quantity = int(request.form.get('count'))
     )
     with app.app_context():
-        product.stock = product.stock-new_order.quantity
+        product.stock-=new_order.quantity
         db.session.add(new_order)
         db.session.commit()
     return redirect(url_for('home'))
 
-# Checkout
+@app.route('/cart/<int:user_id>')
+@login_required
+@member_only
+def get_cart(user_id):
+    orders = Order.query.filter_by(user=current_user)
+    if user_id != current_user.id:
+        return abort(403)
+    return render_template('cart.html', orders = orders)
 
+@app.route('/cart/<int:user_id>/increment_quantity/<int:product_id>')
+@login_required
+@member_only
+def increment_product_quantity(user_id, product_id):
+    if user_id != current_user.id:
+        return abort(403)
+    product = Product.query.filter_by(id=product_id).first()
+    order = Order.query.filter_by(user_id=user_id, product_id=product_id).first()
+    with app.app_context():
+        order.quantity+=1
+        product.stock-=1
+        db.session.commit()
+    return redirect(url_for('get_cart', user_id=user_id))
+
+@app.route('/cart/<int:user_id>/decrement_quantity/<int:product_id>')
+@login_required
+@member_only
+def decrement_product_quantity(user_id, product_id):
+    if user_id != current_user.id:
+        return abort(403)
+    product = Product.query.filter_by(id=product_id).first()
+    order = Order.query.filter_by(user_id=user_id, product_id=product_id).first()
+    with app.app_context():
+        order.quantity-=1
+        product.stock+=1
+        if order.quantity == 0:
+            db.session.delete(order)
+        db.session.commit()
+    return redirect(url_for('get_cart', user_id=user_id))
+
+# Checkout
+@app.route('/cart/<int:user_id>/checkout', methods=['GET', 'POST'])
+@login_required
+@member_only
+def checkout(user_id):
+    if user_id != current_user.id:
+        return abort(403)
+    details = Order.query.filter_by(user=current_user)
+    transaction_id = 0
+    form = TransactionForm()
+    if form.validate_on_submit():
+        with app.app_context():
+            new_transaction = Transaction(
+                user = current_user,
+                date = datetime.now().date(),
+                payment_method = request.form.get('payment_method'),
+                payment_status = 'Unpaid',
+                address = request.form.get('address'),
+                delivery_cost = len(request.form.get('address'))*100,
+                delivery_status = 'Unsent',
+            )
+            db.session.add(new_transaction)
+            db.session.commit()
+            for detail in details:
+                new_transaction_detail = TransactionDetail(
+                    transaction = new_transaction,
+                    product = detail.product,
+                    quantity = detail.quantity,
+                    price = detail.product.price
+                )
+                db.session.add(new_transaction_detail)
+                db.session.commit()
+            for detail in details:
+                db.session.delete(detail)
+                db.session.commit()
+            transaction_id = new_transaction.id  
+        return redirect(url_for('get_transaction_history', user_id = user_id, transaction_id = transaction_id))    
+    return render_template('checkout.html', form=form, details=details)
 
 # Transaction History
+@app.route('/history/<int:user_id>')
+@login_required
+@member_only
+def get_all_transactions(user_id):
+    if user_id != current_user.id:
+        return abort(403)
+    transactions = Transaction.query.filter_by(user_id=user_id)
+    return render_template('transaction.html', transactions = transactions, purpose='show_all')
+
+@app.route('/history/<int:user_id>/<int:transaction_id>', methods=['GET', 'POST'])
+@login_required
+@member_only
+def get_transaction_history(user_id, transaction_id):
+    if user_id != current_user.id:
+        return abort(403)
+    transaction = Transaction.query.filter_by(id=transaction_id).first()
+    return render_template('transaction.html', transaction = transaction, purpose='single')
+
+@app.route('/history/<int:user_id>/<int:transaction_id>/delivered', methods=['GET', 'POST'])
+@login_required
+@member_only
+def product_delivered(user_id, transaction_id):
+    if user_id != current_user.id:
+        return abort(403)
+    transaction = Transaction.query.filter_by(id=transaction_id).first()
+    with app.app_context():
+        transaction.delivery_status = 'Delivered'
+        transaction.payment_status = 'Paid'
+        db.session.commit()
+    return redirect(url_for('get_transaction_history', user_id=user_id, transaction_id=transaction_id))
+
+# Product Reviews
+
 
 # Driver code
 if __name__ == '__main__':

@@ -35,8 +35,8 @@
                     <p>In Stock: {{product.stock}}</p>
                     {% if current_user.id != 1 %}
                     <form id = 'cart_form' action="{% if current_user.is_authenticated %}{{url_for('add_to_cart', user_id = current_user.id, product_id=product.id)}}{% endif %}" method="post">
-                        {{form.csrf_token}} 
-                        {{form.count()}}
+                        {{cart_form.csrf_token}} 
+                        {{cart_form.count()}}
                         <button type = 'button' class = 'btn btn-primary' onclick="{% if current_user.is_authenticated %}addedToCart(){% else %}notLoggedIn(){% endif %}">Add to Cart</button>
                     </form>
                     {% endif %}

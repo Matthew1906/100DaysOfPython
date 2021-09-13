@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms.fields import StringField, TextAreaField , PasswordField, SubmitField, SelectMultipleField
+from wtforms.fields import StringField, TextAreaField , PasswordField, SubmitField, SelectMultipleField, SelectField
 from wtforms.fields.html5 import DateField, IntegerField
 from wtforms.widgets.html5 import NumberInput
 from wtforms.validators import InputRequired, URL, email, NumberRange
@@ -44,4 +44,19 @@ class CartForm(FlaskForm):
         if limit:
             print(limit)
             self.count.widget = NumberInput(min=1, max=limit)
-    
+
+class TransactionForm(FlaskForm):
+    address = StringField('Address', validators=[InputRequired()]) 
+    payment_method = SelectField(
+        label = 'Choose Payment Method',
+        choices=[
+            ('GoPay'), ('Credit Card'), ('Cash On Demand')
+        ],
+        validators=[InputRequired()]
+    )
+    submit = SubmitField("Checkout")
+
+class ReviewForm(FlaskForm):
+    rating = IntegerField('Number of Products', validators=[InputRequired()], widget=NumberInput(min=1, max=5))
+    body = TextAreaField('Review', validators=[InputRequired()])
+    submit = SubmitField('Submit Review')
