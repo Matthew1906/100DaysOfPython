@@ -43,6 +43,7 @@ class CartForm(FlaskForm):
         super().__init__(*args, **kwargs)
         if limit:
             print(limit)
+            self.count.validators.append(NumberRange(min=1, max=limit))
             self.count.widget = NumberInput(min=1, max=limit)
 
 class TransactionForm(FlaskForm):
@@ -57,6 +58,6 @@ class TransactionForm(FlaskForm):
     submit = SubmitField("Checkout")
 
 class ReviewForm(FlaskForm):
-    rating = IntegerField('Number of Products', validators=[InputRequired()], widget=NumberInput(min=1, max=5))
+    rating = IntegerField('Your Rating', validators=[InputRequired(), NumberRange(min=1, max=5)], widget=NumberInput(min=1, max=5))
     body = TextAreaField('Review', validators=[InputRequired()])
     submit = SubmitField('Submit Review')

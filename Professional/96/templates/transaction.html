@@ -9,19 +9,22 @@
         {% if purpose == 'show_all' %} 
         <h2 class='text-center margin-50'>All {{current_user.name}}'s Transaction</h2> 
         <div class="col">
-        {% for transaction in transactions %} 
-            <div class="transaction-history">
-                <hr>
-                <h5>Date of Transaction: {{transaction.date | format_date }}</h5>
-                <h6>Total Payment: {{transaction | get_total_payment}}</h6>
-                {% if transaction.payment_status == 'Unpaid' %}
-                <h6>Status: {{transaction.payment_status}}</h6>
-                {% else %}
-                <h6>Status: {{transaction.delivery_status}}</h6>
-                {% endif %}
-                <a href="{{url_for('get_transaction_history', transaction_id=transaction.id, user_id = current_user.id)}}" class = 'btn btn-info'>Check it out</a>
-            </div>
-        {% endfor %}
+            {% if transactions.count() == 0 %} 
+            <h2 class='no-products'>There are no transactions!</h2>
+            {% endif %}
+            {% for transaction in transactions %} 
+                <div class="horizontal-padding-50">
+                    <hr>
+                    <h5>Date of Transaction: {{transaction.date | format_date }}</h5>
+                    <h6>Total Payment: {{transaction | get_total_payment}}</h6>
+                    {% if transaction.payment_status == 'Unpaid' %}
+                    <h6>Status: {{transaction.payment_status}}</h6>
+                    {% else %}
+                    <h6>Status: {{transaction.delivery_status}}</h6>
+                    {% endif %}
+                    <a href="{{url_for('get_transaction_history', transaction_id=transaction.id, user_id = current_user.id)}}" class = 'btn btn-info'>Check it out</a>
+                </div>
+            {% endfor %}
         </div>
         {% else %}
         <h2 class='text-center margin-50'>{{current_user.name}}'s {{transaction.date | format_date }}'s Transaction</h2>

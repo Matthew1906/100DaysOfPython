@@ -29,6 +29,7 @@
                     <h1>{{product.name}}</h1>
                 {% endif %}
                 <p>{{product.description.strip().capitalize()}}</p>
+                <p>{{product.reviews | get_average_rating}} ({{product.reviews | get_number_of_reviews}}) </p>
                 <p>Category: {{product.categories | refactor_categories}}</p>
                 <p>Price: {{product.price | format_currency }}</p>
                 {% if product.stock>0 %} 
@@ -48,6 +49,40 @@
                 {% endif %}
             </div>
         </div>
+        {% if purpose == 'get' %}
+        <div class="row">
+            <div class = 'col horizontal-padding-50'>
+                {% if product.reviews != [] %}
+                <h4>Reviews: </h4>
+                <hr>
+                {% for review in product.reviews %} 
+                    <p>{{review.rating | get_stars }}, "{{review.review}}" - {{review.user.name}}</p>
+                {% endfor %}
+                <hr>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        {% if purpose == 'get' and current_user.is_authenticated and current_user.id !=1 %} 
+        <div class="row">
+            <div class="col horizontal-padding-50">   
+                <h3>Add Review</h3> 
+                <form action="{{url_for('get_product', id=product.id)}}" method="post" novalidate class='col'>
+                    {{review_form.csrf_token}}
+                    <div class="form-group">
+                        <label class="control-label">{{review_form.rating.label}}</label>
+                        {{review_form.rating(class="form-control")}}
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">{{review_form.body.label}}</label>
+                        {{review_form.body(class="form-control")}}
+                    </div>  
+                    <br>
+                    {{review_form.submit(class='btn btn-primary')}}
+                </form>
+            </div>
+        </div>
+        {% endif %}
         {% endif %}
         {% if purpose != 'get' %} 
         <form action="{% if purpose == 'add' %}{{url_for('add_product')}}{% else %}{{url_for('update_product', id=product.id)}}{% endif %}" method="post" novalidate class='col'>

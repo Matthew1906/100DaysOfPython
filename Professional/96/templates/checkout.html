@@ -10,7 +10,7 @@
         <div class='row top-75'>
             <hr>
             <h5>Cart Summary</h5>
-            <p>Total Price ({{details | get_length}}): {{details | get_total}}</p>
+            <p>Total Price ({{details | get_order_count}}): {{details | get_current_sum}}</p>
             <hr>
             <form action="{{url_for('checkout', user_id=current_user.id)}}" method="post" novalidate>
                 {{form.csrf_token}}

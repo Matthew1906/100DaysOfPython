@@ -11,6 +11,9 @@
         <hr>
         <div class="col cart-contents">
             <div>
+            {% if orders.count()==0 %} 
+            <h2 class='no-products'>There are no orders!</h2>
+            {% endif %}
             {% for order in orders %} 
                 <div class="cart-item">
                     <img src="{{order.product.image_url}}" alt="{{order.product.name}}" class='cart-img'>
@@ -26,6 +29,7 @@
                 </div>
             {% endfor %}
             </div>
+            {% if orders.count() !=0 %}
             <div class="card cart-summary">
                 <div class="card-body">
                     <h5 class="card-title">Cart Summary</h5>
@@ -34,6 +38,7 @@
                     <a href="{{url_for('checkout', user_id=current_user.id)}}" class = 'btn btn-primary'>Checkout</a>
                 </div>
             </div>  
+            {% endif %}
         </div>
     </div> 
 </main>

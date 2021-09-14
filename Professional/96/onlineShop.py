@@ -13,29 +13,13 @@ from datetime import datetime
 from dotenv import load_dotenv # Environment variables
 from os import getenv # Environment variables
 from locale import setlocale, currency, LC_ALL # Currency formatter
-# For initializing dataframe
-import pandas as pd
-
-# PROGRESS:
-# - Flow of Program: Flowchart, ERD
-# - Database: All done
-# - Frontend: Header. Footer, show all products, individual products, product form, unfinished slider (need to add image)
-# - Forms: Product, Login, Register
-# - Authorizations: All done
-# - Product Management: Add Product, Update Product, reduce stock (after adding to cart)
-# - Admin Access: Decorator is done, condition on product management
-# - Cart Function: Add product to cart
-# - Search Function: All done
-# - Pagination: All done
-# - Checkout: All done
-# - Transaction History: All done
-# - Product Review
+import pandas as pd # Initialize Products
 
 # Load Environment Variables
 load_dotenv()
 
 # Configure Locale
-setlocale(LC_ALL, 'IND')
+setlocale(LC_ALL, 'id_ID.utf8')
 
 # Create App
 app = Flask(__name__)
@@ -61,7 +45,8 @@ db.init_app(app)
 def load_user(user_id):
     return User.query.get(user_id)
 
-# Setup Decorator
+# // ------------------------------ DECORATORS ------------------------------ //
+
 def admin_only(func):
     @wraps(func)
     def decorated_function(*args, **kwargs):
@@ -78,42 +63,69 @@ def member_only(func):
         return abort(403)
     return decorated_function
 
-# Setup Template filter
+# // ------------------------------ TEMPLATE FILTERS ------------------------------ //
+
 @app.template_filter('format_currency')
 def format_currency(price:int):
+    '''Format currency'''
     return currency(float(price))
 
 @app.template_filter('format_date')
 def format_date(date):
+    '''Format Date'''
     return date.strftime('%d/%m/%Y')
 
 @app.template_filter('refactor_categories')
 def refactor_categories(categories:list):
+    '''Change the categories into a more readable string format'''
     if len(categories) == 0:
         return 'Miscellaneous'
     return ', '.join([pc.category.name.replace('And', ' & ') for pc in categories])
 
+@app.template_filter('get_stars')
+def get_stars(rating:int):
+    '''Convert Rating into stars'''
+    return '★' * rating
+
+@app.template_filter('get_average_rating')
+def get_average_rating(reviews):
+    '''Get average rating and convert them into stars'''
+    if len(reviews) == 0:
+        return 'Not Rated'
+    return '★' * (sum([review.rating for review in reviews]) // len(reviews))
+
+@app.template_filter('get_number_of_reviews')
+def get_number_of_reviews(reviews):
+    '''Convert Rating into stars'''
+    return len(reviews)
+
 @app.template_filter('get_order_count')
 def get_order_count(orders):
+    '''Get number of products in total (from Order object)'''
     return sum([order.quantity for order in orders])
 
 @app.template_filter('get_products_count')
 def get_products_count(details):
+    '''Get Number of products in total (from TransactionDetail object)'''
     return sum([detail.quantity for detail in details])
 
 @app.template_filter('get_current_sum')
 def get_current_sum(orders):
+    '''Get Temporary Total Cost in Cart (from Order object)'''
     return currency(float(sum([order.product.price * order.quantity for order in orders])))
 
 @app.template_filter('get_price_sum')
 def get_price_sum(transactions):
+    '''Get Total Cost (from Transaction object)'''
     return currency(float(sum([transaction.price * transaction.quantity for transaction in transactions])))
 
 @app.template_filter('get_total_payment')
 def get_total_payment(info):
+    '''Get Total Cost + Delivery Cost in currency format (from Transaction Object)'''
     return currency(float(info.delivery_cost+sum([transaction.price * transaction.quantity for transaction in info.details])))
 
-# Main route
+# // ------------------------------ BASIC FUNCTIONALITY ------------------------------ //
+
 @app.route('/')
 @app.route('/<int:page>')
 def home(page=1):
@@ -133,7 +145,8 @@ def search_product(page=1):
     products = Product.query.filter(Product.name.like(f'%{query}%')).paginate(page,9)
     return render_template('index.html', products= products)
 
-# User Authentication
+# // ------------------------------ USER AUTHENTICATION ------------------------------ //
+
 @app.route('/register', methods=['GET','POST'])
 def register():
     form = RegisterForm()
@@ -180,7 +193,8 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-# Product Management -> Admin Access
+# // ------------------------------ PRODUCT MANAGEMENT (CRUD) ------------------------------ //
+
 @app.route('/products/add', methods=['GET','POST'])
 @admin_only
 def add_product():
@@ -241,11 +255,27 @@ def update_product(id:int):
         return redirect(url_for('get_product', id=id))
     return render_template('product_manager.html', product=product, purpose = 'update', form = form)
 
-@app.route('/products/<int:id>')
+@app.route('/products/<int:id>', methods=['GET', 'POST'])
 def get_product(id:int):
     product = Product.query.filter_by(id=id).first()
     cart_form = CartForm(product.stock)
     review_form = ReviewForm()
+    if current_user.is_authenticated and review_form.validate_on_submit():
+        find_product_review = ProductReview.query.filter_by(product=product, user=current_user).first()
+        if find_product_review:
+            with app.app_context():
+                db.session.delete(find_product_review)
+                db.session.commit()
+        new_product_review = ProductReview(
+            user = current_user,
+            product = product,
+            rating = int(request.form.get('rating')),
+            review = request.form.get('body')
+        )
+        with app.app_context():
+            db.session.add(new_product_review)
+            db.session.commit()
+        return redirect(url_for('get_product', id=id))
     return render_template(
         'product_manager.html',
         cart_form=cart_form, 
@@ -254,10 +284,13 @@ def get_product(id:int):
         purpose = 'get'
     )
 
-# Add to Cart
+# // ------------------------------ CART FUNCTIONS ------------------------------ //
+
 @app.route('/cart/<int:user_id>/add/<int:product_id>', methods=['POST'])
 def add_to_cart(product_id, user_id):
     product = Product.query.filter_by(id=product_id).first()
+    if int(request.form.get('count')) > product.stock:
+        return redirect(url_for('home'))
     new_order = Order(
         user= current_user,
         product = product,
@@ -308,7 +341,8 @@ def decrement_product_quantity(user_id, product_id):
         db.session.commit()
     return redirect(url_for('get_cart', user_id=user_id))
 
-# Checkout
+# // ------------------------------ CHECKOUT ------------------------------ //
+
 @app.route('/cart/<int:user_id>/checkout', methods=['GET', 'POST'])
 @login_required
 @member_only
@@ -347,7 +381,8 @@ def checkout(user_id):
         return redirect(url_for('get_transaction_history', user_id = user_id, transaction_id = transaction_id))    
     return render_template('checkout.html', form=form, details=details)
 
-# Transaction History
+# // ------------------------------ TRANSACTION HISTORY ------------------------------ //
+
 @app.route('/history/<int:user_id>')
 @login_required
 @member_only
@@ -379,9 +414,7 @@ def product_delivered(user_id, transaction_id):
         db.session.commit()
     return redirect(url_for('get_transaction_history', user_id=user_id, transaction_id=transaction_id))
 
-# Product Reviews
+# // ------------------------------ DRIVER CODE ------------------------------ //
 
-
-# Driver code
 if __name__ == '__main__':
     app.run(debug=True)
