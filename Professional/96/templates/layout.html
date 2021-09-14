@@ -57,9 +57,11 @@
                         {{current_user.name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% if current_user.id != 1 %}
                         <li class="nav-item">
                             <a class="dropdown-item" href="{{url_for('get_all_transactions', user_id=current_user.id)}}">History</a>
                         </li>
+                        {% endif %}
                         <li class="nav-item">
                             <a class="dropdown-item" href="{{url_for('logout')}}">Logout</a>
                         </li>
