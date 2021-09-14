@@ -113,3 +113,4 @@ Thanks for visiting this repository!
 - [Google Dinosaur Run Automation](Professional/93) (GUI Automation)
 - [Space Invaders](Professional/94) (GUI, Game)
 - [API based Website - English Dictionary using Owlbot API](Professional/95) (HTTP Requests & APIs, Web Development) 
+- [Online Shop - Shoplexify](https://github.com/Matthew1906/shoplexify) (Web Development)
