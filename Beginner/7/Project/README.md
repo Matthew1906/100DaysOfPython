@@ -2,7 +2,8 @@
 #### Project name: Hangman
 #### Things I Learnt: Random, Selection, Repetition, Lists, String Functions, Game Logic, Importing Modules
 
-#### Link to repl.it: https://replit.com/@matthewadrianus/hangman
+#### What this program does:
+- Simple Hangman game :)
 
 #### Approach to the project:
 1. Import necessary libraries (in this case: random)
@@ -11,3 +12,5 @@
 4. Set the initial values for the game value
 5. Create helper functions
 6. Driver program
+
+#### Link to repl.it: https://replit.com/@matthewadrianus/hangman
