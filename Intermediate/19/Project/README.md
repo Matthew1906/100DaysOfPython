@@ -5,7 +5,7 @@
 #### There are 2 projects for day 19, therefore there are 2 links
 
 #### What the program does:
-- Etch A Sketch MockUp :https://en.wikipedia.org/wiki/Etch_A_Sketch
+- Etch A Sketch :https://en.wikipedia.org/wiki/Etch_A_Sketch
 - Turtle Race: A simple race game, where the user guesses which turtle color would win a race (the turtles will move randomly)
 
 #### Link to repl.it for Etch A Sketch: https://replit.com/@matthewadrianus/etchASketch
