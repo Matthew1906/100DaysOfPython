@@ -4,6 +4,7 @@
 
 #### What this program does:
 - Simple Hangman game :)
+- Link to game explanation: https://en.wikipedia.org/wiki/Hangman_(game)
 
 #### Approach to the project:
 1. Import necessary libraries (in this case: random)
