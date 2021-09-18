@@ -4,5 +4,6 @@
 
 #### What the program does:
 - This is a higher lower game where the player need to guess which accounts have more followers as much as they can
+- This is a mockup to http://www.higherlowergame.com/
 
 #### Link to repl.it: https://replit.com/@matthewadrianus/higherLower
