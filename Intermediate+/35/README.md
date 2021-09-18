@@ -1,6 +1,8 @@
-#### DAY 35 PROJECT OF 100 DAYS OF CODE
-#### PROJECT NAME: Weather Warning 
-#### THINGS I IMPLEMENTED: SMTPLIB, API Authentication, REQUESTS, JSONS
+#### Day 35 Project of 100 Days of Python
+#### Project name: Weather Warning 
+#### Things I Implemented: SMTPLIB, API Authentication, Requests, Json
+
+#### What the program does: Sends an email notifying the user about today's weather
 
 #### Supposedly posted on pythonanywhere and send SMS instead of Emails
 
