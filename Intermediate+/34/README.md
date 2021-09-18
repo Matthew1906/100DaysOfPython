@@ -8,4 +8,7 @@
 - Working with multiple classes
 - API requests
 
+#### What the program does:
+- An improved version of Quiz Game (with GUI and APIs)
+
 #### Link to repl.it: https://replit.com/@matthewadrianus/triviaQuiz
