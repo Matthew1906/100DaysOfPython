@@ -2,7 +2,11 @@
 #### Project name: Weather Warning 
 #### Things I Implemented: SMTPLIB, API Authentication, Requests, Json
 
-#### What the program does: Sends an email notifying the user about today's weather
+#### What the program does: 
+- Sends an email notifying the user about today's weather
+
+#### Link to Public API: 
+- https://openweathermap.org/
 
 #### Supposedly posted on pythonanywhere and send SMS instead of Emails
 
