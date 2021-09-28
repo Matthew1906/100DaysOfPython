@@ -6,6 +6,10 @@
 - Checks the stock price of a certain company
 - If the price rise or fall by more than 5%, sends 3 top news regarding the company to the user
 
+#### Public APIs:
+- Get Stock Data: https://www.alphavantage.co/
+- Get News: https://newsapi.org/
+
 #### Slight Encoding error, but it mostly worked
 
 #### Link to repl.it: https://replit.com/@matthewadrianus/stockNews
