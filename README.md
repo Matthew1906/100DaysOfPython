@@ -2,20 +2,20 @@
 
 Hello there, I'm Matthew Adrianus Mulyono
 
-Recently I decided to take 100 Days of Python Course by Angela Yu on Udemy. 
+Recently I decided to take the 100 Days of Python Course by Angela Yu on Udemy. 
 
 Course link: https://www.udemy.com/course/100-days-of-code/
 
-I took this course to improve my skills in python, while also building my portofolio.
+I took this course to improve my skills in Python, while also building my portfolio.
 
-This repository contain all my notes and projects while trying to complete this course.
+This repository contains all my notes and projects while trying to complete this course.
 
 Feel free to see my projects and exercises, The finished projects are listed below.
 
 Thanks for visiting this repository!
 
 ### Course guided projects:
-#### These are my projects from Day 1 - 80, where the course actually provided a solution for each project. Most of these projects are done by myself, but there are some projects that I finished by taking a peek at the provided solution.
+#### These are my projects from Day 1 - 80, where the course provided a solution for each project. Most of these projects are done by myself, but there are some projects that I finished by taking a peek at the provided solution. Please take note that I have removed most unnecessarily large files that aren't directly related to learning Python.
 
 #### Basic Scripting: 
 - [Band Name Generator](Beginner/1/Project)
@@ -109,9 +109,9 @@ Thanks for visiting this repository!
 - [Udemy Course Scraper](Professional/92) (Web Scraping & Automation)
 - [Google Dinosaur Run Automation](Professional/93) (GUI Automation)
 - [Space Invaders](Professional/94) (GUI, Game)
-- [API based Website - English Dictionary using Owlbot API](Professional/95) (HTTP Requests & APIs, Web Development) 
+- [API-based Website - English Dictionary using Owlbot API](Professional/95) (HTTP Requests & APIs, Web Development) 
 - [Online Shop - Shoplexify](https://github.com/Matthew1906/shoplexify) (Web Development)
 - [Kaggle Dataset Downloader](Professional/97) (Web and GUI Automation)
 - [Analyze and Visualize the Space Race](https://colab.research.google.com/drive/1u091oUSjLTx5YHZRMMZYJ7elEQIOGycA?usp=sharing) (Data Science)
-- [Analyze Deaths Involving the Police in USA (2015-2017)](https://colab.research.google.com/drive/1K6Y3zDEYLyXR0CRuIwbh-BLbGNhyEDch?usp=sharing) (Data Science)
+- [Analyze Deaths Involving the Police in the USA (2015-2017)](https://colab.research.google.com/drive/1K6Y3zDEYLyXR0CRuIwbh-BLbGNhyEDch?usp=sharing) (Data Science)
 - [Predict Earnings](https://colab.research.google.com/drive/1GkUUicTT6XZ7LsGWqr0aFT1M_RzZi7IW?usp=sharing) (Data Science, Machine Learning)
